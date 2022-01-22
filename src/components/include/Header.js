@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SiCoffeescript } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 import '../scss/Header.scss';
 
@@ -9,7 +10,7 @@ function Header() {
     return (
         <header>
             <div className='header-con inner-con'>
-                <Link to="/"><h1>Gabes Coffee</h1></Link>
+                <Link to="/"><h1>Gabes Coffee <SiCoffeescript /></h1></Link>
                 <div className={`gnb  ${ open ? 'on' : '' } `} onMouseEnter={toggleGnb} onMouseLeave={toggleGnb}>
                     <ul>
                         <li>Gabes</li>

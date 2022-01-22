@@ -10,3 +10,4 @@
 #### 설치
 scss
 router
+react-icons

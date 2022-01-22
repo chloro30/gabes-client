@@ -1,5 +1,7 @@
 import React from 'react';
 import '../scss/Footer.scss';
+import { GrFacebook, GrInstagram } from 'react-icons/gr';
+import { SiKakaotalk } from 'react-icons/si';
 
 function Footer() {
     return (
@@ -11,8 +13,16 @@ function Footer() {
                     ⓒ 2022 Gabes Coffee. All Rights Reserved.
                 </p>
                 <ul>
-                    <li>페이스북</li>
-                    <li>인스타그램</li>
+                    <li>개인정보 처리방침</li>
+                    <li>영상정보처리기기 운영관리 방침</li>
+                    <li>사이트 이용약관</li>
+                    <li>윤리신고센터</li>
+                </ul>
+                <ul>
+                    {/* <li>CCM</li> */}
+                    <li><GrFacebook /></li>
+                    <li><GrInstagram /></li>
+                    <li><SiKakaotalk /></li>
                 </ul>
             </div>
         </footer>
