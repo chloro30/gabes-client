@@ -1,0 +1,167 @@
+// display: flex
+@mixin flexBox($fd:row, $wr:nowrap,$ju:space-between, $al:center) {
+    display: flex;
+    flex-direction: $fd;
+    flex-wrap: $wr;
+    justify-content: $ju;
+    align-items: $al;
+    @content;
+  }
+
+// 팔레트
+$color-top:rgba(186, 215, 223, 0.8);
+$color-middle-top:rgb(251, 244, 249);
+$color-middle-bottom:rgb(246, 231, 230);
+$color-bottom:rgb(246, 229, 245);
+
+header {
+    background-color: $color-top;
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    
+    div.header-con {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+
+        h1 {
+            background-color: #fff;
+            margin-left: 40px;
+            padding: 10px;
+            font-style: italic;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 99;
+        }
+        .gnb {
+            background-color: rgba(186, 215, 223, 0.2);
+            width: 100%;
+            height: 0px;
+            color: rgb(134, 130, 130);
+            font-size: 16px;
+            font-weight: bold;
+            position: absolute;
+            top: 120px;
+            transition: 0.05s;
+            &.on {
+                height: 100px;
+            }
+            > ul {
+                // background-color: antiquewhite;
+                width: 500px;
+                height: 60px;
+                padding: 0 20px;
+                margin: 0 auto;
+                position: absolute;
+                top: -60px;
+                left: 50%;
+                transform: translateX(-50%);
+                @include flexBox;
+                > li {
+                    // background-color: rgba(246, 229, 245, 0.5);
+                    padding: 8px;
+                    border-radius: 6px;
+                }
+            }
+            .lnb {
+                // background-color: forestgreen;
+                width: 500px;
+                height: 0px;
+                margin: 0 auto;
+                font-size: 14px;
+                font-weight: normal;
+                transition: 0.05s;
+                &.on {
+                    height: 100px;
+                }
+                .lnb-innerDiv {
+                    // background-color: darkgrey;
+                    // width: 100%;
+                    // height: 0;
+                    padding: 16px 0;
+                    @include flexBox($ju:flex-start, $al:flex-start);
+                    // &.on {
+                    //     height: 100px;
+                    // }
+                    
+                    ul.brand {
+                        // background-color: wheat;
+                        display: none;
+                        margin-left: 36px;
+                        // transition: 0.7s;
+                        opacity: 0;
+                        &.on {
+                            display: block;
+                            opacity: 1;
+                        }
+                        > li {
+                            margin-bottom: 4px;
+                        }
+                    }
+                    ul.menu {
+                        // background-color: sandybrown;
+                        display: none;
+                        margin-left: 68px;
+                        // transition: 0.7s;
+                        opacity: 0;
+                        &.on {
+                            display: block;
+                            opacity: 1;
+                        }
+                        > li {
+                            margin-bottom: 4px;
+                        }
+                    }
+                    ul.store {
+                        // background-color: saddlebrown;
+                        display: none;
+                        margin-left: 68px;
+                        // transition: 0.7s;
+                        opacity: 0;
+                        &.on {
+                            display: block;
+                            opacity: 1;
+                        }
+                        > li {
+                            margin-bottom: 4px;
+                        }
+                    }
+                    ul.board {
+                        // background-color: darkcyan;
+                        display: none;
+                        margin-left: 80px;
+                        transition: 0.5s;
+                        &.on {
+                            display: block;
+                        }
+                        > li {
+                            margin-bottom: 4px;
+                        }
+                    }
+                }
+            }
+        }
+        .login {
+            // background-color: rgb(139, 211, 139);
+            margin-right: 40px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+
+            z-index: 99;
+            ul {
+                @include flexBox;
+                li {
+                    background-color: $color-middle-bottom;
+                    margin-left: 10px;
+                    padding: 8px;
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+}
