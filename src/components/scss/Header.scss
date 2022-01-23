@@ -20,6 +20,7 @@ header {
     height: 120px;
     position: fixed;
     top: 0;
+    z-index: 999;
     
     div.header-con {
         width: 100%;
