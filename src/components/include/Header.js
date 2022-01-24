@@ -9,19 +9,20 @@ function Header() {
 
     const [lnbOn, setLnbOn] = useState(false);
     const toggleLnb = () => setLnbOn(!lnbOn);
+    const onLnb = () => setLnbOn(true);
 
     return (
-        <header>
-            <div className={`header-con inner-con ${lnbOn ? 'lnb-on': '' } `} onMouseEnter={toggleLnb} onMouseLeave={toggleLnb}>
+        <header className={` ${lnbOn ? 'lnb-on': '' } `} onMouseEnter={toggleLnb}  onMouseLeave={toggleLnb} >
+            <div className={`header-con inner-con ${lnbOn ? 'lnb-on': '' } `} onMouseEnter={onLnb} onMouseLeave={toggleLnb}>
                 <Link to="/"><h1>Gabes Coffee <SiCoffeescript /></h1></Link>
-                <div className={`gnb ${ open ? 'on' : '' } `} onMouseEnter={toggleGnb} onMouseLeave={toggleGnb}>
-                    <ul>
+                <div className={`gnb ${ open ? 'on' : '' } `} onMouseEnter={onLnb,toggleGnb} onMouseLeave={toggleGnb}>
+                    <ul onMouseEnter={onLnb}>
                         <li>Gabes</li>
                         <li>Menu</li>
                         <li>Store</li>
                         <li>What's New</li>
                     </ul>
-                    <div className={`lnb ${ open ? 'on' : '' } `} onMouseEnter={toggleLnb} onMouseLeave={toggleLnb}>
+                    <div className={`lnb ${ open ? 'on' : '' } `} onMouseEnter={onLnb} >
                         <div className='lnb-innerDiv'>
                             <ul className={`brand ${ open ? 'on' : '' } `} >
                                 <li>연혁</li>
@@ -46,8 +47,8 @@ function Header() {
                 </div>
                 <div className="login">
                     <ul>
-                        <Link to="/login"><li>로그인</li></Link>
-                        <Link to="/register"><li>회원가입</li></Link>
+                        <li><Link to="/login">로그인</Link></li>
+                        <li><Link to="/register">회원가입</Link></li>
                     </ul>
                 </div>
             </div>
