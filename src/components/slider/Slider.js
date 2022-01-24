@@ -29,6 +29,7 @@ function Slider() {
     }
 
     return (
+        <div className='slider-div'>
         <div className='container-slider'>
             {
                 dataSlider.map((obj, index) => {
@@ -50,6 +51,7 @@ function Slider() {
                      className={(slideIndex === index + 1) ? 'dot active' : 'dot' }
                 ></div>
             ))}
+        </div>
         </div>
         </div>
     );
