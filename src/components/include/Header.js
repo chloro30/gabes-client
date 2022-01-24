@@ -7,29 +7,32 @@ function Header() {
     const [ open, setOpen ] = useState(false);
     const toggleGnb = () => setOpen(!open);
 
+    const [lnbOn, setLnbOn] = useState(false);
+    const toggleLnb = () => setLnbOn(!lnbOn);
+
     return (
         <header>
-            <div className='header-con inner-con'>
+            <div className={`header-con inner-con ${lnbOn ? 'lnb-on': '' } `} onMouseEnter={toggleLnb} onMouseLeave={toggleLnb}>
                 <Link to="/"><h1>Gabes Coffee <SiCoffeescript /></h1></Link>
-                <div className={`gnb  ${ open ? 'on' : '' } `} onMouseEnter={toggleGnb} onMouseLeave={toggleGnb}>
+                <div className={`gnb ${ open ? 'on' : '' } `} onMouseEnter={toggleGnb} onMouseLeave={toggleGnb}>
                     <ul>
                         <li>Gabes</li>
                         <li>Menu</li>
                         <li>Store</li>
                         <li>What's New</li>
                     </ul>
-                    <div className={`lnb  ${ open ? 'on' : '' } `} >
+                    <div className={`lnb ${ open ? 'on' : '' } `} onMouseEnter={toggleLnb} onMouseLeave={toggleLnb}>
                         <div className='lnb-innerDiv'>
-                            <ul className={`brand  ${ open ? 'on' : '' } `}>
+                            <ul className={`brand ${ open ? 'on' : '' } `} >
                                 <li>연혁</li>
                                 <li>회사소개</li>
                             </ul>
-                            <ul className={`menu  ${ open ? 'on' : '' } `}>
+                            <ul className={`menu ${ open ? 'on' : '' } `}>
                                 {/* <li>New</li> */}
                                 <li><Link to="/coffee">Coffee</Link></li>
                                 <li>Desert</li>
                             </ul>
-                            <ul className={`store  ${ open ? 'on' : '' } `}>
+                            <ul className={`store ${ open ? 'on' : '' } `}>
                                 <li>
                                     매장찾기
                                 </li>
