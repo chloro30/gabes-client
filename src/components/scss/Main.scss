@@ -1,8 +1,89 @@
-section {
-    background-color: rgba(237, 223, 250, 0.4);
-    margin-top: 120px;
-    .inner-con {
-        // background-color: sandybrown;
-        padding: 20px 0;
+section.main-con {
+    padding: 20px 0;
+    .slider-div {
+        background-color: rgba(206, 156, 253, 0.4);
+        padding-top: 16px;
+    }
+    .section1 {
+        background-color: rgba(130, 177, 248, 0.4);
+        div.inner-con {
+            background-image: url('../../img/section1/sec1-bg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 343px;
+            padding: 20px 160px;
+
+            display: flex;
+            justify-content: space-evenly;
+            .desc {
+                // background-color: cornflowerblue;
+                height: 70%;
+                align-self: center;
+                p:nth-child(1) {
+                    font-size: 20px;
+                    color: #4067ab;
+                }
+                p:nth-child(2) {
+                    font-size: 32px;
+                    font-weight: bold;
+                    color: #223d6c;
+                }
+                p:nth-child(3) {
+                    font-size: 18px;
+                    color: #4b4748;
+                    margin-top: 10px;
+                }
+                button {
+                    background-color: transparent;
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    color: #453d3d;
+                    border: 2px solid #453d3d;
+                    margin-top: 32px;
+                    transition: 0.4s;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #4a4546;
+                        color: #fff;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .section2 {
+        background-color: rgba(229,227,232, 0.4);
+        > div.inner-con {
+            background-image: url('../../img/section2/2022_hawaii.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 400px;
+            padding-top: 100px;
+            padding-left: 40px;
+            div {
+                // background-color: cornflowerblue;
+                width: 700px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                button {
+                    background-color: transparent;
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    color: #b9813e;
+                    border: 2px solid #b9813e;
+                    margin-top: 32px;
+                    transition: 0.4s;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #b9813e;
+                        color: #fff;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
     }
 }
