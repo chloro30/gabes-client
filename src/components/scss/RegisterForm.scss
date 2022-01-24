@@ -1,0 +1,19 @@
+section.register-con {
+    // background-color: wheat;
+    padding-top: 20px;
+    .register-container {
+        // background-color: slategray;
+        margin-top: 100px;
+        text-align: center;
+        .form-div {
+            background-color: lightblue;
+            width: 60%;
+            margin: 0 auto;
+
+            table > tbody > tr > td:nth-child(1) {
+                text-align: center;
+            }
+        }
+    }
+}
+

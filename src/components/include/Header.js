@@ -25,7 +25,7 @@ function Header() {
                                 <li>회사소개</li>
                             </ul>
                             <ul className={`menu  ${ open ? 'on' : '' } `}>
-                                <li>New</li>
+                                {/* <li>New</li> */}
                                 <li>Coffee</li>
                                 <li>Desert</li>
                             </ul>
