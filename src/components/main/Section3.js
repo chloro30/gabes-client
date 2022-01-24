@@ -4,7 +4,7 @@ function Section3() {
     return (
         <div className='section3'>
             <div className='fran-text-wrap inner-con'>
-                <div className='fran-title'>프렌차이즈</div>
+                <div className='fran-title'>프랜차이즈</div>
                 <p>
                     Gabes Coffee 신화<br/>
                     당신도 할 수 있습니다.
