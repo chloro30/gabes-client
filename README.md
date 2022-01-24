@@ -11,6 +11,8 @@
 scss
 router
 react-icons
+npm install @material-ui/core
+npm install react-daum-postcode
 
 ### 이미지 자료 출처
-HOLLYS
+HOLLYS, 스타벅스, 투썸플레이스
