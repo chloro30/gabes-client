@@ -38,6 +38,7 @@ header {
     
     
     div.header-con {
+        // background-color: rgb(17, 194, 138);
         width: 100%;
         height: 100%;
         margin: 0 auto;
@@ -189,7 +190,7 @@ header {
             ul {
                 @include flexBox;
                 li {
-                    // background-color: rgb(170, 169, 169);
+                    background-color: rgb(170, 169, 169);
                     margin-left: 10px;
                     padding: 8px;
                     border-radius: 6px;

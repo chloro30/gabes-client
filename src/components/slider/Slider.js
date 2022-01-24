@@ -1,33 +1,34 @@
 import React, {useState} from 'react';
 import './css/Slider.css';
 import dataSlider from './dataSlider';
+import BtnSlider from'./BtnSlider';
 
 function Slider() {
 
     const [slideIndex, setSlideIndex] = useState(1);
 
-    // const nextSlide = () => {
-    //     if(slideIndex !== dataSlider.length){
-    //         setSlideIndex(slideIndex + 1);
+    const nextSlide = () => {
+        if(slideIndex !== dataSlider.length){
+            setSlideIndex(slideIndex + 1);
 
-    //     }else if(slideIndex === dataSlider.length){
-    //         setSlideIndex(1);
-    //     }
-    // }
+        }else if(slideIndex === dataSlider.length){
+            setSlideIndex(1);
+        }
+    }
 
-    // const prevSlide = () => {
-    //     if(slideIndex !== 1){
-    //         setSlideIndex(slideIndex - 1);
+    const prevSlide = () => {
+        if(slideIndex !== 1){
+            setSlideIndex(slideIndex - 1);
 
-    //     }else if(slideIndex === 1){
-    //         setSlideIndex(dataSlider.length);
-    //     }
-    // }
+        }else if(slideIndex === 1){
+            setSlideIndex(dataSlider.length);
+        }
+    }
 
-    // const clickDot = (index) => {
-    //     setSlideIndex(index);
-    //     console.log(slideIndex, index);
-    // }
+    const clickDot = (index) => {
+        setSlideIndex(index);
+        console.log(slideIndex, index);
+    }
 
 
 
@@ -52,7 +53,7 @@ function Slider() {
                 {
                     dataSlider.map((obj, index) => {
                         return (
-                            <div key={obj.id} className={ (slideIndex === index + 1) ? 'slide  active-anim' : 'slide' }>
+                            <div key={obj.id} className={ (slideIndex === index + 1) ? 'slide  active' : 'slide' }>
                                 <img src={`img/banner/banner0${index + 1}.png`} alt={`배너_이미지${index + 1}`} />
                                 {/* obj.title 사용할 시 css로 위치를 position: absolute로 잡아줘야 할 듯(?) */}
                                 {/* <p>{obj.title}</p> */}
@@ -65,7 +66,7 @@ function Slider() {
                 <div className='container-dots'>
                     {Array.from({length: 5}).map((item, index) => (
                         <div key={index} 
-                            onClick={ () => moveDot(index + 1) }
+                            onClick={ () => clickDot(index + 1) }
                             className={(slideIndex === index + 1) ? 'dot active' : 'dot' }
                         ></div>
                     ))}

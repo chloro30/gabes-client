@@ -6,6 +6,7 @@ import '../scss/Header.scss';
 function Header() {
     const [ open, setOpen ] = useState(false);
     const toggleGnb = () => setOpen(!open);
+    const offGnb = () => setOpen(false);
 
     const [lnbOn, setLnbOn] = useState(false);
     const toggleLnb = () => setLnbOn(!lnbOn);
@@ -13,7 +14,7 @@ function Header() {
 
     return (
         <header className={` ${lnbOn ? 'lnb-on': '' } `} onMouseEnter={toggleLnb}  onMouseLeave={toggleLnb} >
-            <div className={`header-con inner-con ${lnbOn ? 'lnb-on': '' } `} onMouseEnter={onLnb} onMouseLeave={toggleLnb}>
+            <div className={`header-con inner-con ${lnbOn ? 'lnb-on': '' } `} onMouseEnter={onLnb} onMouseLeave={offGnb}>
                 <Link to="/"><h1>Gabes Coffee <SiCoffeescript /></h1></Link>
                 <div className={`gnb ${ open ? 'on' : '' } `} onMouseEnter={onLnb,toggleGnb} onMouseLeave={toggleGnb}>
                     <ul onMouseEnter={onLnb}>
