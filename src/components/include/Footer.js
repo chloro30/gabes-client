@@ -18,11 +18,11 @@ function Footer() {
                     <li>사이트 이용약관</li>
                     <li>윤리신고센터</li>
                 </ul>
-                <ul>
+                <ul className='links'>
                     {/* <li>CCM</li> */}
-                    <li><GrFacebook onClick={() => window.location.href="http://facebook.com"}  /></li>
-                    <li><GrInstagram onClick={() => window.location.href="http://instagram.com"} /></li>
-                    <li><SiKakaotalk onClick={() => window.location.href="http://kakao.com"} /></li>
+                    <li><GrFacebook onClick={()=>window.location.href="https://facebook.com"} /></li>
+                    <li><GrInstagram onClick={()=>window.location.href="https://instagram.com"} /></li>
+                    <li><SiKakaotalk onClick={()=>window.location.href="https://kakao.com"} /></li>
                 </ul>
             </div>
         </footer>

@@ -26,7 +26,11 @@ const dataSlider = [
         title: "Lorem ipsum",
         subTitle: "Lorem'"
     },
-
+    {
+        id:6,
+        title: "Lorem ipsum",
+        subTitle: "Lorem'"
+    }
 ];
 
 export default dataSlider;

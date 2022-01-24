@@ -1,32 +1,50 @@
 import React, {useState} from 'react';
 import './css/Slider.css';
-import BtnSlider from './BtnSlider';
 import dataSlider from './dataSlider';
 
 function Slider() {
 
     const [slideIndex, setSlideIndex] = useState(1);
 
-    const nextSlide = () => {
-        if(slideIndex !== dataSlider.length){
-            setSlideIndex(slideIndex + 1);
-        }else if(slideIndex === dataSlider.length){
+    // const nextSlide = () => {
+    //     if(slideIndex !== dataSlider.length){
+    //         setSlideIndex(slideIndex + 1);
+
+    //     }else if(slideIndex === dataSlider.length){
+    //         setSlideIndex(1);
+    //     }
+    // }
+
+    // const prevSlide = () => {
+    //     if(slideIndex !== 1){
+    //         setSlideIndex(slideIndex - 1);
+
+    //     }else if(slideIndex === 1){
+    //         setSlideIndex(dataSlider.length);
+    //     }
+    // }
+
+    // const clickDot = (index) => {
+    //     setSlideIndex(index);
+    //     console.log(slideIndex, index);
+    // }
+
+
+
+
+// autoPlay 추가
+    setTimeout(() => {
+        if(slideIndex===6){
             setSlideIndex(1);
+            
+        }else{
+            setSlideIndex(slideIndex+1);
         }
+    }, 3000);
 
-    }
 
-    const prevSlide = () => {
-        if(slideIndex !== 1){
-            setSlideIndex(slideIndex - 1);
-        }else if(slideIndex === 1){
-            setSlideIndex(dataSlider.length);
-        }
-    }
 
-    const moveDot = index => {
-        setSlideIndex(index);
-    }
+
 
     return (
         <div className='slider-div'>
