@@ -20,9 +20,9 @@ function Footer() {
                 </ul>
                 <ul>
                     {/* <li>CCM</li> */}
-                    <li><GrFacebook /></li>
-                    <li><GrInstagram /></li>
-                    <li><SiKakaotalk /></li>
+                    <li><GrFacebook onClick={() => window.location.href="http://facebook.com"}  /></li>
+                    <li><GrInstagram onClick={() => window.location.href="http://instagram.com"} /></li>
+                    <li><SiKakaotalk onClick={() => window.location.href="http://kakao.com"} /></li>
                 </ul>
             </div>
         </footer>

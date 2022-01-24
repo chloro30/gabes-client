@@ -5,6 +5,7 @@ import Header from './components/include/Header';
 import Main from './components/main/Main';
 import LoginForm from './components/member/LoginForm';
 import RegisterForm from './components/member/RegisterForm';
+import Coffee from './components/menu/Coffee';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/login" element={<LoginForm />} />
+          {/* gnb */}
+          <Route path="/coffee" element={<Coffee />} />
         </Routes>
       <Footer />
     </div>

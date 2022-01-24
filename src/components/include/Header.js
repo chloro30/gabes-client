@@ -26,7 +26,7 @@ function Header() {
                             </ul>
                             <ul className={`menu  ${ open ? 'on' : '' } `}>
                                 {/* <li>New</li> */}
-                                <li>Coffee</li>
+                                <li><Link to="/coffee">Coffee</Link></li>
                                 <li>Desert</li>
                             </ul>
                             <ul className={`store  ${ open ? 'on' : '' } `}>
