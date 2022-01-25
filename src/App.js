@@ -6,6 +6,7 @@ import Main from './components/main/Main';
 import LoginForm from './components/member/LoginForm';
 import RegisterForm from './components/member/RegisterForm';
 import Coffee from './components/menu/Coffee';
+import Notice from './components/whatsnew/Notice';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/login" element={<LoginForm />} />
           {/* gnb */}
-          <Route path="/coffee" element={<Coffee />} />
+          <Route path="/menu/coffee" element={<Coffee />} />
+          <Route path="/board/notice" element={<Notice />} />
         </Routes>
       <Footer />
     </div>

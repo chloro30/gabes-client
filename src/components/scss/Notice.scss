@@ -1,0 +1,12 @@
+section.notice-con {
+    // background-color: darkkhaki;
+    padding-top: 20px;
+    .notice-container {
+        background-color: #eee;
+        margin-top: 100px;
+        .inner-con {
+            background-color: lightgreen;
+            padding-top: 30px;
+        }
+    }
+}
