@@ -1,0 +1,23 @@
+{
+    "coffee": {
+        "basic" : [
+            {"id":"b1", "name":"아메리카노", "src":"../img/menu/products/basic/americano.png"},
+            {"id":"b2", "name":"카페라떼", "src":"../img/menu/products/basic/cafelatte.jpg"},
+            {"id":"b3", "name":"카푸치노", "src":"../img/menu/products/basic/cappuccino.jpg"},
+            {"id":"b4", "name":"에스프레소", "src":"../img/menu/products/basic/espresso.jpg"}
+        ],
+        "special" : [
+            {"id":"s1", "name":"흑당 펄 라떼", "src":"../img/menu/products/special/brown_sugar_latte.jpg"},
+            {"id":"s2", "name":"키위 주스", "src":"../img/menu/products/special/kiwi_juice.jpg"},
+            {"id":"s3", "name":"연유 콜드브루 플로트", "src":"../img/menu/products/special/milky.jpg"},
+            {"id":"s4", "name":"모카 브라우니 그라니따 ", "src":"../img/menu/products/special/mocha_brawnie.jpg"},
+            {"id":"s5", "name":"시그니처 크림 커피", "src":"../img/menu/products/special/signature.jpg"},
+            {"id":"s6", "name":"자몽 스파클링", "src":"../img/menu/products/special/sparkling.jpg"},
+            {"id":"s7", "name":"딸기 그라니타", "src":"../img/menu/products/special/strawberry_granita.jpg"},
+            {"id":"s8", "name":"딸기 라떼", "src":"../img/menu/products/special/strawberry_latte.jpg"}
+        ]
+    },
+    "desert": {
+
+    }
+}

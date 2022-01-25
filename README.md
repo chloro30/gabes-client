@@ -15,4 +15,4 @@ npm install @material-ui/core
 npm install react-daum-postcode
 
 ### 이미지 자료 출처
-HOLLYS, 스타벅스, 투썸플레이스
+HOLLYS, 스타벅스, 투썸플레이스, 폴 바셋, 파스쿠찌
