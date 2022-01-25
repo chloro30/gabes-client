@@ -1,18 +1,14 @@
 import React from 'react';
+import MapIterator_arr from '../module/MapIterator_arr';
 
-function BasicMenu() {
+function BasicMenu( {basicProducts} ) {
 
 
     return (
         <div className='basicmenu-container'>
             <div className='inner-con'>
                 <p>기본 메뉴</p>
-                <ul className='basic-list'>
-                    <li>커피1</li>
-                    <li>커피2</li>
-                    <li>커피3</li>
-                    <li>커피4</li>
-                </ul>
+                <MapIterator_arr products={basicProducts} />
             </div>
         </div>
     );

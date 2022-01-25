@@ -57,10 +57,10 @@ section.coffee-con {
     }
     .basicmenu-container {
         background-color: lightskyblue;
-        height: 400px;
-        padding: 40px 0;
+        height: 600px;
+        padding: 80px 0;
 
-        > div {
+        > div.inner-con {
             background-color: cornsilk;
             // height: 100px;
             position: relative;
@@ -69,45 +69,89 @@ section.coffee-con {
                 display: inline-block;
                 position: absolute;
                 transform: translateX(350px);
-                left: 50px;
+                left: 110px;
+                top: 50px;
             }
-        }
-        ul.basic-list {
-            background-color: #fff;
-            width: 800px;
-            padding: 20px;
+            ul.list-ul {
+                background-color: #fff;
+                width: 740px;
+                height: 200px;
+                padding: 20px 0;
+                
+                position: absolute;
+                top: 80px;
+                right: 0px;
+                
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                > li {
+                    // background-color: lightsalmon;
+                    width:  $item-width;
+                    height: 140px;
+                    div.img-div {
+                        // background-color: darkseagreen;
+                        width: 100%;
+                        height: 100%;
 
-            position: absolute;
-            top: 40px;
-            right: 0px;
+                        position: relative;
+                        img {
+                            // width: 100%;
+                            height: 90%;
+                            border-radius: 10px;
 
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            > li {
-                background-color: lightsalmon;
-                width:  $item-width;
-                height: 140px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                        }
+                    }
+                    > p {
+                        // background-color: darkslateblue;
+                        text-align: center;
+                    }
+                }
             }
         }
     }
     .specialmenu-container {
         background-color: rgb(121, 238, 199);
-        height: 500px;
-        padding: 40px 0;
-        ul.special-list {
+        height: 600px;
+        padding: 80px 0;
+        ul.list-ul {
             background-color: chocolate;
-            width: 800px;
-            padding: 20px 20px 0 20px;
+            width: 740px;
+            padding: 20px  0;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             > li {
-                background-color: lightsalmon;
+                // background-color: lightsalmon;
                 width:  $item-width;
                 height: 140px;
                 margin-bottom: 20px;
 
+                div.img-div {
+                    // background-color: darkseagreen;
+                    width: 100%;
+                    height: 100%;
+
+                    position: relative;
+                    img {
+                        // width: 100%;
+                        height: 90%;
+                        border-radius: 10px;
+
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+                > p {
+                    // background-color: darkslateblue;
+                    text-align: center;
+                }
             }
         }
     }

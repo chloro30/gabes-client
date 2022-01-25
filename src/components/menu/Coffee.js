@@ -8,14 +8,14 @@ import products from '../../data/products.json';
 function Coffee() {
 
     const [allProducts, setAllProducts] = useState(products);       //전체 상품
-    // const [basics, setBasics] = useState(allProducts.basic);        //기본 상품
-    // const [specials, setSpecials] = useState(allProducts.special);  //특별 상품
+    const [basicProducts, setBasicProductss] = useState(allProducts.coffee.basic);        //기본 상품
+    const [specialProducts, setSpecialProducts] = useState(allProducts.coffee.special);  //특별 상품
 
     return (
         <section className='coffee-con'>
             <AllCoffee allProducts={allProducts} />
-            <BasicMenu  />
-            <SpecialMenu />
+            <BasicMenu basicProducts={basicProducts} />
+            <SpecialMenu specialProducts={specialProducts} />
         </section>
     );
 }
