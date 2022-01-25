@@ -83,11 +83,30 @@ header {
                 cursor: pointer;
                 @include flexBox;
                 > li {
-                    // background-color: rgba(246, 229, 245, 0.5);
-                    padding: 8px;
+                    // background-color: rgba(77, 105, 41, 0.5);
+                    height: 100%;
+                    padding: 20px 0;
                     border-radius: 6px;
+                    position: relative;
                     &:hover {
                         color: violet;
+                        &::after {
+                            width: 100%;
+                            left: 0;
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        background-color: rgb(246, 231, 230);
+                        width: 0;
+                        height: 4px;
+
+                        position: absolute;
+                        bottom: 0; 
+                        left: 50%;
+
+                        transition: 0.3s;
+
                     }
                 }
             }
