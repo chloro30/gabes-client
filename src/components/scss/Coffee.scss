@@ -1,5 +1,5 @@
 // 아이템 너비 통일
- $item-width: 140px;
+ $item-width: 180px;
 
 section.coffee-con {
     // background-color: lightcoral;
@@ -7,17 +7,51 @@ section.coffee-con {
     .allcoffee-container {
         background-color: lightgreen;
         margin-top: 100px;
-        ul.allcoffee-list {
-            // background-color: lightgreen;
+        padding-top: 20px;
+        .allcoffee-list {
+            background-color: saddlebrown;
+            height: 500px;
             padding: 20px;
-            display: flex;
-            // flex-wrap: wrap;
-            justify-content: space-around;
-            > li {
-                background-color: lightsalmon;
-                width:  $item-width;
-                height: 140px;
-
+            ul {
+                background-color: silver;
+                height: 100%;
+                padding: 22px 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                li {
+                    // background-color: lightsalmon;
+                    width:  $item-width;
+                    height: 200px;
+                    padding: 8px 0;
+                    overflow: hidden;
+                    position: relative;
+                    .all-img-div {
+                        // background-color: darkcyan;
+                        width: 75%;
+                        height: 80%;
+                        overflow: hidden;
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        .all-img {
+                            width: 100%;
+                            height: 90%;
+                            border-radius: 10px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                        }
+                    }
+                    > p {
+                        // background-color:slateblue;
+                        width: 100%;
+                        text-align: center;
+                        position: absolute;
+                        bottom: 10px;
+                    }
+                }
             }
         }
     }
@@ -63,7 +97,7 @@ section.coffee-con {
         padding: 40px 0;
         ul.special-list {
             background-color: chocolate;
-            width: 700px;
+            width: 800px;
             padding: 20px 20px 0 20px;
             display: flex;
             flex-wrap: wrap;

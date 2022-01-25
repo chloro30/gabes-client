@@ -1,6 +1,8 @@
 import React from 'react';
 
 function BasicMenu() {
+
+
     return (
         <div className='basicmenu-container'>
             <div className='inner-con'>
