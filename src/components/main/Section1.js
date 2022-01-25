@@ -4,7 +4,7 @@ function Section1() {
     return (
         <div className='section1'>
             <div className='inner-con'>
-                <img src='img/section1/star_bean.png' alt='원두사진' />
+                <img src='img/main/section1/star_bean.png' alt='원두사진' />
                 <div className='desc'>
                     <p>활기찬 새해와 함께할</p>
                     <p>니카라과 블론드 로스트 250g</p>
