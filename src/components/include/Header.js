@@ -19,9 +19,9 @@ function Header() {
                 <div className={`gnb ${ open ? 'on' : '' } `} onMouseEnter={onLnb,toggleGnb} onMouseLeave={toggleGnb}>
                     <ul onMouseEnter={onLnb}>
                         <li>Gabes</li>
-                        <li>Menu</li>
-                        <li>Store</li>
-                        <li>What's New</li>
+                        <li><Link to="/menu/coffee">Menu</Link></li>
+                        <li><Link to="/store">Store</Link></li>
+                        <li><Link to="/board/notice">What's New</Link></li>
                     </ul>
                     <div className={`lnb ${ open ? 'on' : '' } `} onMouseEnter={onLnb} >
                         <div className='lnb-innerDiv'>
@@ -31,17 +31,15 @@ function Header() {
                             </ul>
                             <ul className={`menu ${ open ? 'on' : '' } `}>
                                 {/* <li>New</li> */}
-                                <li><Link to="/coffee">Coffee</Link></li>
-                                <li>Desert</li>
+                                <li><Link to="/menu/coffee">Coffee</Link></li>
+                                <li><Link to="/menu/desert">Desert</Link></li>
                             </ul>
                             <ul className={`store ${ open ? 'on' : '' } `}>
-                                <li>
-                                    매장찾기
-                                </li>
+                                <li><Link to="/store">매장찾기</Link></li>
                             </ul>
                             <ul className={`board  ${ open ? 'on' : '' } `}>
-                                <li>공지사항</li>
-                                <li>이벤트/뉴스</li>
+                                <li><Link to="/board/notice">공지사항</Link></li>
+                                <li><Link to="/board/event">이벤트</Link></li>
                             </ul>
                         </div>
                     </div>
