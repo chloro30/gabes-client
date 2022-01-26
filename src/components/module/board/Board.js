@@ -29,14 +29,14 @@ function Board( {list} ) {
     const [currentPage,setCurrentPage] = useState(page);
     const changePage = (page) => {
         setCurrentPage(page)
-        console.log(currentPage);
+        // console.log(currentPage);
     }
     /* Boardpage 끝 */
 
     return (
         <div className='board'>
             <BoardTable list={list} />
-            <BoardPage all_page={page_arr} page={page} changePage={changePage}/>
+            <BoardPage all_page={page_arr} page={currentPage} changePage={changePage}/>
         </div>
     );
 }

@@ -53,6 +53,7 @@ div.board {
         justify-content: center;
         div.paging-first {
             margin-right: 10px;
+            cursor: pointer;
         }
         ul.paging-middle {
             width: 40%;
@@ -61,10 +62,12 @@ div.board {
             li.paging-num {
                 // background-color: chartreuse;
                 width: 18%;
+                cursor: pointer;
             }
         }
         div.paging-last {
             margin-left: 10px;
+            cursor: pointer;
         }
     }
 }
