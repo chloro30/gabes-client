@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react';
 import '../scss/Footer.scss';
 import { GrFacebook, GrInstagram } from 'react-icons/gr';
