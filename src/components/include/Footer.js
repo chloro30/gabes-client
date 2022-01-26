@@ -12,17 +12,17 @@ function Footer() {
                     주소 : 서울 종로구 세종대로 172 , 30층<br/>
                     ⓒ 2022 Gabes Coffee. All Rights Reserved.
                 </p>
-                <ul>
+                <ul className='footer-menu'>
                     <li>개인정보 처리방침</li>
                     <li>영상정보처리기기 운영관리 방침</li>
                     <li>사이트 이용약관</li>
                     <li>윤리신고센터</li>
                 </ul>
-                <ul className='links'>
+                <ul className='footer-links'>
                     {/* <li>CCM</li> */}
-                    <li><GrFacebook onClick={()=>window.location.href="https://facebook.com"} /></li>
-                    <li><GrInstagram onClick={()=>window.location.href="https://instagram.com"} /></li>
-                    <li><SiKakaotalk onClick={()=>window.location.href="https://kakao.com"} /></li>
+                    <li><a href='https://facebook.com' target='_blank' ><GrFacebook /></a></li>
+                    <li><a href='https://instagram.com' target='_blank' ><GrInstagram /></a></li>
+                    <li><a href='https://kakao.com' target='_blank' ><SiKakaotalk /></a></li>
                 </ul>
             </div>
         </footer>

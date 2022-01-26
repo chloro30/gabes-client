@@ -9,17 +9,48 @@ footer {
         padding: 20px;
         display: flex;
         justify-content: space-between;
-        > ul {
+        > ul.footer-menu {
             display: flex;
             > li {
+                // background-color: blueviolet;
+                height: 20px;
                 margin-right: 16px;
+                position: relative;
+                &:not(:last-child) {
+                    &::after {
+                        content: ""; 
+                        display: block;
+                        width: 2px;
+                        height: 60%;
+                        background-color: rgb(147, 117, 231);
+                        position: absolute;
+                        top: 5px;
+                        right: -8px;
+                    }
+                }
             }
         }
-        > ul:last-child {
-            li {
-                cursor: pointer;
+        > ul.footer-links {
+            display: flex;
+            > li {
+                // background-color: blueviolet;
+                height: 20px;
+                margin-right: 16px;
+                font-size: 20px;
+                position: relative;
+                &:not(:last-child) {
+                    &::after {
+                        content: ""; 
+                        display: block;
+                        width: 2px;
+                        height: 80%;
+                        background-color: rgb(147, 117, 231);
+                        position: absolute;
+                        top: 6px;
+                        right: -8px;
+                    }
+                }
             }
         }
-    
     }
 }
