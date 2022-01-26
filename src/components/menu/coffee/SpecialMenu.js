@@ -1,8 +1,8 @@
 /* eslint-disable */
 
 import React from 'react';
-import MapIterator_arr from '../module/MapIterator_arr';
-import ProductIntro from '../module/ProductIntro';
+import MapIterator_arr from '../../module/MapIterator_arr';
+import ProductIntro from '../../module/ProductIntro';
 
 function SpecialMenu({specialProducts}) {
 

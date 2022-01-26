@@ -1,5 +1,5 @@
 import React from 'react';
-import MapIterator from '../module/MapIterator';
+import MapIterator from '../../module/MapIterator';
 
 function AllCoffee( {allProducts} ) {
 

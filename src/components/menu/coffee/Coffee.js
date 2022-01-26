@@ -1,11 +1,11 @@
 /* eslint-disable */
 
 import React, { useState } from 'react';
-import '../scss/Coffee.scss';
+import '../../scss/Coffee.scss';
 import AllCoffee from './AllCoffee';
 import BasicMenu from './BasicMenu';
 import SpecialMenu from './SpecialMenu';
-import products from '../../data/products.json';
+import products from '../../../data/products.json';
 
 function Coffee() {
 

@@ -5,7 +5,7 @@ import Header from './components/include/Header';
 import Main from './components/main/Main';
 import LoginForm from './components/member/LoginForm';
 import RegisterForm from './components/member/RegisterForm';
-import Coffee from './components/menu/Coffee';
+import Coffee from './components/menu/coffee/Coffee';
 import Notice from './components/whatsnew/Notice';
 
 function App() {
