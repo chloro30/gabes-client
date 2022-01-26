@@ -2,10 +2,6 @@ import React from 'react';
 
 function BoardTable({list}) {
  
-    console.log(list);
-    // const list = list.notice;
-    // console.log(list[0].date);
-
     return (
         <div className='board-contents'>
             <div className='board-header'>

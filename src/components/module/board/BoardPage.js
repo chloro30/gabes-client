@@ -1,16 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function BoardPage( {all_page, page} ) {
+function BoardPage( {all_page, page, changePage} ) {
 
     // console.log(all_page, page);
-    const [pageNow,setPageNow] = useState(page);
-
-    //페이지 클릭 했을 때 변경하는 함수
-    const changePage = (el) => {
-        setPageNow(el)
-        console.log(pageNow);
-    }
-
+    
     return (
         <div className='paging'>
             <div className='paging-first'>&lt;&lt;</div>
