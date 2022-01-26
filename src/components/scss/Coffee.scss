@@ -5,13 +5,12 @@ section.coffee-con {
     // background-color: lightcoral;
     padding-top: 20px;
     .allcoffee-container {
-        background-color: lightgreen;
+        // background-color: lightgreen;
         margin-top: 100px;
         padding-top: 20px;
         .allcoffee-list {
-            background-color: saddlebrown;
+            // background-color: saddlebrown;
             height: 500px;
-            padding: 20px;
             ul {
                 background-color: silver;
                 height: 100%;
@@ -56,7 +55,7 @@ section.coffee-con {
         }
     }
     .basicmenu-container {
-        background-color: lightskyblue;
+        // background-color: lightskyblue;
         height: 600px;
         padding: 80px 0;
 
@@ -74,7 +73,7 @@ section.coffee-con {
                 z-index: 9;
             }
             ul.list-ul {
-                background-color: #fff;
+                background-color: wheat;
                 width: 740px;
                 height: 200px;
                 padding: 20px 0;
@@ -97,7 +96,7 @@ section.coffee-con {
                         height: 100%;
 
                         position: relative;
-                        img {
+                        .img-item {
                             // width: 100%;
                             height: 90%;
                             border-radius: 10px;
@@ -120,7 +119,7 @@ section.coffee-con {
                 }
             }
             div.intro-img {
-                background-color: darkseagreen;
+                // background-color: darkseagreen;
                 width: 320px;
                 height: 320px;
                 border-radius: 50%;
@@ -135,18 +134,10 @@ section.coffee-con {
                     transform: translate(-50%,-50%) scale(0.7);
                 }
             }
-            div.intro-desc {
-                background-color: dimgray;
-                width: 360px;
-                height: 200px;
-
-                position: absolute;
-                top: 300px;
-            }
         }
     }
     .specialmenu-container {
-        background-color: rgb(121, 238, 199);
+        // background-color: rgb(121, 238, 199);
         height: 600px;
         padding: 80px 0;
         .inner-con {
@@ -170,7 +161,7 @@ section.coffee-con {
                         height: 100%;
 
                         position: relative;
-                        img {
+                        .img-item {
                             // width: 100%;
                             height: 90%;
                             border-radius: 10px;
@@ -212,15 +203,48 @@ section.coffee-con {
                         transform: translate(-50%,-50%) scale(0.8);
                     }
                 }
-                div.intro-desc {
-                    background-color: dimgray;
-                    width: 360px;
-                    height: 200px;
+            }
+        }
+    }
+}
 
-                    position: absolute;
-                    top: 300px;
+//(공통 사항) basic, special 영양 소개 
+.intro-desc {
+    background-color: rgb(238, 238, 238);
+    border: 1px solid black;
+    width: 340px;
+    height: 160px;
+    padding: 10px;
+    
+    position: absolute;
+    top: 300px;
+
+    table.nutrition {
+        // background-color: yellowgreen;
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        border-collapse: collapse;
+        thead {
+            // background-color: darkkhaki;
+            th {
+                font-size: 16px;
+                padding: 0;
+                span {
+                    font-size: 12px;
                 }
             }
+        }
+        tbody {
+            // background-color: darkolivegreen;
+            height: 40%;
+            td {
+                font-size: 14px;
+                color: gray;
+            }
+        }
+        &:nth-of-type(2) {
+            margin-top: 10px;
         }
     }
 }
