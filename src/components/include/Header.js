@@ -26,8 +26,8 @@ function Header() {
                     <div className={`lnb ${ open ? 'on' : '' } `} onMouseEnter={onLnb} >
                         <div className='lnb-innerDiv'>
                             <ul className={`brand ${ open ? 'on' : '' } `} >
-                                <li>연혁</li>
                                 <li>회사소개</li>
+                                <li>연혁</li>
                             </ul>
                             <ul className={`menu ${ open ? 'on' : '' } `}>
                                 {/* <li>New</li> */}

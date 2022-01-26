@@ -142,7 +142,8 @@ header {
                     ul.brand {
                         // background-color: wheat;
                         display: none;
-                        margin-left: 36px;
+                        margin-left: 20px;
+                        text-align: center;
                         // transition: 0.7s;
                         opacity: 0;
                         &.on {
@@ -156,8 +157,9 @@ header {
                     ul.menu {
                         // background-color: sandybrown;
                         display: none;
-                        margin-left: 65px;
+                        margin-left: 78px;
                         // transition: 0.7s;
+                        text-align: center;
                         opacity: 0;
                         &.on {
                             display: block;
@@ -171,8 +173,9 @@ header {
                     ul.store {
                         // background-color: saddlebrown;
                         display: none;
-                        margin-left: 70px;
+                        margin-left: 77px;
                         // transition: 0.7s;
+                        text-align: center;
                         opacity: 0;
                         &.on {
                             display: block;
@@ -187,6 +190,7 @@ header {
                         display: none;
                         margin-left: 90px;
                         // transition: 0.5s;
+                        text-align: center;
                         &.on {
                             display: block;
                         }
