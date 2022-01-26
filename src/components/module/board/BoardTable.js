@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TableBoard({list}) {
+function BoardTable({list}) {
  
     console.log(list);
     // const list = list.notice;
@@ -30,4 +30,4 @@ function TableBoard({list}) {
     );
 }
 
-export default TableBoard;
+export default BoardTable;

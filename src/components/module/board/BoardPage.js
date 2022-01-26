@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function BoardPage({all_page, page}) {
+function BoardPage( {all_page, page} ) {
 
     // console.log(all_page, page);
     const [pageNow,setPageNow] = useState(page);
