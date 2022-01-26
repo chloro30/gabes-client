@@ -1,7 +1,9 @@
 import React from 'react';
 
-function BoardTable( {list} ) {
-
+function TableBoard({list}) {
+ 
+    console.log(list);
+    // const list = list.notice;
     // console.log(list[0].date);
 
     return (
@@ -28,4 +30,4 @@ function BoardTable( {list} ) {
     );
 }
 
-export default BoardTable;
+export default TableBoard;

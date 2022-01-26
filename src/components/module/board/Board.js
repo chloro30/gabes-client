@@ -1,9 +1,8 @@
 import '../../scss/Board.scss';
 import React from 'react';
 
-import BoardTable from './BoardTable';
 import BoardPage from './BoardPage';
-// import BoardList from './BoardList';
+import TableBoard from './TableBoard';
 
 function Board({list}) {
     /*
@@ -31,9 +30,8 @@ function Board({list}) {
 
     return (
         <div className='board'>
-            <BoardTable list={list} />
+            <TableBoard list={list} />
             <BoardPage all_page={page_arr} page={page} />
-            {/* <BoardPage pageLimit="5" maxPage="31" /> */}
         </div>
     );
 }
