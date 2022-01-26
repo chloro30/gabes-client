@@ -1,11 +1,19 @@
 import React from 'react';
-import Board from './Board';
+import boardData from '../../data/boardDatas.json';
+import Board from '../module/board/Board';
 import '../scss/Notice.scss';
 
 function Notice() {
+
+    const list = boardData.notice;  //공지사항 게시글 데이터
+
     return (
         <section className='notice-con'>
-            <Board />
+            <div className='notice-container'>
+                <div className='inner-con'>
+                    <Board list={list} />
+                </div>
+            </div>
         </section>
     );
 }

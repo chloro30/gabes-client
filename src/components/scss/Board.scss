@@ -1,0 +1,70 @@
+div.board {
+    background-color: blanchedalmond;
+    width: 70%;
+    min-height: 320px;
+    padding: 16px 24px;
+    margin: 0 auto;
+    text-align: center;
+    div.board-contents {
+        div.board-header {
+            // background-color: cadetblue;
+            display: flex;
+            line-height: 30px;
+            border-bottom: 2px solid black;
+            .no {
+                width: 10%;
+            }
+            .title {
+                flex: 1;
+            }
+            .writer, .date {
+                width: 15%;
+            }
+        }
+        div.board-list {
+            // background-color: cornflowerblue;
+            display: flex;
+            line-height: 40px;
+            .no {
+                width: 10%;
+            }
+            .title {
+                flex: 1;
+                text-align: left;
+                padding-left: 40px;
+            }
+            .writer, .date {
+                width: 15%;
+            }
+            &:not(:last-child) {
+                border-bottom: 1px solid rgb(145, 139, 139);
+            }
+            &:last-child {
+                border-bottom: 2px solid black;
+            }
+        }
+    }
+    div.paging {
+        // background-color: cadetblue;
+        width: 45%;
+        margin: 0 auto;
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+        div.paging-first {
+            margin-right: 10px;
+        }
+        ul.paging-middle {
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+            li.paging-num {
+                // background-color: chartreuse;
+                width: 18%;
+            }
+        }
+        div.paging-last {
+            margin-left: 10px;
+        }
+    }
+}
