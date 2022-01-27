@@ -1,4 +1,4 @@
-import '../../scss/Board.scss';
+import './Board.scss';
 import React, { useState } from 'react';
 import BoardTable from './BoardTable';
 import BoardPage from './BoardPage';
