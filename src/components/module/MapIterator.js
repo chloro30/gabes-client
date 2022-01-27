@@ -9,7 +9,7 @@ function MapIterator( {allProducts} ) {
     return (
         <ul>
             { allProducts_arr.map( (product) =>
-                <li key={product.id}>
+                <li key={product.code}>
                     <div className='all-img-div'>
                         <img className='all-img' src={`${product.src}`} alt={`${product.name}`} />
                     </div>

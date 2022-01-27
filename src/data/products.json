@@ -1,20 +1,20 @@
 {
     "coffee": {
         "basic" : [
-            {"id":"b1", "name":"아메리카노", "src":"../img/menu/products/basic/americano.png","capacity":360,"calorie":10,"sugar":0,"natrium":0,"protein":1,"fatty":0,"caffeine":160 },
-            {"id":"b2", "name":"카페라떼", "src":"../img/menu/products/basic/cafelatte.jpg","capacity":360,"calorie":210,"sugar":15,"natrium":150,"protein":10,"fatty":7,"caffeine":225 },
-            {"id":"b3", "name":"카푸치노", "src":"../img/menu/products/basic/cappuccino.jpg","capacity":360,"calorie":151,"sugar":12,"natrium":91,"protein":6,"fatty":4.4,"caffeine":190 },
-            {"id":"b4", "name":"에스프레소", "src":"../img/menu/products/basic/espresso.jpg","capacity":60,"calorie":15,"sugar":0,"natrium":0,"protein":1,"fatty":0,"caffeine":225 }
+            {"code":"b1", "name":"아메리카노", "src":"../img/menu/products/basic/americano.png","capacity":360,"calorie":10,"sugar":0,"natrium":0,"protein":1,"fatty":0,"caffeine":160 },
+            {"code":"b2", "name":"카페라떼", "src":"../img/menu/products/basic/cafelatte.jpg","capacity":360,"calorie":210,"sugar":15,"natrium":150,"protein":10,"fatty":7,"caffeine":225 },
+            {"code":"b3", "name":"카푸치노", "src":"../img/menu/products/basic/cappuccino.jpg","capacity":360,"calorie":151,"sugar":12,"natrium":91,"protein":6,"fatty":4.4,"caffeine":190 },
+            {"code":"b4", "name":"에스프레소", "src":"../img/menu/products/basic/espresso.jpg","capacity":60,"calorie":15,"sugar":0,"natrium":0,"protein":1,"fatty":0,"caffeine":225 }
         ],
         "special" : [
-            {"id":"s1", "name":"흑당 펄 라떼", "src":"../img/menu/products/special/brown_sugar_latte.jpg","capacity":325,"calorie":270,"sugar":26,"natrium":26,"protein":7,"fatty":6,"caffeine":0},
-            {"id":"s2", "name":"시그니처 크림 커피", "src":"../img/menu/products/special/signature.jpg","capacity":370,"calorie":120,"sugar":15,"natrium":45,"protein":3,"fatty":3,"caffeine":239},
-            {"id":"s3", "name":"콜드브루 라떼", "src":"../img/menu/products/special/cold_brew_latte.jpg","capacity":350,"calorie":80,"sugar":5,"natrium":55,"protein":4,"fatty":2.5,"caffeine":190},
-            {"id":"s4", "name":"모카 브라우니 그라니따 ", "src":"../img/menu/products/special/mocha_brawnie.jpg","capacity":432,"calorie":460,"sugar":68,"natrium":230,"protein":5,"fatty":7,"caffeine":251},
-            {"id":"s5", "name":"딸기 그라니타", "src":"../img/menu/products/special/strawberry_granita.jpg","capacity":451,"calorie":300,"sugar":56,"natrium":15,"protein":2,"fatty":0,"caffeine":0 },
-            {"id":"s6", "name":"딸기 라떼", "src":"../img/menu/products/special/strawberry_latte.jpg","capacity":38,"calorie":240,"sugar":45,"natrium":65,"protein":3,"fatty":2.5,"caffeine":0 },
-            {"id":"s7", "name":"자몽 스파클링", "src":"../img/menu/products/special/sparkling.jpg","capacity":480,"calorie":200,"sugar":50,"natrium":10,"protein":0,"fatty":0,"caffeine":0},
-            {"id":"s8", "name":"키위 주스", "src":"../img/menu/products/special/kiwi_juice.jpg","capacity":435,"calorie":259,"sugar":39,"natrium":20,"protein":2,"fatty":0,"caffeine":0}
+            {"code":"s1", "name":"흑당 펄 라떼", "src":"../img/menu/products/special/brown_sugar_latte.jpg","capacity":325,"calorie":270,"sugar":26,"natrium":26,"protein":7,"fatty":6,"caffeine":0},
+            {"code":"s2", "name":"시그니처 크림 커피", "src":"../img/menu/products/special/signature.jpg","capacity":370,"calorie":120,"sugar":15,"natrium":45,"protein":3,"fatty":3,"caffeine":239},
+            {"code":"s3", "name":"콜드브루 라떼", "src":"../img/menu/products/special/cold_brew_latte.jpg","capacity":350,"calorie":80,"sugar":5,"natrium":55,"protein":4,"fatty":2.5,"caffeine":190},
+            {"code":"s4", "name":"모카 브라우니 그라니따 ", "src":"../img/menu/products/special/mocha_brawnie.jpg","capacity":432,"calorie":460,"sugar":68,"natrium":230,"protein":5,"fatty":7,"caffeine":251},
+            {"code":"s5", "name":"딸기 그라니타", "src":"../img/menu/products/special/strawberry_granita.jpg","capacity":451,"calorie":300,"sugar":56,"natrium":15,"protein":2,"fatty":0,"caffeine":0 },
+            {"code":"s6", "name":"딸기 라떼", "src":"../img/menu/products/special/strawberry_latte.jpg","capacity":38,"calorie":240,"sugar":45,"natrium":65,"protein":3,"fatty":2.5,"caffeine":0 },
+            {"code":"s7", "name":"자몽 스파클링", "src":"../img/menu/products/special/sparkling.jpg","capacity":480,"calorie":200,"sugar":50,"natrium":10,"protein":0,"fatty":0,"caffeine":0},
+            {"code":"s8", "name":"키위 주스", "src":"../img/menu/products/special/kiwi_juice.jpg","capacity":435,"calorie":259,"sugar":39,"natrium":20,"protein":2,"fatty":0,"caffeine":0}
         ]
     },
     "desert": {

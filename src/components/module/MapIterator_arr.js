@@ -5,7 +5,7 @@ function MapIterator_arr( {products, changeItem} ) {
         <ul className='list-ul'>
             {
                 products.map( (product) =>
-                    <li key={product.id}>
+                    <li key={product.code}>
                         <div className='img-div'>
                             <img className='img-item' src={`${product.src}`} alt={`${product.name}`} onClick={()=>changeItem(product)}/>
                         </div>
