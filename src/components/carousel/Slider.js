@@ -3,7 +3,8 @@ import SliderContent from './SliderContent';
 import dataSlider from './dataSlider';
 import Arrows from './Arrows';
 import Dots from './Dots';
-import './slider.css';
+// import './slider.css';
+import './slider.scss';
 
 const len = dataSlider.length - 1;
 
