@@ -80,7 +80,6 @@ header {
                 top: -60px;
                 left: 50%;
                 transform: translateX(-50%);
-                cursor: pointer;
                 @include flexBox;
                 > li {
                     // background-color: rgba(77, 105, 41, 0.5);
