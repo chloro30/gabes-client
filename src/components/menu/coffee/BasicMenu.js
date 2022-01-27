@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import React, { useState } from 'react';
-import MapIterator_arr from '../../module/MapIterator_arr';
+import MapIteratorEvent from '../../module/MapIteratorEvent';
 import ProductIntro from '../../module/ProductIntro';
 
 function BasicMenu( {basicProducts} ) {
@@ -19,7 +19,7 @@ function BasicMenu( {basicProducts} ) {
         <div className='basicmenu-container'>
             <div className='inner-con'>
                 <p>기본 메뉴</p>
-                <MapIterator_arr products={basicProducts} changeItem={changeItem} />
+                <MapIteratorEvent products={basicProducts} changeItem={changeItem} />
                 <ProductIntro item={item} />
             </div>
         </div>

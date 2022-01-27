@@ -14,6 +14,7 @@ function App() {
       <Header />
         <Routes>
           <Route path="/" element={<Main />} />
+          {/* login */}
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/login" element={<LoginForm />} />
           {/* gnb */}

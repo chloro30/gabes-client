@@ -8,12 +8,19 @@
 
 
 #### 설치
-scss
-router
-react-icons
+npm install react-router-dom  (라우터)
+
+npm install --save-dev sass sass-loader mini-css-extract-plugin  (SCSS)
+
+npm install react-icons --save  (아이콘)
+
 npm install @material-ui/core   (회원가입)
+
 npm install react-daum-postcode (회원가입)
-npm install styled-components
+
+<!-- npm install styled-components   (우편번호 검색) -->
+
+npm install axios  (AJAX)
 
 ### 이미지 자료 출처
 HOLLYS, 스타벅스, 투썸플레이스, 폴 바셋, 파스쿠찌

@@ -5,7 +5,7 @@ import BoardPage from './BoardPage';
 
 function Board( {list} ) {
 
-    /* Boardpage 시작 */
+    /* BoardPage 시작 */
     /*
         page: 현재 데이터를 표시하는 페이지를 나타낼 값 
         limit: 한 페이지에서 가져올 데이터의 한계치를 나타내는 값

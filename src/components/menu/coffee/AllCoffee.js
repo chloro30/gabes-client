@@ -1,14 +1,14 @@
 import React from 'react';
 import MapIterator from '../../module/MapIterator';
 
-function AllCoffee( {allProducts} ) {
+function AllCoffee( {products} ) {
 
     return (
         <div className='allcoffee-container'>
             <div className='inner-con'>
                 <p>모든메뉴</p>
                 <div className='allcoffee-list'>
-                    <MapIterator allProducts={allProducts} />
+                    <MapIterator products={products} />
                 </div>
             </div>
         </div>
