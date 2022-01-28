@@ -61,6 +61,22 @@ function Section3() {
                         </dd>
                     </dl>
                 </div>
+                <div className="fran-item">
+                    <dl>
+                        <dt>울산대공원점</dt>
+                        <dd>
+                            <img src="img/main/section3/store_01.png" alt="부산송정힐스점" />
+                        </dd>
+                    </dl>
+                </div>
+                <div className="fran-item">
+                    <dl>
+                        <dt>강릉경포호수점</dt>
+                        <dd>
+                            <img src="img/main/section3/store_02.png" alt="왕산해수욕장점" />
+                        </dd>
+                    </dl>
+                </div>
             </div>
         </div>
     );

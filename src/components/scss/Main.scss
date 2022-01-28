@@ -212,22 +212,32 @@ section.main-con {
                 &:nth-child(2){
                     position: absolute;
                     top: 190px;
-                    animation: moveFranchise 23s linear 4s infinite;
+                    animation: moveFranchise 23s linear 14s infinite;
                 }
                 &:nth-child(3){
                     position: absolute;
                     top: 250px;
-                    animation: moveFranchise 16s linear 2s infinite;
+                    animation: moveFranchise 28s linear 10s infinite;
                 }
                 &:nth-child(4){
                     position: absolute;
-                    top: 340px;
+                    top: 380px;
                     animation: moveFranchise 26s linear 7s infinite;
                 }
                 &:nth-child(5){
                     position: absolute;
                     top: 480px;
-                    animation: moveFranchise 18s linear 9s infinite;
+                    animation: moveFranchise 24s linear 19s infinite;
+                }
+                &:nth-child(6){
+                    position: absolute;
+                    top: 310px;
+                    animation: moveFranchise 29s linear 24s infinite;
+                }
+                &:nth-child(7){
+                    position: absolute;
+                    top: 480px;
+                    animation: moveFranchise 24s linear 3s infinite;
                 }
             }
         }
