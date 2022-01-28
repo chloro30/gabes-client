@@ -1,5 +1,5 @@
 import React from 'react';
-import Details from '../module/Details/Details';
+import Details from '../module/details/Details';
 import '../scss/FaqPage.scss';
 
 function FaqPage() {

@@ -21,62 +21,7 @@ section.faq-con {
             padding-bottom: 30px;
             display: flex;
             justify-content: center;
-            .details-div {
-                position: relative;
-                background-color: darkcyan;
-                width: 80%;
-                height: 800px;
-
-                padding: 6em;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                h2 {
-                    align-self: flex-start;
-                    margin-left: 20%;
-                }
-                details {
-                    // background-color: darkmagenta;
-                    margin-top: 1em;
-                    width: 60%;
-
-                    summary {
-                        background-color: darkkhaki;
-                        width: 100%;
-                        height: 50px;
-                        padding: 1em;
-                        
-                        // margin-bottom: 1em;
-                        cursor: pointer;
-                        outline: none;
-                        border-radius: .3em;
-                        font-weight: bold;
-                        transition: background-color 0.3s;
-
-                        &:hover {
-                            background-color: rgb(253, 229, 90)
-                        }
-
-                        &::-webkit-details-marker {
-                            background: url('../../img/faq/arrows-up.png') center no-repeat;
-                            // color: transparent;
-                            // width: 17px;
-                            // height: 17px;
-                        }
-                    }
-
-                    img {
-                        width: 50%;
-                    }
-
-                }
-                details[open] {
-                    summary ~ * {
-                        animation: sweep 0.5s ease-in-out;
-                    }
-                }
-                
-            }
+            
         }
     }
 }
