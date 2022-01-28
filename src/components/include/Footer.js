@@ -4,6 +4,7 @@ import React from 'react';
 import '../scss/Footer.scss';
 import { GrFacebook, GrInstagram } from 'react-icons/gr';
 import { SiKakaotalk } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -12,13 +13,13 @@ function Footer() {
                 <p>
                     대표자 : 이진우 | 사업자등록번호 234-56-78901<br/>
                     주소 : 서울 종로구 세종대로 172 , 30층<br/>
-                    ⓒ 2022 Gabes Coffee. All Rights Reserved.
+                    Copyright ⓒ 2022 Gabes Coffee. All Rights Reserved.
                 </p>
                 <ul className='footer-menu'>
-                    <li>개인정보 처리방침</li>
-                    <li>영상정보처리기기 운영관리 방침</li>
-                    <li>사이트 이용약관</li>
-                    <li>윤리신고센터</li>
+                    <li><Link to="#">개인정보 처리방침</Link></li>
+                    <li><Link to="#">영상정보처리기기 운영관리 방침</Link></li>
+                    <li><Link to="#">사이트 이용약관</Link></li>
+                    <li><Link to="#">윤리신고센터</Link></li>
                 </ul>
                 <ul className='footer-links'>
                     {/* <li>CCM</li> */}
