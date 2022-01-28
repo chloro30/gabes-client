@@ -7,6 +7,7 @@ import LoginForm from './components/member/LoginForm';
 import RegisterForm from './components/member/RegisterForm';
 import Coffee from './components/menu/coffee/Coffee';
 import StoreArea from './components/store/StoreArea';
+import FaqPage from './components/whatsnew/FaqPage';
 import Notice from './components/whatsnew/Notice';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           {/* <Route path="/about" element={<About />} /> */}
           <Route path="/menu/coffee" element={<Coffee />} />
           <Route path="/board/notice" element={<Notice />} />
+          <Route path="/board/faq" element={<FaqPage />} />
           {/* <Route path="/board/event" element={<Event />} /> */}
           <Route path="/store" element={<StoreArea />} />
         </Routes>

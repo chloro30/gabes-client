@@ -39,6 +39,7 @@ function Header() {
                             </ul>
                             <ul className={`board  ${ open ? 'on' : '' } `}>
                                 <li><Link to="/board/notice">공지사항</Link></li>
+                                <li><Link to="/board/faq">FAQ</Link></li>
                                 <li><Link to="/board/event">이벤트</Link></li>
                             </ul>
                         </div>
