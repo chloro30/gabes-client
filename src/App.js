@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import CompanyIntro from './components/about/intro/CompanyIntro';
 import Footer from './components/include/Footer';
 import Header from './components/include/Header';
 import Main from './components/main/Main';
@@ -20,7 +21,7 @@ function App() {
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/login" element={<LoginForm />} />
           {/* gnb */}
-          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/about/intro" element={<CompanyIntro />} />
           <Route path="/menu/coffee" element={<Coffee />} />
           <Route path="/board/notice" element={<Notice />} />
           <Route path="/board/faq" element={<FaqPage />} />

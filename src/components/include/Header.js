@@ -18,7 +18,7 @@ function Header() {
                 <Link to="/"><h1>Gabes Coffee <SiCoffeescript /></h1></Link>
                 <div className={`gnb ${ open ? 'on' : '' } `} onMouseEnter={onLnb,toggleGnb} onMouseLeave={toggleGnb}>
                     <ul onMouseEnter={onLnb}>
-                        <li>Gabes</li>
+                        <li><Link to="/about/intro">Gabes</Link></li>
                         <li><Link to="/menu/coffee">Menu</Link></li>
                         <li><Link to="/store">Store</Link></li>
                         <li><Link to="/board/notice">What's New</Link></li>
@@ -26,8 +26,8 @@ function Header() {
                     <div className={`lnb ${ open ? 'on' : '' } `} onMouseEnter={onLnb} >
                         <div className='lnb-innerDiv'>
                             <ul className={`brand ${ open ? 'on' : '' } `} >
-                                <li>회사소개</li>
-                                <li>연혁</li>
+                                <li><Link to="/about/intro">회사소개</Link></li>
+                                <li><Link to="/about/history">연혁</Link></li>
                             </ul>
                             <ul className={`menu ${ open ? 'on' : '' } `}>
                                 {/* <li>New</li> */}
