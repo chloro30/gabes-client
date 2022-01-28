@@ -23,4 +23,4 @@ npm install react-daum-postcode (회원가입)
 npm install axios  (AJAX)
 
 ### 이미지 자료 출처
-HOLLYS, 스타벅스, 투썸플레이스, 폴 바셋, 파스쿠찌
+HOLLYS, TOM N TOMS, 스타벅스, 투썸플레이스, 폴 바셋, 파스쿠찌
