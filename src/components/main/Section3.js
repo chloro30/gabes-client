@@ -23,41 +23,41 @@ function Section3() {
             <div className='fran-item-wrap inner-con'>
                 <div className="fran-item">
                     <dl>
-                        <dt>부산송정힐스점</dt>
+                        <dt>서울세종대로점</dt>
                         <dd>
-                            <img src="img/main/section3/store_01.png" alt="부산송정힐스점" />
+                            <img src="img/main/section3/store_01.png" alt="서울세종대로점" />
                         </dd>
                     </dl>
                 </div>
                 <div className="fran-item">
                     <dl>
-                        <dt>왕산해수욕장점</dt>
+                        <dt>대전카이스트점</dt>
                         <dd>
-                            <img src="img/main/section3/store_02.png" alt="왕산해수욕장점" />
+                            <img src="img/main/section3/store_02.png" alt="대전카이스트점" />
                         </dd>
                     </dl>
                 </div>
                 <div className="fran-item">
                     <dl>
-                        <dt>앞산스카이타운점</dt>
+                        <dt>대구동성로점</dt>
                         <dd>
-                            <img src="img/main/section3/store_03.png" alt="앞산스카이타운점" />
+                            <img src="img/main/section3/store_03.png" alt="대구동성로점" />
                         </dd>
                     </dl>
                 </div>
                 <div className="fran-item">
                     <dl>
-                        <dt>춘천구봉산점</dt>
+                        <dt>부산서면점</dt>
                         <dd>
-                            <img src="img/main/section3/store_04.png" alt="춘천구봉산점" />
+                            <img src="img/main/section3/store_04.png" alt="부산서면점" />
                         </dd>
                     </dl>
                 </div>
                 <div className="fran-item">
                     <dl>
-                        <dt>제주애월하귀점</dt>
+                        <dt>광주무등산점</dt>
                         <dd>
-                            <img src="img/main/section3/store_05.png" alt="제주애월하귀점" />
+                            <img src="img/main/section3/store_05.png" alt="광주무등산점" />
                         </dd>
                     </dl>
                 </div>
@@ -65,7 +65,7 @@ function Section3() {
                     <dl>
                         <dt>울산대공원점</dt>
                         <dd>
-                            <img src="img/main/section3/store_01.png" alt="부산송정힐스점" />
+                            <img src="img/main/section3/store_01.png" alt="울산대공원점" />
                         </dd>
                     </dl>
                 </div>
@@ -73,7 +73,7 @@ function Section3() {
                     <dl>
                         <dt>강릉경포호수점</dt>
                         <dd>
-                            <img src="img/main/section3/store_02.png" alt="왕산해수욕장점" />
+                            <img src="img/main/section3/store_02.png" alt="강릉경포호수점" />
                         </dd>
                     </dl>
                 </div>
