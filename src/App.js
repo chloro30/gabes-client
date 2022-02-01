@@ -9,7 +9,9 @@ import RegisterForm from './components/member/RegisterForm';
 import Coffee from './components/menu/coffee/Coffee';
 import StoreArea from './components/store/StoreArea';
 import FaqPage from './components/whatsnew/FaqPage';
-import Notice from './components/whatsnew/Notice';
+import Notice from './components/whatsnew/notice/Notice';
+import NoticeDetail from './components/whatsnew/notice/NoticeDetail';
+import NoticeUpForm from './components/whatsnew/notice/NoticeUpForm';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="/about/intro" element={<CompanyIntro />} />
           <Route path="/menu/coffee" element={<Coffee />} />
           <Route path="/board/notice" element={<Notice />} />
+          <Route path="/board/notice/upload" element={<NoticeUpForm />} />
+          <Route path="/board/notice/:no" element={<NoticeDetail />} />
           <Route path="/board/faq" element={<FaqPage />} />
           {/* <Route path="/board/event" element={<Event />} /> */}
           <Route path="/store" element={<StoreArea />} />

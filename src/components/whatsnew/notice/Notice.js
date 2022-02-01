@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import Board from '../module/board/Board';
-import '../scss/Notice.scss';
+import { Link } from 'react-router-dom';
+import Board from '../../module/board/Board';
+import '../../scss/Notice.scss';
 
 function Notice() {
 
@@ -13,7 +14,7 @@ function Notice() {
     //비동기 전송으로 get요청을 해주는 함수
     
     useEffect(() => {
-        const url = `http://localhost:8080/notice`;
+        const url = `http://localhost:8080/board/notice`;
         axios.get(url)
         .then((response) => {
             // console.log(response.data);
@@ -28,6 +29,7 @@ function Notice() {
             <div className='notice-container'>
                 <div className='inner-con'>
                     <Board list={noticeList} />
+                    <Link to="/board/notice/upload"><button className='btn upload-btn'>등록하기</button></Link>
                 </div>
             </div>
         </section>

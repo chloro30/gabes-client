@@ -1,0 +1,13 @@
+section.detail-con {
+    // background-color: darkkhaki;
+    padding-top: 20px;
+    .detail-container {
+        background-color: #eee;
+        margin-top: 100px;
+        .inner-con {
+            background-color: lightgray;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+}
