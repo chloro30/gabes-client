@@ -11,7 +11,7 @@ import axios from 'axios';
 
  //응답받은 데이터를 리턴해줌
  async function getCoffeeList(){
-    const url = `http://localhost:8080/coffee`;
+    const url = `http://localhost:8080/menu/coffee`;
     
     const response = await axios.get(url);
     // console.log(response.data);
