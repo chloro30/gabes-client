@@ -31,9 +31,9 @@ function Section3() {
                 </div>
                 <div className="fran-item">
                     <dl>
-                        <dt>대전카이스트점</dt>
+                        <dt>대전엑스포점</dt>
                         <dd>
-                            <img src="img/main/section3/store_02.png" alt="대전카이스트점" />
+                            <img src="img/main/section3/store_02.png" alt="대전엑스포점" />
                         </dd>
                     </dl>
                 </div>
@@ -57,7 +57,7 @@ function Section3() {
                     <dl>
                         <dt>광주무등산점</dt>
                         <dd>
-                            <img src="img/main/section3/store_05.png" alt="광주무등산점" />
+                            <img src="img/main/section3/store_05.png" alt="광주송정역점" />
                         </dd>
                     </dl>
                 </div>
