@@ -53,7 +53,8 @@ function PopupZipcode({onClose, returnData}) {
         transform:'translate(-50%,-50%)',
         width: "600px",
         height: "600px",
-        border: "2px solid #666"
+        border: "2px solid #666",
+        zIndex: "1"
     };
 
     const closeBtnStyle = {
