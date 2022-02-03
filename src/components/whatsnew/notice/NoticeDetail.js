@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import useAsync from '../../hook/useAsync';
 import '../../scss/NoticeDetail.scss';
 
@@ -10,6 +10,8 @@ function NoticeDetail() {
     //라우터 파라미터 받기
     const { no } = useParams();
     // console.log(no);
+
+    const navigate = useNavigate();
 
 
     // 해당 id의 고객 정보 받아오기
@@ -29,6 +31,19 @@ function NoticeDetail() {
     /* 비동기 종료 */
 
     // console.log(notice[0]);
+
+    const deleteNotice = () => {
+        //서버에 삭제 전송
+        const url = `http://localhost:8080/board/notice/delete/${no}`;
+        axios.delete(url)
+        .then( (res) => {
+            // console.log(res)
+            alert('삭제완료')
+            navigate("/board/notice");
+        })
+        .catch( (err) => console.error(err));
+        
+    }
 
     return (
         <section className='detail-con'>
@@ -54,6 +69,8 @@ function NoticeDetail() {
                             </tr>
                         </tbody>
                     </table>
+                    <Link to="/board/notice"><button type='button'>목록</button></Link>
+                    <button type='button' onClick={deleteNotice}>삭제</button>
                 </div>
             </div>
         </section>

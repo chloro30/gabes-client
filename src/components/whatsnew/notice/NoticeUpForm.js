@@ -1,11 +1,14 @@
 import axios from 'axios';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../../scss/NoticeUpForm.scss';
+import {useNavigate} from 'react-router-dom';
 
 function NoticeUpForm() {
 
     const titleInput = useRef();
     const descInput = useRef();
+
+    const navigate = useNavigate();
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -24,15 +27,19 @@ function NoticeUpForm() {
             date: dateFormat(uploadTime)
         }
 
-        console.log(uploadData);
+        // console.log(uploadData);
 
 
         //서버에 등록 전송
         const url = `http://localhost:8080/board/notice/upload`;
         axios.post(url, uploadData)
-        .then( (res) => console.log(res))
+        .then( (res) => {
+            // console.log(res)
+            alert('등록완료')
+            navigate("/board/notice");
+        })
         .catch( (err) => console.error(err));
-
+        
     }
 
     //날짜 포맷팅

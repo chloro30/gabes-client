@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function BoardTable({list}) {
  
@@ -14,8 +15,8 @@ function BoardTable({list}) {
                 list.map( (data) => {
                     return(
                         <div className='board-list' key={data.no}>
-                            <div className='no'>{data.no}</div>
-                            <div className='title'>{data.title}</div>
+                            <div className='no'><Link to={`/board/notice/${data.no}`}>{data.no}</Link></div>
+                            <div className='title'><Link to={`/board/notice/${data.no}`}>{data.title}</Link></div>
                             <div className='writer'>{data.writer}</div>
                             <div className='date'>{data.date.slice(0, 10)}</div>
                         </div>
