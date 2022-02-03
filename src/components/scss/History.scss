@@ -1,0 +1,173 @@
+section.history-con {
+    // background-color: darkkhaki;
+    padding-top: 20px;
+    .history-container {
+        // background-color: #eee;
+        margin-top: 100px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        > h2 {
+            // margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+        .history-01-bg{
+            background-color: white;
+            .history-01 {
+                background: url('../../img/gabes/history/bg_history_01.jpg') top no-repeat;
+                // background-color: beige;
+                background-size: cover;
+                width: 100%;
+                height: 650px;
+
+                display: flex;
+                flex-direction: column;
+                p {
+                    // background-color: darkolivegreen;
+                    margin-top: 20px;
+                    font-size: 22px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+                dl {
+                    // background-color: skyblue;
+                    flex: 1;
+                    width: 37%;
+                    align-self: flex-end;
+                    margin-right: 80px;
+
+                    // padding: 100px 0;
+                    dt {
+                        // background-color: darksalmon;
+                        // margin-top: 100px;
+                        font-size: 18px;
+                        font-weight: bold;
+                        &:nth-of-type(1) {
+                            margin-top: 130px;
+                        }
+                        &:nth-of-type(2) {
+                            margin-top: 50px;
+                        }
+                    }
+                    dd {
+                        // background-color: darkturquoise;
+                        color: #8f8f8f;
+                        margin-top: 10px;
+                        line-height: 1.6;
+                    }
+                }
+            }
+        }
+        .history-02-bg{
+            background-color: #f5f5f5;
+            .history-02 {
+                background: url('../../img/gabes/history/bg_history_02.jpg') top no-repeat;
+                // background-color: red;
+                background-size: cover;
+                width: 100%;
+                height: 780px;
+
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    // background-color: darkolivegreen;
+                    margin-top: 20px;
+                    font-size: 22px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+                dl {
+                    // background-color: skyblue;
+                    flex: 1;
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+                    
+
+                    dt {
+                        // background-color: darksalmon;
+                        width: 37%;
+                        // margin-top: 100px;
+                        font-size: 18px;
+                        font-weight: bold;
+                        margin-right: 80px;
+
+
+                        &:nth-of-type(1) {
+                            margin-top: 130px;
+                            margin-left: 80px;
+                        }
+                        &:nth-of-type(2) {
+                            margin-top: 160px;
+                            align-self: flex-end;
+                            
+                        }
+                        &:nth-of-type(3) {
+                            margin-top: 30px;
+                            align-self: flex-end;
+                        }
+                    }
+                    dd {
+                        // background-color: darkturquoise;
+                        width: 37%;
+                        color: #8f8f8f;
+                        margin-top: 10px;
+                        line-height: 1.6;
+                        margin-right: 80px;
+                        &:nth-of-type(1) {
+                            margin-left: 80px;
+                        }
+                        &:nth-of-type(2) {
+                            align-self: flex-end;
+                        }
+                        &:nth-of-type(3) {
+                            align-self: flex-end;
+                        }
+                    }
+                }
+            }
+        }
+        .history-03-bg{
+            background-color: #fff;
+            .history-03 {
+                background: url('../../img/gabes/history/bg_history_03.jpg') top no-repeat;
+                // background-color: darkmagenta;
+                background-size: cover;
+                width: 100%;
+                height: 590px;
+                > p {
+                    // background-color: wheat;
+                    margin-top: 20px;
+                    font-size: 22px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+                > div {
+                    // background-color: yellowgreen;
+                    width: 45%;
+                    margin-top: 130px;
+                    margin-left: 80px;
+                    color: #8f8f8f;
+
+                    p:nth-of-type(1) {
+                        // background-color: seagreen;
+                    }
+                    p:nth-of-type(2) {
+                        // background-color: saddlebrown;
+                        margin: 40px 0;
+                    }
+                    p:nth-of-type(3) {
+                        // background-color: rosybrown;
+                        span {
+                            font-weight: bold;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

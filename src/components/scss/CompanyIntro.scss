@@ -16,8 +16,10 @@ section.intro-con {
             padding-top: 10px;
             padding-bottom: 30px;
             h2 {
-                transform: translateX(0);
+                // transform: translateX(0);
                 margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #ccc;
             }
             .info-1st {
                 background: url('../../img/gabes/company_intro/company_intro_bg_01.jpg') right no-repeat ;
@@ -52,7 +54,7 @@ section.intro-con {
                 justify-content: space-between;
                 .img-area {
                     background: url('../../img/gabes/company_intro/company_intro_bg_02.jpg') center no-repeat ;
-                    background-color: slategrey;
+                    // background-color: slategrey;
                     // background-size: cover;
                     background-size: contain;
                     width: 50%;
@@ -164,6 +166,91 @@ section.intro-con {
                     }
                 }
             }
+        }
+    }
+}
+
+
+
+
+// 하단 박스  (회사소개, 연혁 페이지 동시 적용)
+.boxes {
+    // background-color: skyblue;
+    display: flex;
+    > div {
+        width: 33.3334%;
+        height: 460px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .span-div {
+            // background-color: steelblue;
+            width: 53%;
+            text-align: center;
+            position: relative;
+            > span {
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 60px;
+                    height: 22px;
+                    background: url('../../img/gabes/history/bg_leaf_left.png') no-repeat 0 0;
+                    position: absolute;
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 60px;
+                    height: 22px;
+                    background: url('../../img/gabes/history/bg_leaf_right.png') no-repeat 0 0;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+        > h2 {
+            font-size: 30px;
+            margin: 24px 0;
+        }
+        > p {
+            text-align: center;
+        }
+        > a {
+            display: inline-block;
+            width: 120px;
+            height: 40px;
+            margin-top: 30px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 0;
+            // border: none;
+            transition: 0.3s;
+            // cursor: pointer;
+            &:hover {
+                background-color: rgb(141, 185, 212);
+                color: black;
+            }
+        }
+    }
+    .box-left {
+        background-color: #ffebec;
+        > a {
+            background-color: #e6224a;
+        }
+    }
+    .box-center {
+        background-color: #fff;
+        > a {
+            background-color: #333333;
+        }
+    }
+    .box-right {
+        background-color: #fff1dc;
+        > a {
+            background-color: #ba770c;
         }
     }
 }

@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import History from './components/gabes/history/History';
 import CompanyIntro from './components/gabes/intro/CompanyIntro';
 import Footer from './components/include/Footer';
 import Header from './components/include/Header';
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" element={<LoginForm />} />
           {/* gnb */}
           <Route path="/about/intro" element={<CompanyIntro />} />
+          <Route path="/about/history" element={<History />} />
           <Route path="/menu/coffee" element={<Coffee />} />
           <Route path="/board/notice" element={<Notice />} />
           <Route path="/board/notice/upload" element={<NoticeUpForm />} />

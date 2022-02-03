@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../scss/CompanyIntro.scss';
+import BottomBoxes from '../BottomBoxes';
 
 function CompanyIntro() {
     return (
@@ -36,11 +37,11 @@ function CompanyIntro() {
                                     </tr>
                                     <tr>
                                         <th>국내 매장수</th>
-                                        <td>422개점 (직영 47개점, 가맹 375개점)</td>
+                                        <td>8개점 (직영 1개점, 가맹 7개점)</td>
                                     </tr>
                                     <tr>
                                         <th>해외 매장수</th>
-                                        <td>9개국 91개점</td>
+                                        <td>3개국 12개점</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -81,6 +82,7 @@ function CompanyIntro() {
                             <div className='img-round'></div>
                         </div>
                     </div>
+                    <BottomBoxes />
                 </div>
             </div>
         </section>
