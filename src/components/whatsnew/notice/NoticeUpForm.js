@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../../scss/NoticeUpForm.scss';
 import {useNavigate} from 'react-router-dom';
 
@@ -9,15 +9,27 @@ function NoticeUpForm() {
     const descInput = useRef();
 
     const navigate = useNavigate();
-
+    
+    const checkForm = () => {
+        if(titleInput.current.value === ""){
+            alert('제목을 입력해 주세요');
+            return false;
+        }else if(descInput.current.value === ""){
+            alert('내용을 입력해 주세요');
+            return false;
+        }else{
+            return true;
+        }
+    }
+    
     const onSubmit = (e) => {
         e.preventDefault();
-
         // console.log(titleInput.current.value, descInput.current.value);
         
+        //등록시간 생성
         const uploadTime = new Date();
         // console.log(dateFormat(uploadTime).slice(0,10));
-
+        
         const uploadData = {
             title: titleInput.current.value,
             desc: descInput.current.value,
@@ -26,20 +38,19 @@ function NoticeUpForm() {
             // date: dateFormat(uploadTime)
             date: dateFormat(uploadTime)
         }
-
         // console.log(uploadData);
-
-
-        //서버에 등록 전송
-        const url = `http://localhost:8080/board/notice/upload`;
-        axios.post(url, uploadData)
-        .then( (res) => {
-            // console.log(res)
-            alert('등록완료')
-            navigate("/board/notice", {replace:true});
-        })
-        .catch( (err) => console.error(err));
         
+        if(checkForm()){
+            //서버에 등록 전송
+            const url = `http://localhost:8080/board/notice/upload`;
+            axios.post(url, uploadData)
+            .then( (res) => {
+                // console.log(res)
+                alert('등록완료')
+                navigate("/board/notice", {replace:true});
+            })
+            .catch( (err) => console.error(err));
+        }
     }
 
     //날짜 포맷팅
@@ -84,7 +95,7 @@ function NoticeUpForm() {
                         </table>
                         <div className='btns'>
                             <button className='btn' type='submit'>등록</button>
-                            <button className='btn' type='reset'>취소</button>
+                            <button className='btn' type='reset' onClick={()=>navigate('/board/notice')}>취소</button>
                         </div>
                     </form>
                 </div>

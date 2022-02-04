@@ -13,6 +13,18 @@ function NoticeUpdate() {
 
     const navigate = useNavigate();
 
+    const checkForm = () => {
+        if(titleInput.current.value === ""){
+            alert('제목을 입력해 주세요');
+            return false;
+        }else if(descInput.current.value === ""){
+            alert('내용을 입력해 주세요');
+            return false;
+        }else{
+            return true;
+        }
+    }
+
     const onSubmit = (e) => {
         e.preventDefault();
 
@@ -32,16 +44,17 @@ function NoticeUpdate() {
 
         // console.log(uploadData);
 
-
-        //서버에 수정 전송
-        const url = `http://localhost:8080/board/notice/update/${no}`;
-        axios.put(url, uploadData)
-        .then( (res) => {
-            // console.log(res)
-            alert('수정완료')
-            navigate("/board/notice", {replace:true});
-        })
-        .catch( (err) => console.error(err));
+        if(checkForm()){
+            //서버에 수정 전송
+            const url = `http://localhost:8080/board/notice/update/${no}`;
+            axios.put(url, uploadData)
+            .then( (res) => {
+                // console.log(res)
+                alert('수정완료')
+                navigate("/board/notice", {replace:true});
+            })
+            .catch( (err) => console.error(err));
+        }
         
     }
 
