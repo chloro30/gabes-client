@@ -8,6 +8,7 @@ import Main from './components/main/Main';
 import LoginForm from './components/member/LoginForm';
 import RegisterForm from './components/member/RegisterForm';
 import Coffee from './components/menu/coffee/Coffee';
+import Desert from './components/menu/desert/Desert';
 import StoreArea from './components/store/StoreArea';
 import Event from './components/whatsnew/event/Event';
 import FaqPage from './components/whatsnew/FaqPage';
@@ -28,6 +29,7 @@ function App() {
           <Route path="/about/intro" element={<CompanyIntro />} />
           <Route path="/about/history" element={<History />} />
           <Route path="/menu/coffee" element={<Coffee />} />
+          <Route path="/menu/desert" element={<Desert />} />
           <Route path="/board/notice" element={<Notice />} />
           <Route path="/board/notice/upload" element={<NoticeUpForm />} />
           <Route path="/board/notice/:no" element={<NoticeDetail />} />

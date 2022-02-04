@@ -16,7 +16,7 @@
         width: 80%;
 
         summary {
-            background-color: darkkhaki;
+            background-color: rgb(113, 190, 196);
             width: 100%;
             height: 50px;
             padding: 1em;
@@ -29,7 +29,7 @@
             transition: background-color 0.3s;
 
             &:hover {
-                background-color: rgb(253, 229, 90)
+                background-color: rgb(137, 228, 235);
             }
 
             &::-webkit-details-marker {
