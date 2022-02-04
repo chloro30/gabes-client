@@ -18,8 +18,8 @@ function InputReigster() {
     const nameInput = useRef();      //이름
     const phoneInput = useRef();     //연락처
     const birthdayInput = useRef();  //생년월일
-    const genderInput1 = useRef();   //성별 - 여성
-    const genderInput2 = useRef();   //성별 - 남성
+    const genderInput1 = useRef();   //성별 - 남성
+    const genderInput2 = useRef();   //성별 - 여성
     const zipcodeInput = useRef();        //우편번호
     const roadAddressInput = useRef();    //도로명 주소
     const detailAddressInput = useRef();  //상세 주소
@@ -45,9 +45,9 @@ function InputReigster() {
     const genderChange = (e) => {
         // console.log(e.target.value);
         // console.log(e.target.checked);
-        if(e.target.value==="여성"){
+        if(e.target.value==="남성"){
             genderInput2.current.checked=false;
-        }else if(e.target.value==="남성"){
+        }else if(e.target.value==="여성"){
             genderInput1.current.checked=false;
         }
     }
@@ -57,9 +57,9 @@ function InputReigster() {
         e.preventDefault();  //버튼의 기본 이벤트 제거
 
         if(genderInput1.current.checked){
-            genderValue = "여성";
-        }else if(genderInput2.current.checked){
             genderValue = "남성";
+        }else if(genderInput2.current.checked){
+            genderValue = "여성";
         }
 
         // console.log(`(${zipcodeInput.current.value}) ${roadAddressInput.current.value} ${detailAddressInput.current.value}`);
@@ -185,8 +185,8 @@ function InputReigster() {
                             <TableRow>
                                 <TableCell>성별</TableCell>
                                 <TableCell>
-                                    <label>여성<input ref={genderInput1} type="radio" value="여성" onChange={genderChange} /></label>&nbsp;&nbsp;
-                                    <label>남성<input ref={genderInput2} type="radio" value="남성" onChange={genderChange} /></label>
+                                    <label>남성<input ref={genderInput1} type="radio" value="남성" onChange={genderChange} /></label>&nbsp;&nbsp;
+                                    <label>여성<input ref={genderInput2} type="radio" value="여성" onChange={genderChange} /></label>
                                 </TableCell>
                             </TableRow>
                             <TableRow>
@@ -209,8 +209,10 @@ function InputReigster() {
                             </TableRow>
                             <TableRow>
                                 <TableCell colSpan={2}>
-                                    <button type="submit">등록</button>
-                                    <button type="reset">취소</button>
+                                    <div className='btns'>
+                                        <button className='btn' type="submit">등록</button>
+                                        <button className='btn' type="reset">취소</button>
+                                    </div>
                                 </TableCell>
                             </TableRow>
                         </TableBody>

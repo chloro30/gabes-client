@@ -6,7 +6,7 @@ function AllCoffee( {products} ) {
     return (
         <div className='allcoffee-container'>
             <div className='inner-con'>
-                <p>모든메뉴</p>
+                <h2>Coffee</h2>
                 <div className='allcoffee-list'>
                     <MapIterator products={products} />
                 </div>

@@ -68,10 +68,10 @@ export const checkBirthday = (birthdayInput) => {
 export const checkGender = (genderInput1, genderInput2) => {
 
     if(genderInput1.current.checked){
-        console.log(`여성: ${genderInput1.current.value}`);
+        console.log(`남성: ${genderInput1.current.value}`);
         return true;
     }else if(genderInput2.current.checked){
-        console.log(`남성: ${genderInput2.current.value}`);
+        console.log(`여성: ${genderInput2.current.value}`);
         return true;
     }else{
         alert('성별을 체크하세요!');

@@ -5,13 +5,21 @@ section.coffee-con {
     // background-color: lightcoral;
     padding-top: 20px;
     .allcoffee-container {
-        // background-color: lightgreen;
+        background-color: #eee;
         margin-top: 100px;
-        padding-top: 20px;
+        // padding-top: 20px;
+        padding: 50px 0;
+        > .inner-con > h2 {
+            // background-color: aquamarine;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
         .allcoffee-list {
             // background-color: saddlebrown;
             height: 500px;
             ul {
+                margin-top: 40px;
                 background-color: silver;
                 height: 100%;
                 padding: 22px 0;
@@ -137,7 +145,7 @@ section.coffee-con {
         }
     }
     .specialmenu-container {
-        // background-color: rgb(121, 238, 199);
+        background-color: #eee;
         height: 600px;
         padding: 80px 0;
         .inner-con {

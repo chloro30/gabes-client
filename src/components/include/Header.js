@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { SiCoffeescript } from 'react-icons/si';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../scss/Header.scss';
 
 function Header() {
+
+    const navigate = useNavigate();
+
     const [ open, setOpen ] = useState(false);
     const toggleGnb = () => setOpen(!open);
     const offGnb = () => setOpen(false);
@@ -47,8 +50,8 @@ function Header() {
                 </div>
                 <div className="login">
                     <ul>
-                        <li><Link to="/login">로그인</Link></li>
-                        <li><Link to="/register">회원가입</Link></li>
+                        <li onClick={()=>navigate("/login")}>로그인</li>
+                        <li onClick={()=>navigate("/register")}>회원가입</li>
                     </ul>
                 </div>
             </div>

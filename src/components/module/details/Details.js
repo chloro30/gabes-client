@@ -4,7 +4,6 @@ import './Details.scss';
 function Details() {
     return (
         <div className='details-div'>
-            <h2>FAQ</h2>
             <details>
                 <summary>원두는 무엇을 사용하나요?</summary>
                 <div className='summary-con'>
@@ -13,7 +12,7 @@ function Details() {
                 </div>
             </details>
             <details>
-                <summary>원두는 무엇을 사용하나요?</summary>
+                <summary>멤버십 혜택이 있나요?</summary>
                 <div className='summary-con'>
                     <p>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor </p>
                     <ul>
@@ -25,13 +24,13 @@ function Details() {
                 </div>
             </details>
             <details>
-                <summary>원두는 무엇을 사용하나요?</summary>
+                <summary>영업시간은 어떻게 되나요?</summary>
                 <div className='summary-con'>
                     <p>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor </p>
                 </div>
             </details>
             <details>
-                <summary>원두는 무엇을 사용하나요?</summary>
+                <summary>가맹 절차는 어떻게 되나요?</summary>
                 <div className='summary-con'>
                     <p>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor </p>
                 </div>

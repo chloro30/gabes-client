@@ -7,6 +7,7 @@ function FaqPage() {
         <section className='faq-con'>
             <div className='faq-container'>
                 <div className='inner-con'>
+                    <h2>FAQ</h2>
                     <Details />
                 </div>
             </div>

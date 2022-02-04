@@ -23,6 +23,7 @@ header {
     z-index: 999;
     .login ul li {
         background-color: rgb(175, 180, 202);
+        cursor: pointer;
     }
     &.lnb-on {
         background-color: rgb(34, 76, 88);
@@ -137,7 +138,7 @@ header {
                     margin-top: 16px;
                     ul li {
                         &:hover {
-                            cursor: pointer;
+                            // cursor: pointer;
                             color: violet;
                         }
                     }

@@ -15,12 +15,16 @@ section.faq-con {
     .faq-container {
         background-color: #eee;
         margin-top: 100px;
+        
         .inner-con {
-            background-color: lightgreen;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            display: flex;
-            justify-content: center;
+            // background-color: lightgreen;
+            padding: 50px 0;
+            > h2 {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #ccc;
+            }
+            
             
         }
     }
