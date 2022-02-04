@@ -10,10 +10,11 @@ import RegisterForm from './components/member/RegisterForm';
 import Coffee from './components/menu/coffee/Coffee';
 import Desert from './components/menu/desert/Desert';
 import StoreArea from './components/store/StoreArea';
-import Event from './components/whatsnew/event/Event';
+// import Event from './components/whatsnew/event/Event';
 import FaqPage from './components/whatsnew/FaqPage';
 import Notice from './components/whatsnew/notice/Notice';
 import NoticeDetail from './components/whatsnew/notice/NoticeDetail';
+import NoticeUpdate from './components/whatsnew/notice/NoticeUpdate';
 import NoticeUpForm from './components/whatsnew/notice/NoticeUpForm';
 
 function App() {
@@ -33,8 +34,9 @@ function App() {
           <Route path="/board/notice" element={<Notice />} />
           <Route path="/board/notice/upload" element={<NoticeUpForm />} />
           <Route path="/board/notice/:no" element={<NoticeDetail />} />
+          <Route path="/board/notice/update/:no" element={<NoticeUpdate />} />
           <Route path="/board/faq" element={<FaqPage />} />
-          <Route path="/board/event" element={<Event />} />
+          {/* <Route path="/board/event" element={<Event />} /> */}
           <Route path="/store" element={<StoreArea />} />
         </Routes>
       <Footer />

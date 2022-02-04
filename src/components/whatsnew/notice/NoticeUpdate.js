@@ -1,9 +1,12 @@
 import axios from 'axios';
 import React, { useRef } from 'react';
-import '../../scss/NoticeUpForm.scss';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import '../../scss/NoticeUpdate.scss';
 
-function NoticeUpForm() {
+function NoticeUpdate() {
+    //라우터 파라미터 받기
+    const { no } = useParams();
+    // console.log(no);
 
     const titleInput = useRef();
     const descInput = useRef();
@@ -30,12 +33,12 @@ function NoticeUpForm() {
         // console.log(uploadData);
 
 
-        //서버에 등록 전송
-        const url = `http://localhost:8080/board/notice/upload`;
-        axios.post(url, uploadData)
+        //서버에 수정 전송
+        const url = `http://localhost:8080/board/notice/update/${no}`;
+        axios.put(url, uploadData)
         .then( (res) => {
             // console.log(res)
-            alert('등록완료')
+            alert('수정완료')
             navigate("/board/notice", {replace:true});
         })
         .catch( (err) => console.error(err));
@@ -59,22 +62,25 @@ function NoticeUpForm() {
         return date.getFullYear() + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
     }
 
-
     return (
         <section className='upform-con'>
             <div className='upform-container'>
                 <div className='inner-con'>
-                    <h2>공지사항 등록하기</h2>
+                    <h2>공지사항 수정하기</h2>
                     <form onSubmit={onSubmit}>
                         <table>
                             <tbody>
+                                <tr>
+                                    <th>번호</th>
+                                    <td><input type="text" value={no} readOnly /></td>
+                                </tr>
                                 <tr>
                                     <th>제목</th>
                                     <td><input ref={titleInput} type="text" /></td>
                                 </tr>
                                 <tr>
                                     <th>작성자</th>
-                                    <td><input type="text" value="관리자" readOnly/></td>
+                                    <td><input type="text" value="관리자" readOnly /></td>
                                 </tr>
                                 <tr>
                                     <th>내용</th>
@@ -84,7 +90,7 @@ function NoticeUpForm() {
                         </table>
                         <div className='btns'>
                             <button className='btn' type='submit'>등록</button>
-                            <button className='btn' type='reset'>취소</button>
+                            <button className='btn' type='reset' onClick={()=>navigate('/board/notice')}>취소</button>
                         </div>
                     </form>
                 </div>
@@ -93,4 +99,4 @@ function NoticeUpForm() {
     );
 }
 
-export default NoticeUpForm;
+export default NoticeUpdate;

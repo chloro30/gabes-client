@@ -5,9 +5,66 @@ section.detail-con {
         background-color: #eee;
         margin-top: 100px;
         .inner-con {
-            background-color: lightgray;
-            padding-top: 30px;
-            padding-bottom: 30px;
+            // background-color: lightgray;
+            padding: 50px 0;
+            > h2 {
+                margin-bottom: 40px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #ccc;
+            }
+            table {
+                // background-color: cadetblue;
+                width: 60%;
+                margin: 0 auto;
+                border-collapse: collapse;
+                // text-align: center;
+                tr {
+                    // background-color: rgb(169, 194, 196);
+                    border-bottom: 1px solid rgba(224, 224, 224, 1);
+                }
+
+                th {
+                    // background-color: darkgreen;
+                    width: 10%;
+                    padding: 20px 0;
+                }
+                td {
+                    // background-color: burlywood;
+                    width: 80%;
+                    padding: 20px 0;
+                    input {
+                        width: 80%;
+                        padding: 4px 10px;
+                        margin-left: 10px;
+                    }
+                    textarea {
+                        width: 80%;
+                        padding: 4px 10px;
+                        margin-left: 10px;
+                        resize: none;
+                    }
+                }
+            }
+            .btns {
+                // background-color: bisque;
+                width: 280px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                .btn {
+                    background-color: darkgray;
+                    width: 80px;
+                    margin-top: 16px;
+                    color: #fff;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: lightgray;
+                    }
+                }
+            }
         }
     }
 }

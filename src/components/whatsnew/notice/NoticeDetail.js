@@ -1,7 +1,7 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import React from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import useAsync from '../../hook/useAsync';
+import axios from 'axios';
 import '../../scss/NoticeDetail.scss';
 
 
@@ -39,7 +39,7 @@ function NoticeDetail() {
         .then( (res) => {
             // console.log(res)
             alert('삭제완료')
-            navigate("/board/notice");
+            navigate("/board/notice", {replace:true});
         })
         .catch( (err) => console.error(err));
         
@@ -49,8 +49,13 @@ function NoticeDetail() {
         <section className='detail-con'>
             <div className='detail-container'>
                 <div className='inner-con'>
+                    <h2>공지사항 상세보기</h2>
                     <table>
                         <tbody>
+                            <tr>
+                                <th>번호</th>
+                                <td>{notice[0].no}</td>
+                            </tr>
                             <tr>
                                 <th>제목</th>
                                 <td>{notice[0].title}</td>
@@ -69,8 +74,11 @@ function NoticeDetail() {
                             </tr>
                         </tbody>
                     </table>
-                    <Link to="/board/notice"><button type='button'>목록</button></Link>
-                    <button type='button' onClick={deleteNotice}>삭제</button>
+                    <div className='btns'>
+                        <button className='btn' type='button' onClick={()=>navigate(`/board/notice/update/${notice[0].no}`)}>수정</button>
+                        <button className='btn' type='button' onClick={deleteNotice}>삭제</button>
+                        <button className='btn' type='button' onClick={()=>navigate("/board/notice")}>목록</button>
+                    </div>
                 </div>
             </div>
         </section>
