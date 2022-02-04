@@ -9,6 +9,7 @@ import LoginForm from './components/member/LoginForm';
 import RegisterForm from './components/member/RegisterForm';
 import Coffee from './components/menu/coffee/Coffee';
 import StoreArea from './components/store/StoreArea';
+import Event from './components/whatsnew/event/Event';
 import FaqPage from './components/whatsnew/FaqPage';
 import Notice from './components/whatsnew/notice/Notice';
 import NoticeDetail from './components/whatsnew/notice/NoticeDetail';
@@ -31,7 +32,7 @@ function App() {
           <Route path="/board/notice/upload" element={<NoticeUpForm />} />
           <Route path="/board/notice/:no" element={<NoticeDetail />} />
           <Route path="/board/faq" element={<FaqPage />} />
-          {/* <Route path="/board/event" element={<Event />} /> */}
+          <Route path="/board/event" element={<Event />} />
           <Route path="/store" element={<StoreArea />} />
         </Routes>
       <Footer />
