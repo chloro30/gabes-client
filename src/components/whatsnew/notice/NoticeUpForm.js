@@ -36,7 +36,7 @@ function NoticeUpForm() {
         .then( (res) => {
             // console.log(res)
             alert('등록완료')
-            navigate("/board/notice");
+            navigate("/board/notice", {replace:true});
         })
         .catch( (err) => console.error(err));
         

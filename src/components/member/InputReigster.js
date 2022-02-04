@@ -3,8 +3,11 @@ import { Table, TableBody, TableCell, TableRow } from '@material-ui/core';
 import { checkId, checkPassword, checkName, checkPhone, checkBirthday, checkGender, checkAddr } from '../module/validation';
 import PopupDom from '../popup/PopupDom';
 import PopupZipcode from '../popup/PopupZipcode';
+import { useNavigate } from 'react-router-dom';
 
 function InputReigster() {
+
+    const navigate = useNavigate();
 
     //form 요소 선택하기 - useRef()
 
@@ -73,6 +76,7 @@ function InputReigster() {
                 input.current.value="";
             });
         }
+        navigate("/", {replace:true});  //리다이렉트로 이동
     }
 
 
