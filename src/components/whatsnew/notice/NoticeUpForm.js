@@ -81,7 +81,7 @@ function NoticeUpForm() {
                             <tbody>
                                 <tr>
                                     <th>제목</th>
-                                    <td><input ref={titleInput} type="text" /></td>
+                                    <td><input ref={titleInput} type="text" required /></td>
                                 </tr>
                                 <tr>
                                     <th>작성자</th>
@@ -89,7 +89,7 @@ function NoticeUpForm() {
                                 </tr>
                                 <tr>
                                     <th>내용</th>
-                                    <td><textarea ref={descInput} cols={50} rows={20}></textarea></td>
+                                    <td><textarea ref={descInput} cols={50} rows={20} required ></textarea></td>
                                 </tr>
                             </tbody>
                         </table>

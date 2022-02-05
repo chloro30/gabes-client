@@ -14,7 +14,7 @@ function NoticeDetail() {
     const navigate = useNavigate();
 
 
-    // 해당 id의 고객 정보 받아오기
+    // 해당 no의 공지사항 글 받아오기
     async function getNotice(){
         const url = `http://localhost:8080/board/notice/${no}`;
         const response = await axios.get(url);

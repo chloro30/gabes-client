@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import useAsync from '../../hook/useAsync';
 import '../../scss/NoticeUpdate.scss';
 
 function NoticeUpdate() {
@@ -24,6 +25,26 @@ function NoticeUpdate() {
             return true;
         }
     }
+
+    //기존 내용을 defaultValue로 입력하기위해 데이터 불러오기
+    // 해당 no의 공지사항 글 받아오기
+    async function getNotice(){
+        const url = `http://localhost:8080/board/notice/${no}`;
+        const response = await axios.get(url);
+        return response.data;
+    }
+
+    /* 비동기 시작 */
+    const state = useAsync(getNotice);
+    const { loading, error, data:notice } = state;
+
+    if(loading) return <div>로딩중...</div>;
+    if(error) return <div>페이지를 나타낼 수 없습니다.</div>;
+    if(!notice) return null;
+    /* 비동기 종료 */
+
+
+
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -85,11 +106,11 @@ function NoticeUpdate() {
                             <tbody>
                                 <tr>
                                     <th>번호</th>
-                                    <td><input type="text" value={no} readOnly /></td>
+                                    <td><input type="text" value={notice[0].no} readOnly /></td>
                                 </tr>
                                 <tr>
                                     <th>제목</th>
-                                    <td><input ref={titleInput} type="text" /></td>
+                                    <td><input ref={titleInput} type="text" defaultValue={notice[0].title} required /></td>
                                 </tr>
                                 <tr>
                                     <th>작성자</th>
@@ -97,7 +118,7 @@ function NoticeUpdate() {
                                 </tr>
                                 <tr>
                                     <th>내용</th>
-                                    <td><textarea ref={descInput} cols={50} rows={20}></textarea></td>
+                                    <td><textarea ref={descInput} cols={50} rows={20} defaultValue={notice[0].description} required></textarea></td>
                                 </tr>
                             </tbody>
                         </table>
