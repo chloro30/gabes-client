@@ -4,6 +4,7 @@ import { checkId, checkPassword, checkName, checkPhone, checkBirthday, checkGend
 import PopupDom from '../popup/PopupDom';
 import PopupZipcode from '../popup/PopupZipcode';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function InputReigster() {
 
@@ -11,15 +12,14 @@ function InputReigster() {
 
     //form 요소 선택하기 - useRef()
 
-    const idInput = useRef();
-    const passwordInput = useRef();
-    const passwordCheckInput = useRef();
-
-    const nameInput = useRef();      //이름
-    const phoneInput = useRef();     //연락처
-    const birthdayInput = useRef();  //생년월일
-    const genderInput1 = useRef();   //성별 - 남성
-    const genderInput2 = useRef();   //성별 - 여성
+    const idInput = useRef();             //아이디
+    const passwordInput = useRef();       //비밀번호
+    const passwordCheckInput = useRef();  //비밀번호 확인
+    const nameInput = useRef();           //이름
+    const phoneInput = useRef();          //연락처
+    const birthdayInput = useRef();       //생년월일
+    const genderInput1 = useRef();        //성별 - 남성
+    const genderInput2 = useRef();        //성별 - 여성
     const zipcodeInput = useRef();        //우편번호
     const roadAddressInput = useRef();    //도로명 주소
     const detailAddressInput = useRef();  //상세 주소
@@ -69,7 +69,7 @@ function InputReigster() {
         if(!checkInputs( ...inputs )){  //spread 구문으로 inputs 배열 요소들을 매개변수로 전달.
             return false;
         }else{
-            // insertCustomer();  //서버에 고개 등록 요청
+            insertMember();  //서버에 고객 등록 요청
             
             // input 태그 값 비우기
             inputs.forEach(input => {
@@ -78,9 +78,6 @@ function InputReigster() {
         }
         navigate("/", {replace:true});  //리다이렉트로 이동
     }
-
-
-
 
 
     // 유효성 검사
@@ -100,23 +97,25 @@ function InputReigster() {
         }
     }
 
-    // // post 전송 axios
-    // function insertCustomer() {
-    //     // const url = "http://localhost:8080/addCustomer";
+    // 회원등록 axios 전송 - POST 
+    function insertMember() {
+        
+        const memberData = {
+            m_id: idInput.current.value,
+            m_password: passwordInput.current.value,
+            m_name: nameInput.current.value,
+            m_phone: phoneInput.current.value,
+            m_birthday: birthdayInput.current.value,
+            m_gender: genderValue,
+            m_address: address,
+        }
+        console.log(memberData);
 
-    //     const insertData = {
-    //         c_name: nameInput.current.value,
-    //         c_phone: phoneInput.current.value,
-    //         c_birthday: birthdayInput.current.value,
-    //         c_gender: genderValue,
-    //         c_addr: address
-    //     }
-
-    //     const url = `${API_URL}/addCustomer`;
-    //     axios.post(url, insertData)
-    //     .then( (res) => console.log(res))
-    //     .catch( (err) => console.error(err));
-    // }
+        const url = "http://localhost:8080/member/register";
+        axios.post(url, memberData)
+        .then( (result) => console.log(result))
+        .catch( (err) => console.error(err));
+    }
 
     // 팝업창 상태 관리
     const [isPopupOpen, setIsPopupOpen] = useState(false);
