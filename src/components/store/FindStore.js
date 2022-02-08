@@ -4,7 +4,7 @@ import Location from '../module/store/Location';
 function FindStore() {
     return (
         <div className='map-div'>
-            {/* <Location /> */}
+            <Location />
         </div>
     );
 }
