@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import '../../scss/NoticeUpForm.scss';
 import {useNavigate} from 'react-router-dom';
 
@@ -24,7 +24,6 @@ function NoticeUpForm() {
     
     const onSubmit = (e) => {
         e.preventDefault();
-        // console.log(titleInput.current.value, descInput.current.value);
         
         //등록시간 생성
         const uploadTime = new Date();
