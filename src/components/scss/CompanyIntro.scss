@@ -155,14 +155,15 @@ section.intro-con {
                         }
 
                         &.img-round {
-                                background: url('../../img/gabes/company_intro/bg_mission.svg') center no-repeat;
+                                // background: url('../../img/gabes/company_intro/bg_mission.svg') center no-repeat;
+                                background: url('../../img/gabes/company_intro/coffee_beans.png') center no-repeat;
                                 // background-color: wheat;
                                 background-size: cover;
-                                width: 500px;
-                                height: 500px;
+                                width: 600px;
+                                height: 600px;
                                 position: absolute;
-                                top: -43%;
-                                right: -25%;                                
+                                top: -48%;
+                                right: -40%;                                
                                 animation: rotateImg 50s linear 0s infinite forwards;
                         }
                     }
