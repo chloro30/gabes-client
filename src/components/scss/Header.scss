@@ -36,8 +36,6 @@ header {
         }
     }
     
-    
-    
     div.header-con {
         // background-color: rgb(17, 194, 138);
         width: 100%;
@@ -46,10 +44,13 @@ header {
         position: relative;
 
         h1 {
-            background-color: #fff;
+            width: 200px;
+            height: 70px;
+            background: url('../../img/logo/gabes_logo_02.png') center center;
+            // background-color: #fff;
+            background-size: contain;
             margin-left: 40px;
-            padding: 10px;
-            font-style: italic;
+            font-size: 0;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -222,6 +223,75 @@ header {
                     padding: 8px;
                     border-radius: 6px;
                 }
+            }
+        }
+        .toggle {
+            display: none;
+            z-index: 101;
+        }
+    }
+}
+
+
+/* 디바이스 width의 크기가 980 미만 일때 */
+@media screen and (max-width: 979px) {
+    header {
+        div.header-con {
+            .gnb, .login {
+                display: none;
+            }
+            .toggle {
+                background-color: rgb(170, 169, 169);
+                width: 60px;
+                height: 60px;
+
+                position: absolute;
+                top: 50%;
+                right: 40px;
+                transform: translateY(-50%);
+                border-radius: 6px;
+                cursor: pointer;
+
+                @include flexBox($fd:column,$ju:center);
+
+                &:hover span {
+                    background-color: rgb(201, 200, 200);
+                }
+
+                &.on span {
+                    margin-left: 14px;
+                    &:nth-child(1){
+                        transform: rotateZ(45deg) translateY(8px);
+                    }
+                    &:nth-child(2){ display: none; }
+                    &:nth-child(3){
+                        transform: rotateZ(135deg) translateY(8px);
+                    }
+                }
+                
+                span {
+                    width: 60%;
+                    height: 5px;
+                    background-color: rgb(73, 60, 60);
+                    margin: 3px;
+                    border-radius: 10px;
+                    transition: 0.3s;
+                }
+            }
+            .toggle-menu {
+                display: none;
+                background-color: rgba(45, 61, 66, 0.7);
+                width: 100vw;
+                height: 100vh;
+                
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 100;
+                &.on {
+                    display: block;
+                }
+                
             }
         }
     }

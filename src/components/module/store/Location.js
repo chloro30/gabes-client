@@ -248,7 +248,7 @@ function Location() {
                                 </div>
                                 <div class="body"> 
                                     <div class="img">
-                                        <img src="img/store/star_logo.png" width="73" height="70">
+                                        <img src="img/logo/gabes_logo_01.png" width="73" height="70">
                                     </div>
                                     <div class="desc">
                                         <div class="ellipsis">${places[i].road_address_name}</div> 

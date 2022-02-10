@@ -1,10 +1,14 @@
 .slider-container {
+    // background-color: cadetblue;
+
     height: 480px;
+    // height: 100%;
     position: relative;
     padding-top: 40px;
     section {
-       .slide-div {
+        .slide-div {
             position: relative;
+            
             > div {
                 position: absolute;
                 transition: 0.9s;
@@ -21,7 +25,9 @@
                 }
                 .slide-image {
                     width: 100%;
-                    object-fit: contain;
+                    height: auto;
+                    // min-height: 480px;
+                    // object-fit: contain;
                     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
                 }
             }
@@ -85,4 +91,62 @@
             background-color: rgba(255, 255, 255, 0.8);
         }
     }
+}
+
+
+/* 디바이스 width의 크기가 900px 미만 일때 */
+@media screen and (max-width: 899px) {
+    .slider-container {
+        
+        section {
+            .slide-div {
+                
+                
+                > div {
+                   
+                    &.active {
+                        
+                    }
+                    &.inactive {
+                       
+                    }
+                    &.slides {
+                       
+                    }
+                    .slide-image {
+                        
+                    }
+                }
+            }
+        }
+        .arrows {
+            .prev {
+                
+                &:hover {
+                    
+                }
+            }
+            .next {
+               
+                &:hover {
+                   
+                }
+            }
+        }
+        .all-dots {
+            // background-color: antiquewhite;
+            transform: translate(-50%, -80px);
+            .dot {
+              
+            }
+            .active-dot {
+                
+            }
+            .dot:hover {
+               
+            }
+        }
+    }
+
+
 }

@@ -15,6 +15,9 @@ function Header() {
     const toggleLnb = () => setLnbOn(!lnbOn);
     const onLnb = () => setLnbOn(true);
 
+    const [toggle, setToggle] = useState(false);
+    const OnToggle = () => setToggle(!toggle);
+
     return (
         <header className={` ${lnbOn ? 'lnb-on': '' } `} onMouseEnter={toggleLnb}  onMouseLeave={toggleLnb} >
             <div className={`header-con inner-con ${lnbOn ? 'lnb-on': '' } `} onMouseEnter={onLnb} onMouseLeave={offGnb}>
@@ -53,6 +56,14 @@ function Header() {
                         <li onClick={()=>navigate("/login")}>로그인</li>
                         <li onClick={()=>navigate("/register")}>회원가입</li>
                     </ul>
+                </div>
+                <div className={`toggle ${ toggle ? 'on' : '' } `} onClick={()=>OnToggle()}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div className={`toggle-menu ${ toggle ? 'on' : '' } `}>
+                    
                 </div>
             </div>
         </header>

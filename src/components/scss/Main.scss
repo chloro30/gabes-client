@@ -26,7 +26,8 @@ section.main-con {
         background-color: rgba(130, 177, 248, 0.4);
         div.inner-con {
             background-image: url('../../img/section1/sec1-bg.png');
-            background-size: contain;
+            // background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
             width: 100%;
             height: 343px;
@@ -35,7 +36,8 @@ section.main-con {
             display: flex;
             justify-content: space-evenly;
             img {
-                margin-top: 28px;
+                margin-top: 50px;
+                height: 70%;
                 animation: moveRightSec1 8s linear 0s infinite ;
             }
             .desc {
@@ -79,7 +81,8 @@ section.main-con {
         background-color: rgba(196,226,236, 0.4);
         > div.inner-con {
             background-image: url('../../img/section2/2022_hawaii.jpg');
-            background-size: contain;
+            // background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
             height: 400px;
             padding-top: 100px;
@@ -238,6 +241,112 @@ section.main-con {
                     position: absolute;
                     top: 480px;
                     animation: moveFranchise 26s linear 3s infinite;
+                }
+            }
+        }
+    }
+}  
+
+
+/* 디바이스 width의 크기가 910 미만 일때 */
+@media screen and (max-width: 909px) {
+    section.main-con {
+        .section1 {
+            div.inner-con {
+                // width: 80%;
+                padding: 20px 60px;
+                img {
+                    // background-color: #223d6c;
+                    // width: auto;
+                    // height: 50%;
+                    // transform: translateX(20px);
+                    // margin-top: 40px;
+                }
+                .desc {
+                    // background-color: cornflowerblue;
+                    height: 50%;
+                    align-self: center;
+                    // opacity: 1;
+                    p:nth-child(1) {
+                        font-size: 14px;
+                        color: #4067ab;
+                    }
+                    p:nth-child(2) {
+                        // background-color: #4067ab;
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: #223d6c;
+                    }
+                    p:nth-child(3) {
+                        font-size: 16px;
+                        color: #4b4748;
+                        margin-top: 10px;
+                    }
+                    button {
+                        background-color: transparent;
+                        padding: 8px 16px;
+                        border-radius: 4px;
+                        color: #453d3d;
+                        border: 2px solid #453d3d;
+                        margin-top: 32px;
+                        transition: 0.4s;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: #4a4546;
+                            color: #fff;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 디바이스 width의 크기가 1018px 미만 일때 */
+@media screen and (max-width: 1017px) {
+    section.main-con {
+        .section2 {
+            > div.inner-con {
+                background-image: url('../../img/section2/2022_hawaii.jpg');
+                background-size: contain;
+
+                padding: 0;
+                padding-top: 60px;
+                div {
+                    // background-color: #223d6c;
+                    width: 400px;
+                    img {
+                        width: 80%;
+                    }
+                    button {
+                        &:hover {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 디바이스 width의 크기가 710px 미만 일때 */
+@media screen and (max-width: 709px) {
+    section.main-con {
+        .section2 {
+            > div.inner-con {
+                padding-top: 20px;
+                div {
+                    // background-color: #223d6c;
+                    width: 400px;
+                    img {
+                        width: 80%;
+                    }
+                    button {
+                        &:hover {
+
+                        }
+                    }
                 }
             }
         }
