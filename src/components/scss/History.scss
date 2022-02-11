@@ -186,10 +186,6 @@ section.history-con {
                             &:nth-of-type(1) {
                                 margin-top: 50px;
                             }
-                            &:nth-of-type(2) {
-                            }
-                        }
-                        dd {
                         }
                     }
                 }
@@ -201,20 +197,8 @@ section.history-con {
                     }
                     dl {
                         dt {
-                            &:nth-of-type(1) {
-                            }
                             &:nth-of-type(2) {
                                 margin-top: 90px;
-                            }
-                            &:nth-of-type(3) {
-                            }
-                        }
-                        dd {
-                            &:nth-of-type(1) {
-                            }
-                            &:nth-of-type(2) {
-                            }
-                            &:nth-of-type(3) {
                             }
                         }
                     }
@@ -225,13 +209,34 @@ section.history-con {
                     > p {
                         font-size: 16px;
                     }
-                    > div {
-                        p:nth-of-type(1) {
+                }
+            }
+        }
+    }
+}
+
+
+/* 디바이스 width의 크기가 1170 미만 일때 */
+@media screen and (max-width: 1169px) {
+    section.history-con {
+        .history-container {
+            .history-01-bg {
+                .history-01 {
+                    dl {
+                        dt {
+                            &:nth-of-type(1) {
+                                margin-top: 50px;
+                            }
                         }
-                        p:nth-of-type(2) {
-                        }
-                        p:nth-of-type(3) {
-                            span {
+                    }
+                }
+            }
+            .history-02-bg{
+                .history-02 {
+                    dl {
+                        dt {
+                            &:nth-of-type(2) {
+                                margin-top: 90px;
                             }
                         }
                     }
@@ -243,35 +248,117 @@ section.history-con {
 
 
 
-
-
-/* 디바이스 width의 크기가 1170 미만 일때 */
-@media screen and (max-width: 1169px) {
+/* 디바이스 width의 크기가 780px 미만 일때 */
+@media screen and (max-width: 779px) {
     section.history-con {
         .history-container {
+            .history-01-bg {
+                .history-01 {
+                    dl {
+                        width: 45%;
+                        margin-right: 40px;
+                    }
+                }
+            }
             .history-02-bg{
                 .history-02 {
-                    p {
-                        // font-size: 16px;
-                    }
                     dl {
                         dt {
+                            width: 45%;
+                            margin-right: 40px;
                             &:nth-of-type(1) {
+                                margin-top: 80px;
+                                margin-left: 40px;
                             }
                             &:nth-of-type(2) {
-                                margin-top: 90px;
+                                margin-top: 80px;
                             }
                             &:nth-of-type(3) {
+                                margin-top: 20px;
                             }
                         }
                         dd {
+                            width: 45%;
                             &:nth-of-type(1) {
+                                margin-left: 40px;
                             }
                             &:nth-of-type(2) {
+                                margin-right: 40px;
                             }
                             &:nth-of-type(3) {
+                                margin-right: 40px;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    #root > div > section > div > div.boxes.inner-con {
+        h2 {
+            font-size: 20px;
+        }
+        div {
+            .span-div {
+                width: 85%;
+            }
+        }
+    }
+}
+
+
+/* 디바이스 width의 크기가 608px 미만 일때 */
+@media screen and (max-width: 607px) {
+    section.history-con {
+        .history-container {
+            .history-01-bg {
+                .history-01 {
+                    dl {
+                        width: 80%;
+                        margin-right: 40px;
+                    }
+                }
+            }
+            .history-02-bg{
+                .history-02 {
+                    dl {
+                        dt {
+                            width: 80%;
+                            margin-right: 40px;
+                            &:nth-of-type(1) {
+                                margin-top: 80px;
+                                margin-left: 40px;
+                            }
+                            &:nth-of-type(2) {
+                                margin-top: 100px;
+                            }
+                            &:nth-of-type(3) {
+                                margin-top: 30px;
+                            }
+                        }
+                        dd {
+                            width: 80%;
+                            &:nth-of-type(1) {
+                                margin-left: 40px;
+                            }
+                            &:nth-of-type(2) {
+                                margin-left: 40px;
+                            }
+                            &:nth-of-type(3) {
+                                margin-left: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+            .history-03-bg{
+                .history-03 {
+                    background: url('../../img/gabes/history/bg_history_03.jpg') bottom no-repeat;
+                    background-size: contain;
+                    > div {
+                        width: 80%;
+                        margin-top: 80px;
+                        margin-left: 40px;
                     }
                 }
             }

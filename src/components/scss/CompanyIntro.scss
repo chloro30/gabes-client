@@ -324,5 +324,19 @@ section.intro-con {
             }
         }
     }
+}
 
+
+/* 디바이스 width의 크기가 800 미만 일때 */
+@media screen and (max-width: 799px) {
+    #root > div > section > div > div > div.boxes.inner-con {
+        h2 {
+            font-size: 20px;
+        }
+        div {
+            .span-div {
+                width: 95%;
+            }
+        }
+    }
 }
