@@ -1,13 +1,20 @@
 /* eslint-disable */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import MapIteratorEvent from '../../module/MapIteratorEvent';
 import ProductIntro from '../../module/ProductIntro';
 
-function BasicMenu( {basicProducts} ) {
+function BasicMenu( {basicProducts, clickedMenu} ) {
     
     //초기화
     const [item, setItem] = useState(basicProducts[0]);
+
+    //모든 메뉴에서 클릭시 item을 그 클릭된 상품으로 변경
+    useEffect(()=>{
+        if(clickedMenu){
+            setItem(clickedMenu);
+        }
+    },[clickedMenu]);
 
     /* MapIterator_arr 시작 */
     const changeItem = (item) => {
@@ -16,7 +23,7 @@ function BasicMenu( {basicProducts} ) {
     /* MapIterator_arr 끝 */
 
     return (
-        <div className='basicmenu-container'>
+        <div id='basic' className='basicmenu-container'>
             <div className='inner-con'>
                 <p>기본 메뉴</p>
                 <MapIteratorEvent products={basicProducts} changeItem={changeItem} />

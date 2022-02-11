@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../scss/Coffee.scss';
 import AllCoffee from './AllCoffee';
 import BasicMenu from './BasicMenu';
@@ -20,6 +20,24 @@ import axios from 'axios';
 
 
 function Coffee() {
+
+    // 모든 메뉴에서 basic 상품 클릭시 상세 보기에도 적용시키기
+    const [clickedMenuBasic, setClickedMenuBasic] = useState(null);
+
+    // 모든 메뉴에서 special 상품 클릭시 상세 보기에도 적용시키기
+    const [clickedMenuSpecial, setClickedMenuSpecial] = useState(null);
+
+    const allMenuClick = (product) => {
+        if(product.category === 'basic'){
+            setClickedMenuBasic(product);
+        }else if(product.category === 'special'){
+            setClickedMenuSpecial(product);
+        }
+    }
+
+    // useEffect(()=>{
+    //     alert(clickedMenu);
+    // },[clickedMenu]);
 
     const state = useAsync(getCoffeeList);
     const { loading, data:coffeeData, error } = state;
@@ -48,11 +66,13 @@ function Coffee() {
         }
     });
 
+   
+
     return (
         <section className='coffee-con'>
-            <AllCoffee products={coffeeList} />
-            <BasicMenu basicProducts={basicProducts} />
-            <SpecialMenu specialProducts={specialProducts} />
+            <AllCoffee products={coffeeList} allMenuClick={allMenuClick} />
+            <BasicMenu basicProducts={basicProducts} clickedMenu={clickedMenuBasic} />
+            <SpecialMenu specialProducts={specialProducts} clickedMenu={clickedMenuSpecial} />
         </section>
     );
 }

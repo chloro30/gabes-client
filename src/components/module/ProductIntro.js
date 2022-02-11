@@ -1,8 +1,6 @@
 import React from 'react';
 
 function ProductIntro( {item} ) {
-    // console.log(item);
-    // console.log(item.src);
 
     return (
         <div className='intro-div'>

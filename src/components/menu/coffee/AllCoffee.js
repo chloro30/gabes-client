@@ -1,14 +1,29 @@
 import React from 'react';
 import MapIterator from '../../module/MapIterator';
 
-function AllCoffee( {products} ) {
-
+function AllCoffee( {products, allMenuClick} ) {
+    
     return (
         <div className='allcoffee-container'>
             <div className='inner-con'>
                 <h2>Coffee</h2>
                 <div className='allcoffee-list'>
-                    <MapIterator products={products} />
+                    {/* <MapIterator products={products} /> */}
+                    <ul className='list-ul'>
+                        { 
+                            products.map( (product) =>
+                                // <li key={product.code} onClick={allMenuClick}>
+                                <li key={product.code} onClick={()=>allMenuClick(product)} >
+                                    <a href={`#${product.category}`} key={product.code} >
+                                        <div className='all-img-div'>
+                                            <img className='all-img' src={`${product.src}`} alt={`${product.name}`} />
+                                        </div>
+                                        <p>{product.name}</p>
+                                    </a>
+                                </li>
+                            )
+                        }
+                    </ul>
                 </div>
             </div>
         </div>
