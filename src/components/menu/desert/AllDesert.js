@@ -7,6 +7,7 @@ function AllDesert( {products, allMenuClick} ) {
         <div className='alldesert-container'>
             <div className='inner-con'>
                 <h2>Desert</h2>
+                <p>전체 메뉴</p>
                 <div className='alldesert-list'>
                     {/* <MapIterator products={products} /> */}
                     <ul className='list-ul'>
