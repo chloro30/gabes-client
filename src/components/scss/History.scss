@@ -13,11 +13,12 @@ section.history-con {
         .history-01-bg{
             background-color: white;
             .history-01 {
-                background: url('../../img/gabes/history/bg_history_01.jpg') top no-repeat;
+                background: url('../../img/gabes/history/bg_history_01.jpg') left bottom no-repeat;
                 // background-color: beige;
                 background-size: cover;
                 width: 100%;
                 height: 650px;
+                // height: auto;
 
                 display: flex;
                 flex-direction: column;
@@ -170,3 +171,110 @@ section.history-con {
     }
 }
 
+
+/* 디바이스 width의 크기가 960 미만 일때 */
+@media screen and (max-width: 959px) {
+    section.history-con {
+        .history-container {
+            .history-01-bg {
+                .history-01 {
+                    p {
+                        font-size: 16px;
+                    }
+                    dl {
+                        dt {
+                            &:nth-of-type(1) {
+                                margin-top: 50px;
+                            }
+                            &:nth-of-type(2) {
+                            }
+                        }
+                        dd {
+                        }
+                    }
+                }
+            }
+            .history-02-bg{
+                .history-02 {
+                    p {
+                        font-size: 16px;
+                    }
+                    dl {
+                        dt {
+                            &:nth-of-type(1) {
+                            }
+                            &:nth-of-type(2) {
+                                margin-top: 90px;
+                            }
+                            &:nth-of-type(3) {
+                            }
+                        }
+                        dd {
+                            &:nth-of-type(1) {
+                            }
+                            &:nth-of-type(2) {
+                            }
+                            &:nth-of-type(3) {
+                            }
+                        }
+                    }
+                }
+            }
+            .history-03-bg{
+                .history-03 {
+                    > p {
+                        font-size: 16px;
+                    }
+                    > div {
+                        p:nth-of-type(1) {
+                        }
+                        p:nth-of-type(2) {
+                        }
+                        p:nth-of-type(3) {
+                            span {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/* 디바이스 width의 크기가 1170 미만 일때 */
+@media screen and (max-width: 1169px) {
+    section.history-con {
+        .history-container {
+            .history-02-bg{
+                .history-02 {
+                    p {
+                        // font-size: 16px;
+                    }
+                    dl {
+                        dt {
+                            &:nth-of-type(1) {
+                            }
+                            &:nth-of-type(2) {
+                                margin-top: 90px;
+                            }
+                            &:nth-of-type(3) {
+                            }
+                        }
+                        dd {
+                            &:nth-of-type(1) {
+                            }
+                            &:nth-of-type(2) {
+                            }
+                            &:nth-of-type(3) {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

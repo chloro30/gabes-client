@@ -127,6 +127,7 @@ section.intro-con {
                     padding: 20px 0;
                     width: 100%;
                     height: 580px;
+                    
 
                     display: flex;
                     justify-content: space-between;
@@ -136,7 +137,7 @@ section.intro-con {
                     div {
                         &:nth-child(1) {
                             width: 46%;
-                            height: 84%;
+                            // height: 84%;
                             height: 100%;
                             background: url('../../img/gabes/company_intro/info-3rd-01.PNG') top no-repeat;
                             // background-color: whitesmoke;
@@ -256,4 +257,72 @@ section.intro-con {
             background-color: #ba770c;
         }
     }
+}
+
+
+/* 디바이스 width의 크기가 950 미만 일때 */
+@media screen and (max-width: 949px) {
+    section.intro-con {
+        .intro-container {
+            .inner-con {
+                .info-1st {
+                    .top-txt {
+                        p:nth-child(1) {
+                            font-size: 24px;
+                        }
+                        p:nth-child(2) {
+                            
+                        }
+                    }
+                }
+                .info-2nd {
+                    height: auto;
+                    flex-direction: column;
+                    align-items: center;
+                    .img-area {
+                        // background-color: slategrey;
+                        width: 100%;
+                        height: 300px;
+                        // height: 40%;
+                    }
+                    .info-area {
+                        //  background-color: skyblue;
+                         width: 85%;
+                         margin-top: 16px;
+                         padding: 0;
+                        .info-area-title {
+                            font-size: 18px;
+                        }
+                    }
+                }
+                .info-3rd {
+                    .info-3rd-txt {
+
+                    }
+                    .info-3rd-img-area {
+                        padding-bottom: 0;
+                        height: 400px;
+                        div {
+                            &:nth-child(1) {
+                                height: 64%;
+                            }
+    
+                            &:nth-child(2) {
+                                height: 60%;
+                                
+                                background: url('../../img/gabes/company_intro/info-3rd-02.PNG') center no-repeat;
+                                background-size: contain;
+                            }
+    
+                            &.img-round {
+                                    top: -370px;
+                                    right: -300px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
