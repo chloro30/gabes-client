@@ -62,8 +62,36 @@ function Header() {
                     <span></span>
                     <span></span>
                 </div>
-                <div className={`toggle-menu ${ toggle ? 'on' : '' } `}>
-                    
+                <div className={`toggle-menu ${ toggle ? 'on' : '' } `} onClick={()=>OnToggle()}>
+                    <div className='toggle-gnb-bg'>
+                        <ul className='toggle-gnb'>
+                            <li><Link to="/about/intro">Gabes</Link></li>
+                            <li><Link to="/menu/coffee">Menu</Link></li>
+                            <li><Link to="/store">Store</Link></li>
+                            <li><Link to="/board/notice">What's new</Link></li>
+                        </ul>
+                        <div className='toggle-submenu'>
+                            <ul className='sub-gabes'>
+                                <li><Link to="/about/intro">회사소개</Link></li>
+                                <li><Link to="/about/history">연혁</Link></li>
+                            </ul>
+                            <ul className='sub-menu'>
+                                <li><Link to="/menu/coffee">Coffee</Link></li>
+                                <li><Link to="/menu/desert">Desert</Link></li>
+                            </ul>
+                            <ul className='sub-store'>
+                                <li><Link to="/store">매장찾기</Link></li>
+                            </ul>
+                            <ul className='sub-wtsn'>
+                                <li><Link to="/board/notice">공지사항</Link></li>
+                                <li><Link to="/board/faq">FAQ</Link></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul className='sub-login'>
+                        <li onClick={()=>navigate("/login")}>로그인</li>
+                        <li onClick={()=>navigate("/register")}>회원가입</li>
+                    </ul>
                 </div>
             </div>
         </header>
