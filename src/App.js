@@ -5,7 +5,6 @@ import CompanyIntro from './components/gabes/intro/CompanyIntro';
 import Footer from './components/include/Footer';
 import Header from './components/include/Header';
 import Main from './components/main/Main';
-import LoginForm from './components/member/LoginForm';
 import RegisterForm from './components/member/RegisterForm';
 import Coffee from './components/menu/coffee/Coffee';
 import Desert from './components/menu/desert/Desert';
@@ -25,7 +24,6 @@ function App() {
           <Route path="/" element={<Main />} />
           {/* login */}
           <Route path="/register" element={<RegisterForm />} />
-          <Route path="/login" element={<LoginForm />} />
           {/* gnb */}
           <Route path="/about/intro" element={<CompanyIntro />} />
           <Route path="/about/history" element={<History />} />

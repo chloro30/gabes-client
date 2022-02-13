@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SiCoffeescript } from 'react-icons/si';
 import { Link, useNavigate } from 'react-router-dom';
+import LoginModal from '../module/modal/LoginModal';
 import '../scss/Header.scss';
 
 function Header() {
@@ -17,6 +18,22 @@ function Header() {
 
     const [toggle, setToggle] = useState(false);
     const OnToggle = () => setToggle(!toggle);
+
+    // 로그인 모달창 컨트롤
+    const [loginModal, setLoginModal] = useState(false);
+    const toggleLoginModal = () => setLoginModal(!loginModal);
+
+    // 모달 닫기 버튼에 사용할 state를 props 넘겨주기
+    const closeModal = () => {
+        setLoginModal(!loginModal);
+    }
+
+    // 로그인 모달창 뜨면 배경 스크롤 막기
+    if(loginModal) {
+        document.body.classList.add('active-modal');
+    }else{
+        document.body.classList.remove('active-modal');
+    }
 
     return (
         <header className={` ${lnbOn ? 'lnb-on': '' } `} onMouseEnter={toggleLnb}  onMouseLeave={toggleLnb} >
@@ -53,7 +70,7 @@ function Header() {
                 </div>
                 <div className="login">
                     <ul>
-                        <li onClick={()=>navigate("/login")}>로그인</li>
+                        <li onClick={()=>toggleLoginModal()}>로그인</li>
                         <li onClick={()=>navigate("/register")}>회원가입</li>
                     </ul>
                 </div>
@@ -89,11 +106,13 @@ function Header() {
                         </div>
                     </div>
                     <ul className='sub-login'>
-                        <li onClick={()=>navigate("/login")}>로그인</li>
+                        <li onClick={()=>toggleLoginModal()}>로그인</li>
                         <li onClick={()=>navigate("/register")}>회원가입</li>
                     </ul>
                 </div>
             </div>
+            {/* 로그인 모달 */}
+            {loginModal && <LoginModal closeModal={closeModal} />}
         </header>
     );
 }
