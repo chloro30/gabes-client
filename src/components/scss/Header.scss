@@ -235,8 +235,8 @@ header {
     }
 }
 
-/* 디바이스 width의 크기가 980 미만 일때 */
-@media screen and (max-width: 979px) {
+/* 디바이스 width의 크기가 1000px 미만 일때 */
+@media screen and (max-width: 999px) {
     header {
         div.header-con {
             .gnb, .login {
@@ -359,5 +359,6 @@ header {
 
 /* 디바이스 width의 크기가 830px 미만 일때 */
 @media screen and (max-width: 829px) {
-    header div.header-con .toggle-menu .toggle-gnb-bg ul.toggle-gnb li { font-size: 16px;}
+    header div.header-con .toggle-menu .toggle-gnb-bg ul.toggle-gnb li { font-size: 16px; font-weight: bold;}
+    #root > div > header > div > div.toggle-menu.on > div > div > ul { font-size: 12px; }
 }

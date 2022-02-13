@@ -11,9 +11,9 @@ function Footer() {
         <footer>
             <div className='footer-con inner-con'>
                 <p>
-                    대표자 : 이진우 | 사업자등록번호 234-56-78901<br/>
-                    주소 : 서울 종로구 세종대로 172 , 30층<br/>
-                    Copyright ⓒ 2022 Gabes Coffee. All Rights Reserved.
+                    <span>대표자 : 이진우 | 사업자등록번호 234-56-78901</span><br/>
+                    <span>주소 : 서울 종로구 세종대로 172 , 30층</span><br/>
+                    <span>Copyright ⓒ 2022 Gabes Coffee. All Rights Reserved.</span>
                 </p>
                 <ul className='footer-menu'>
                     <li><Link to="#">개인정보 처리방침</Link></li>

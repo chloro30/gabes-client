@@ -54,3 +54,49 @@ footer {
         }
     }
 }
+
+
+/* 디바이스 width의 크기가 1000px 미만 일때 */
+@media screen and (max-width: 999px) {
+    footer {
+        .footer-con {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            > p {
+                // background-color: tan;
+                font-size: 12px;
+                // margin-left: 20px;
+                padding: 5px 0;
+                order: 3;
+                display: flex;
+                span {
+                    margin-right: 10px;
+                }
+            }
+            > ul.footer-menu {
+                // background-color: darkcyan;
+                // order: 2;
+                // margin-left: 20px;
+                padding: 5px 0;
+                > li {
+                    &:not(:last-child) {
+                        &::after {
+                        }
+                    }
+                }
+            }
+            > ul.footer-links {
+                // background-color: sandybrown;
+                order: -1;
+                padding: 5px 0;
+                > li {
+                    &:not(:last-child) {
+                        &::after {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
