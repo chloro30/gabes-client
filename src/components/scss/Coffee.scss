@@ -281,3 +281,141 @@ section.coffee-con {
         }
     }
 }
+
+
+//반응형
+/* 디바이스 width의 크기가 1120px 미만 일때 */
+@media screen and (max-width: 1119px) {
+    section.coffee-con {
+        .allcoffee-container {
+            > .inner-con {
+                > h2 {
+                    padding-left: 20px;
+                }
+                > p {
+                    transform: translate(20px,-10px);
+                }
+            }
+            .allcoffee-list {
+                height: auto;
+                ul {
+                    height: auto;
+                    margin: 0 20px;
+                    padding: 20px 0 0 0;
+                    li {
+                        width: 220px;
+                        a{
+                            .all-img-div {
+                                .all-img {
+                                    height: 165px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .basicmenu-container {
+            > div.inner-con {
+                > p {
+                    transform: translateX(400px);
+                }
+                ul.list-ul {
+                    width: 50%;
+                    height: 380px;
+                    padding: 20px 0 0 0;
+                    margin-right: 20px;
+                    > li {
+                        width: 220px;
+                    }
+                }
+                div.intro-desc {
+                    margin-left: 20px;
+                }
+            }
+        }
+        .specialmenu-container {
+            height: auto;
+            .inner-con {
+                > p {
+                    margin-left: 20px;
+                }
+                ul.list-ul {
+                    width: 45%;
+                    height: 700px;
+                    padding: 20px 0 0 0;
+                    margin-left: 20px;
+                }
+                div.intro-div {
+                    transform: translateY(180px);
+                    div.intro-img {
+                        img {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* 디바이스 width의 크기가 900px 미만 일때 */
+@media screen and (max-width: 899px) {
+    section.coffee-con {
+        .basicmenu-container {
+            height: 800px;
+            padding: 80px 0;
+            > div.inner-con {
+                > p {
+                    left: 130px;
+                }
+                ul.list-ul {
+                    width: 35%;
+                    height: 700px;
+                    padding: 20px 0 0 0;
+                    margin-right: 20px;
+                    > li {
+                        width: 220px;
+                    }
+                }
+                div.intro-div {
+                    transform: translateY(200px);
+                }
+            }
+        }
+        .specialmenu-container {
+            padding: 140px 0;
+        }
+    }
+}
+
+/* 디바이스 width의 크기가 820px 미만 일때 */
+@media screen and (max-width: 819px) {
+    section.coffee-con {
+        .specialmenu-container {
+            height: 1600px;
+            padding: 200px 0;
+            .inner-con {
+                > p {
+                    margin: 0;
+                    transform: translate(150px, 490px);
+                }
+                ul.list-ul {
+                    width: 60%;
+                    margin: 500px auto;
+                }
+                div.intro-div {
+                    transform: none;
+                    div.intro-img {
+                        margin: 0;
+                        transform: translateX(-47%);
+                    }
+                    div.intro-desc {
+                        left: 50%;
+                        transform: translateX(-47%);
+                    }
+                }
+            }
+        }
+    }
+}
