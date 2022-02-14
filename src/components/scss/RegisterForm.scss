@@ -1,8 +1,6 @@
 section.register-con {
-    // background-color: wheat;
     padding-top: 20px;
     .register-container {
-        // background-color: slategray;
         margin-top: 100px;
         padding: 50px 0;
         > h2 {
@@ -11,11 +9,9 @@ section.register-con {
             border-bottom: 1px solid #ccc;
         }
         .form-div {
-            // background-color: lightblue;
             width: 60%;
             margin: 0 auto;
             text-align: center;
-
             table > tbody {
                 tr {
                     td {
@@ -33,7 +29,6 @@ section.register-con {
             } 
         }
         .btns {
-            // background-color: bisque;
             width: 180px;
             margin: 0 auto;
             display: flex;

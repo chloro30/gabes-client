@@ -1,8 +1,6 @@
 footer {
     width: 100%;
     background-color: rgb(251, 244, 249);
-    // position: absolute;
-    // bottom: 0;
     border-top: 1px solid #ccc;
 
     .footer-con {
@@ -12,7 +10,6 @@ footer {
         > ul.footer-menu {
             display: flex;
             > li {
-                // background-color: blueviolet;
                 height: 20px;
                 margin-right: 16px;
                 position: relative;
@@ -33,7 +30,6 @@ footer {
         > ul.footer-links {
             display: flex;
             > li {
-                // background-color: blueviolet;
                 height: 20px;
                 margin-right: 16px;
                 font-size: 20px;
@@ -64,9 +60,7 @@ footer {
             flex-direction: column;
             align-items: center;
             > p {
-                // background-color: tan;
                 font-size: 12px;
-                // margin-left: 20px;
                 padding: 5px 0;
                 order: 3;
                 display: flex;
@@ -75,27 +69,11 @@ footer {
                 }
             }
             > ul.footer-menu {
-                // background-color: darkcyan;
-                // order: 2;
-                // margin-left: 20px;
                 padding: 5px 0;
-                > li {
-                    &:not(:last-child) {
-                        &::after {
-                        }
-                    }
-                }
             }
             > ul.footer-links {
-                // background-color: sandybrown;
                 order: -1;
                 padding: 5px 0;
-                > li {
-                    &:not(:last-child) {
-                        &::after {
-                        }
-                    }
-                }
             }
         }
     }
