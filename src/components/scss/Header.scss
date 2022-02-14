@@ -362,3 +362,13 @@ header {
     header div.header-con .toggle-menu .toggle-gnb-bg ul.toggle-gnb li { font-size: 16px; font-weight: bold;}
     #root > div > header > div > div.toggle-menu.on > div > div > ul { font-size: 12px; }
 }
+
+/* 디바이스 width의 크기가 700px 미만 일때 */
+@media screen and (max-width: 699px) {
+    #root > div > header > div > div.toggle-menu.on > ul { width: 28%; }
+}
+
+/* 디바이스 width의 크기가 490px 미만 일때 */
+@media screen and (max-width: 489px) {
+    #root > div > header > div > div.toggle-menu.on > ul { width: 35%; }
+}

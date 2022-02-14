@@ -15,6 +15,7 @@ body {
             width: 600px;
             height: 500px;
             padding: 10% 0;
+            border-radius: 10px;
 
             display: flex;
             flex-direction: column;
@@ -95,3 +96,31 @@ body {
         }//div.login-wrap
     }//section.modal-wrap
 }
+
+
+//반응형
+/* 디바이스 width의 크기가 650px 미만 일때 */
+@media screen and (max-width: 649px) {
+    body {
+        .overlay {
+            .login-wrap {
+                // background-color: tan;
+                width: 80%;
+                height: auto;
+                form.login-form {
+                    // background-color: teal;
+                    width: 100%;
+                    .close {
+                    }
+                    table {
+                        td:nth-child(1) {
+                            // width: 40%;
+                            font-size: 14px;
+                        }
+                    }
+                }//.login-form
+            }//div.login-wrap
+        }//section.modal-wrap
+    }
+}
+  
