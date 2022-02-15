@@ -2,7 +2,7 @@
 가베스 커피 프랜차이즈 회사 소개 사이트
 
 ### 개선할 사항
-로그인 모달 완성하기
+heroku, vercel 배포하기
 
 #### 설치
 npm install react-router-dom  (라우터)

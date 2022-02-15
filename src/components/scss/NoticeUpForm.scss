@@ -1,11 +1,8 @@
 section.upform-con {
-    // background-color: darkkhaki;
     padding-top: 20px;
     .upform-container {
-        // background-color: #eee;
         margin-top: 100px;
         .inner-con {
-            // background-color: darkgoldenrod;
             padding: 50px 0;
             > h2 {
                 margin-bottom: 40px;
@@ -13,25 +10,18 @@ section.upform-con {
                 border-bottom: 1px solid #ccc;
             }
             form {
-                // background-color: bisque;
                 table {
-                    // background-color: cadetblue;
                     width: 60%;
                     margin: 0 auto;
                     border-collapse: collapse;
-                    // text-align: center;
                     tr {
-                        // background-color: rgb(169, 194, 196);
                         border-bottom: 1px solid rgba(224, 224, 224, 1);
                     }
-
                     th {
-                        // background-color: darkgreen;
                         width: 10%;
                         padding: 20px 0;
                     }
                     td {
-                        // background-color: burlywood;
                         width: 80%;
                         padding: 20px 0;
                         input {
@@ -48,7 +38,6 @@ section.upform-con {
                     }
                 }
                 .btns {
-                    // background-color: bisque;
                     width: 180px;
                     margin: 0 auto;
                     display: flex;

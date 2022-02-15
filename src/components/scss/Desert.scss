@@ -2,28 +2,23 @@
  $item-width: 180px;
 
 section.desert-con {
-    // background-color: lightcoral;
     padding-top: 20px;
     .alldesert-container {
         background-color: rgb(255, 244, 228);
         margin-top: 100px;
-        // padding-top: 20px;
         padding: 50px 0;
         > .inner-con {
             > h2 {
-                // background-color: aquamarine;
                 margin-bottom: 40px;
                 padding-bottom: 20px;
                 border-bottom: 1px solid #ccc;
             }
             > p {
-                // background-color: darkcyan;
                 display: inline-block;
                 transform: translateY(30px);
             }
         } 
         .alldesert-list {
-            // background-color: saddlebrown;
             height: 500px;
             ul {
                 margin-top: 40px;
@@ -36,7 +31,6 @@ section.desert-con {
                 flex-wrap: wrap;
                 justify-content: space-around;
                 li {
-                    // background-color: lightsalmon;
                     width:  $item-width;
                     height: 200px;
                     padding: 8px 0;
@@ -44,7 +38,6 @@ section.desert-con {
                     position: relative;
                     a {
                         .all-img-div {
-                            // background-color: darkcyan;
                             width: 75%;
                             height: 80%;
                             position: absolute;
@@ -65,7 +58,6 @@ section.desert-con {
                             }
                         }
                         > p {
-                            // background-color:slateblue;
                             width: 65%;
                             text-align: center;
                             position: absolute;
@@ -79,16 +71,13 @@ section.desert-con {
         }
     }
     .basicmenu-container {
-        // background-color: lightskyblue;
         height: 600px;
         padding: 180px 0;
 
         > div.inner-con {
             background-color: cornsilk;
-            // height: 100px;
             position: relative;
             > p {
-                // background-color: chocolate;
                 display: inline-block;
                 position: absolute;
                 transform: translateX(350px);
@@ -112,17 +101,14 @@ section.desert-con {
                 flex-wrap: wrap;
                 justify-content: space-around;
                 > li {
-                    // background-color: lightsalmon;
                     width:  $item-width;
                     height: 140px;
                     div.img-div {
-                        // background-color: darkseagreen;
                         width: 100%;
                         height: 100%;
 
                         position: relative;
                         .img-item {
-                            // width: 100%;
                             height: 90%;
                             border-radius: 10px;
 
@@ -138,13 +124,11 @@ section.desert-con {
                         }
                     }
                     > p {
-                        // background-color: darkslateblue;
                         text-align: center;
                     }
                 }
             }
             div.intro-img {
-                // background-color: darkseagreen;
                 width: 320px;
                 height: 320px;
                 border-radius: 50%;
@@ -169,7 +153,6 @@ section.desert-con {
         .inner-con {
             position: relative;
             > p {
-                // background-color: chocolate;
                 display: inline-block;
                 transform: translateY(-10px);
             }
@@ -183,19 +166,16 @@ section.desert-con {
                 flex-wrap: wrap;
                 justify-content: space-around;
                 > li {
-                    // background-color: lightsalmon;
                     width:  $item-width;
                     height: 140px;
                     margin-bottom: 20px;
                     
                     div.img-div {
-                        // background-color: darkseagreen;
                         width: 100%;
                         height: 100%;
 
                         position: relative;
                         .img-item {
-                            // width: 100%;
                             height: 90%;
                             border-radius: 10px;
 
@@ -211,7 +191,6 @@ section.desert-con {
                         }
                     }
                     > p {
-                        // background-color: darkslateblue;
                         text-align: center;
                     }
                 }
@@ -221,7 +200,6 @@ section.desert-con {
                 top: 0;
                 right: 360px;
                 div.intro-img {
-                    // background-color: darkseagreen;
                     width: 320px;
                     height: 320px;
                     border-radius: 50%;
@@ -253,13 +231,11 @@ section.desert-con {
     top: 300px;
 
     table.nutrition {
-        // background-color: yellowgreen;
         width: 100%;
         height: 50%;
         text-align: center;
         border-collapse: collapse;
         thead {
-            // background-color: darkkhaki;
             th {
                 font-size: 16px;
                 padding: 0;
@@ -269,7 +245,6 @@ section.desert-con {
             }
         }
         tbody {
-            // background-color: darkolivegreen;
             height: 40%;
             td {
                 font-size: 14px;
@@ -281,8 +256,6 @@ section.desert-con {
         }
     }
 }
-
-
 
 //반응형
 /* 디바이스 width의 크기가 1120px 미만 일때 */
@@ -349,10 +322,6 @@ section.desert-con {
                 }
                 div.intro-div {
                     transform: translateY(180px);
-                    div.intro-img {
-                        img {
-                        }
-                    }
                 }
             }
         }

@@ -1,16 +1,12 @@
 section.notice-con {
-    // background-color: darkkhaki;
     padding-top: 20px;
     .notice-container {
         background-color: #eee;
         height: 800px;
         margin-top: 100px;
-        
         .inner-con {
-            // background-color: lightgreen;
             padding: 50px 0;
             text-align: center;
-            
             > h2 {
                 margin-bottom: 20px;
                 padding-bottom: 20px;
@@ -18,7 +14,6 @@ section.notice-con {
                 text-align: left;
             }
             .btn {
-                // margin-top: 16px;
                 background-color: darkgray;
                 color: #fff;
                 padding: 10px;

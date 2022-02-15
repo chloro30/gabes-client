@@ -3,7 +3,6 @@
     100% {transform: rotate(360deg);}
 }
 section.intro-con {
-    // background-color: darkkhaki;
     padding-top: 20px;
     .intro-container {
         background-color: #eee;
@@ -11,12 +10,10 @@ section.intro-con {
         padding: 40px;
         display: flex;
         .inner-con {
-            // background-color: lightgreen;
             width: 100%;
             padding-top: 10px;
             padding-bottom: 30px;
             h2 {
-                // transform: translateX(0);
                 margin-bottom: 40px;
                 padding-bottom: 20px;
                 border-bottom: 1px solid #ccc;
@@ -26,11 +23,9 @@ section.intro-con {
                 background-color: #e9e5e2;
                 width: 100%;
                 height: 200px;
-                // margin-top: 20px;
                 
                 position: relative;
                 .top-txt {
-                    // background-color: rgb(153, 153, 113);
                     width: 50%;
                     position: absolute;
                     top: 50%;
@@ -49,45 +44,35 @@ section.intro-con {
                 }
             }
             .info-2nd {
-                // background-color: sandybrown;
                 margin-top: 80px;
                 height: 300px;
                 display: flex;
                 justify-content: space-between;
                 .img-area {
                     background: url('../../img/gabes/company_intro/company_intro_bg_02.jpg') center no-repeat ;
-                    // background-color: slategrey;
-                    // background-size: cover;
                     background-size: contain;
                     width: 50%;
-                    // height: 100%;
                 }
                 .info-area {
-                    // background-color: skyblue;
                     width: 50%;
-                    // height: 100%;
                     padding: 0 20px;
                     padding-left: 40px;
                     .info-area-title {
-                        // background-color: slategrey;
                         font-size: 20px;
                         padding-bottom: 16px;
                         border-bottom: 1px solid #ccc;
                         margin-bottom: 16px;
                     }
                     table {
-                        // background-color: teal;
                         width: 100%;
                         padding-bottom: 16px;
                         border-bottom: 1px solid #ccc;
                         tr {
                             th {
-                                // background-color: snow;
                                 width: 20%;
                                 text-align: left;
                             }
                             td {
-                                // background-color: tan;
                                 padding: 8px;
                             }
                         }
@@ -95,20 +80,16 @@ section.intro-con {
                 }
             }
             .info-3rd {
-                // background-color: steelblue;
                 padding: 80px;
                 margin-top: 80px;
                 border-top: 1px solid #ccc;
                 .info-3rd-txt {
-                    // background-color: tan;
                     > p {
-                        // background-color: thistle;
                         display: inline-block;
                         font-size: 20px;
                         margin-bottom: 10px;
                     }
                     .para {
-                        // background-color: teal;
                         padding: 20px 0;
                         font-size: 14px;
                         line-height: 1.5;
@@ -123,7 +104,6 @@ section.intro-con {
                     }
                 }
                 .info-3rd-img-area {
-                    // background-color: rgb(148, 141, 141);
                     padding: 20px 0;
                     width: 100%;
                     height: 580px;
@@ -137,10 +117,8 @@ section.intro-con {
                     div {
                         &:nth-child(1) {
                             width: 46%;
-                            // height: 84%;
                             height: 100%;
                             background: url('../../img/gabes/company_intro/info-3rd-01.PNG') top no-repeat;
-                            // background-color: whitesmoke;
                             background-size: contain;
                         }
 
@@ -150,15 +128,12 @@ section.intro-con {
                             align-self: flex-end;
                             
                             background: url('../../img/gabes/company_intro/info-3rd-02.PNG') bottom no-repeat;
-                            // background-color: wheat;
                             background-size: contain;
                             z-index: 1;
                         }
 
                         &.img-round {
-                                // background: url('../../img/gabes/company_intro/bg_mission.svg') center no-repeat;
                                 background: url('../../img/gabes/company_intro/coffee_beans.png') center no-repeat;
-                                // background-color: wheat;
                                 background-size: cover;
                                 width: 600px;
                                 height: 600px;
@@ -175,11 +150,8 @@ section.intro-con {
 }
 
 
-
-
 // 하단 박스  (회사소개, 연혁 페이지 동시 적용)
 .boxes {
-    // background-color: skyblue;
     display: flex;
     > div {
         width: 33.3334%;
@@ -189,7 +161,6 @@ section.intro-con {
         justify-content: center;
         align-items: center;
         .span-div {
-            // background-color: steelblue;
             width: 53%;
             text-align: center;
             position: relative;
@@ -230,9 +201,7 @@ section.intro-con {
             font-weight: bold;
             text-align: center;
             padding: 10px 0;
-            // border: none;
             transition: 0.3s;
-            // cursor: pointer;
             &:hover {
                 background-color: rgb(141, 185, 212);
                 color: black;
@@ -270,9 +239,6 @@ section.intro-con {
                         p:nth-child(1) {
                             font-size: 24px;
                         }
-                        p:nth-child(2) {
-                            
-                        }
                     }
                 }
                 .info-2nd {
@@ -280,13 +246,10 @@ section.intro-con {
                     flex-direction: column;
                     align-items: center;
                     .img-area {
-                        // background-color: slategrey;
                         width: 100%;
                         height: 300px;
-                        // height: 40%;
                     }
                     .info-area {
-                        //  background-color: skyblue;
                          width: 85%;
                          margin-top: 16px;
                          padding: 0;
@@ -296,9 +259,6 @@ section.intro-con {
                     }
                 }
                 .info-3rd {
-                    .info-3rd-txt {
-
-                    }
                     .info-3rd-img-area {
                         padding-bottom: 0;
                         height: 400px;
@@ -306,14 +266,11 @@ section.intro-con {
                             &:nth-child(1) {
                                 height: 64%;
                             }
-    
                             &:nth-child(2) {
                                 height: 60%;
-                                
                                 background: url('../../img/gabes/company_intro/info-3rd-02.PNG') center no-repeat;
                                 background-size: contain;
                             }
-    
                             &.img-round {
                                     top: -370px;
                                     right: -300px;

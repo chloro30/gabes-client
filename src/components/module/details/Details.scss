@@ -1,6 +1,5 @@
 .details-div {
     position: relative;
-    // background-color: darkcyan;
     width: 80%;
     height: 800px;
     margin: 0 auto;
@@ -9,46 +8,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     details {
-        // background-color: darkmagenta;
         margin-top: 1em;
         width: 80%;
-
         summary {
             background-color: rgb(113, 190, 196);
             width: 100%;
             height: 50px;
             padding: 1em;
-            
-            // margin-bottom: 1em;
             cursor: pointer;
             outline: none;
             border-radius: .3em;
             font-weight: bold;
             transition: background-color 0.3s;
-
             &:hover {
                 background-color: rgb(137, 228, 235);
             }
-
             &::-webkit-details-marker {
                 background: url('../../../img/faq/arrows-up.png') center no-repeat;
-                // color: transparent;
-                // width: 17px;
-                // height: 17px;
             }
         }
-
         img {
             width: 50%;
         }
-
     }
     details[open] {
         summary ~ * {
             animation: sweep 0.5s ease-in-out;
         }
     }
-    
 }
