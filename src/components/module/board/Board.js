@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import BoardTable from './BoardTable';
 import BoardPage from './BoardPage';
 import axios from 'axios';
+import { API_URL } from '../../config/constants';
 
 function Board() {
 
@@ -13,7 +14,8 @@ function Board() {
     /*서버를 통해 DB에 있는 notice 테이블 데이터 받아오기 */
     useEffect(() => {
         //비동기 전송으로 get요청을 해주는 함수
-        const url = `http://localhost:8080/board/notice`;
+        // const url = `http://localhost:8080/board/notice`;
+        const url = `${API_URL}/board/notice`;
         axios.get(url)
         .then((response) => {
             // console.log(response.data);
@@ -64,7 +66,9 @@ function Board() {
     const [noticeLimit, setNoticeLimit] = useState([]);
     useEffect(() => {
         // console.log(currentPage);
-        const url = `http://localhost:8080/board/notice/limit/${currentPage}`;
+        // const url = `http://localhost:8080/board/notice/limit/${currentPage}`;
+        const url = `${API_URL}/board/notice/limit/${currentPage}`;
+
         axios.get(url)
         .then((response) => {
             // console.log(response.data);

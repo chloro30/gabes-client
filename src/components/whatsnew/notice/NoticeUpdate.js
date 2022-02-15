@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { API_URL } from '../../config/constants';
 import useAsync from '../../hook/useAsync';
 import '../../scss/NoticeUpdate.scss';
 
@@ -29,7 +30,8 @@ function NoticeUpdate() {
     //기존 내용을 defaultValue로 입력하기위해 데이터 불러오기
     // 해당 no의 공지사항 글 받아오기
     async function getNotice(){
-        const url = `http://localhost:8080/board/notice/${no}`;
+        // const url = `http://localhost:8080/board/notice/${no}`;
+        const url = `${API_URL}/board/notice/${no}`;
         const response = await axios.get(url);
         return response.data;
     }
@@ -67,7 +69,8 @@ function NoticeUpdate() {
 
         if(checkForm()){
             //서버에 수정 전송
-            const url = `http://localhost:8080/board/notice/update/${no}`;
+            // const url = `http://localhost:8080/board/notice/update/${no}`;
+            const url = `${API_URL}/board/notice/update/${no}`;
             axios.put(url, uploadData)
             .then( (res) => {
                 // console.log(res)

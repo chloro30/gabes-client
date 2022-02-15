@@ -5,6 +5,7 @@ import PopupDom from '../popup/PopupDom';
 import PopupZipcode from '../popup/PopupZipcode';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { API_URL } from '../config/constants';
 
 function InputReigster() {
 
@@ -111,7 +112,8 @@ function InputReigster() {
         }
         console.log(memberData);
 
-        const url = "http://localhost:8080/member/register";
+        // const url = "http://localhost:8080/member/register";
+        const url = `${API_URL}/member/register`;
         axios.post(url, memberData)
         .then( (result) => console.log(result))
         .catch( (err) => console.error(err));

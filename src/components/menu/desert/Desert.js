@@ -7,11 +7,13 @@ import BasicMenu from './BasicMenu';
 import SpecialMenu from './SpecialMenu';
 import useAsync from '../../hook/useAsync';
 import axios from 'axios';
+import { API_URL } from '../../config/constants';
 
 
  //응답받은 데이터를 리턴해줌
  async function getDesertList(){
-    const url = `http://localhost:8080/menu/desert`;
+    // const url = `http://localhost:8080/menu/desert`;
+    const url = `${API_URL}/menu/desert`;
     
     const response = await axios.get(url);
     // console.log(response.data);

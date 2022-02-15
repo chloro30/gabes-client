@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import useAsync from '../../hook/useAsync';
 import axios from 'axios';
 import '../../scss/NoticeDetail.scss';
+import { API_URL } from '../../config/constants';
 
 
 function NoticeDetail() {
@@ -16,7 +17,8 @@ function NoticeDetail() {
 
     // 해당 no의 공지사항 글 받아오기
     async function getNotice(){
-        const url = `http://localhost:8080/board/notice/${no}`;
+        // const url = `http://localhost:8080/board/notice/${no}`;
+        const url = `${API_URL}/board/notice/${no}`;
         const response = await axios.get(url);
         return response.data;
     }
@@ -34,7 +36,8 @@ function NoticeDetail() {
 
     const deleteNotice = () => {
         //서버에 삭제 전송
-        const url = `http://localhost:8080/board/notice/delete/${no}`;
+        // const url = `http://localhost:8080/board/notice/delete/${no}`;
+        const url = `${API_URL}/board/notice/delete/${no}`;
         axios.delete(url)
         .then( (res) => {
             // console.log(res)

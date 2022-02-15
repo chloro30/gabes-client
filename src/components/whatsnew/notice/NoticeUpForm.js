@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useRef } from 'react';
 import '../../scss/NoticeUpForm.scss';
 import {useNavigate} from 'react-router-dom';
+import { API_URL } from '../../config/constants';
 
 function NoticeUpForm() {
 
@@ -41,7 +42,8 @@ function NoticeUpForm() {
         
         if(checkForm()){
             //서버에 등록 전송
-            const url = `http://localhost:8080/board/notice/upload`;
+            // const url = `http://localhost:8080/board/notice/upload`;
+            const url = `${API_URL}/board/notice/upload`;
             axios.post(url, uploadData)
             .then( (res) => {
                 // console.log(res)
