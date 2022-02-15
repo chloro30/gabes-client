@@ -14,7 +14,7 @@ a {text-decoration: none;color: inherit;}
 .inner-con {
   max-width: 1200px;
   margin: 0 auto;
-}
+} 
 
 
 /* :not(#root > div > header) {
