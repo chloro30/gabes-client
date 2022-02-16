@@ -23,7 +23,6 @@ function Board() {
             setNoticeList(response.data);
         })
         .catch((err) => console.error(err));
-
     }, []);
 
     /* BoardPage 시작 */
