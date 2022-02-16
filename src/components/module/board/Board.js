@@ -4,6 +4,7 @@ import BoardTable from './BoardTable';
 import BoardPage from './BoardPage';
 import axios from 'axios';
 import { API_URL } from '../../config/constants';
+import Spinner from '../spinner/Spinner';
 
 function Board() {
 
@@ -78,10 +79,17 @@ function Board() {
 
     }, [currentPage]);
 
+    
+    //로딩 시간 확보하기
+    const [loadingFlag, setLoadingFlag] = useState(true);
+    setTimeout(() => {
+        setLoadingFlag(false);
+    }, 1500);
 
 
     return (
         <div className='board'>
+            { loadingFlag && <Spinner />}
             <BoardTable list={noticeLimit} />
             <BoardPage all_page={page_arr} page={currentPage} changePage={changePage} onFirstPage={onFirstPage} onLastPage={onLastPage} />
         </div>

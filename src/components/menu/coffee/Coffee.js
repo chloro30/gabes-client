@@ -37,7 +37,6 @@ function Coffee() {
             setClickedMenuSpecial(product);
         }
     }
-
    
     const state = useAsync(getCoffeeList);
     const { loading, data:coffeeData, error } = state;

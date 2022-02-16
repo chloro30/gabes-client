@@ -4,6 +4,7 @@ import useAsync from '../../hook/useAsync';
 import axios from 'axios';
 import '../../scss/NoticeDetail.scss';
 import { API_URL } from '../../config/constants';
+import Spinner from '../../module/spinner/Spinner';
 
 
 function NoticeDetail() {
@@ -27,7 +28,8 @@ function NoticeDetail() {
     const state = useAsync(getNotice);
     const { loading, error, data:notice } = state;
 
-    if(loading) return <div>로딩중...</div>;
+    // if(loading) return <div>로딩중...</div>;
+    if(loading) return <Spinner />
     if(error) return <div>페이지를 나타낼 수 없습니다.</div>;
     if(!notice) return null;
     /* 비동기 종료 */
