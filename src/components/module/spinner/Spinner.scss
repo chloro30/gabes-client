@@ -1,0 +1,27 @@
+@keyframes circle {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner-bg {
+    width: 100vw;
+    height: 80vh;
+
+    .spinner::before {
+        content: "";
+        box-sizing: border-box;
+        height: 80px;
+        width: 80px;
+        margin-top: -40px;
+        margin-left: -40px;
+        border-radius: 50%;
+        border: 5px solid lightgray;
+        border-top-color: rgb(44, 81, 102);
+        animation: circle 0.7s linear infinite;
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+}

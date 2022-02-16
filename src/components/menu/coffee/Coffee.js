@@ -8,6 +8,7 @@ import SpecialMenu from './SpecialMenu';
 import useAsync from '../../hook/useAsync';
 import axios from 'axios';
 import { API_URL } from '../../config/constants';
+import Spinner from '../../module/spinner/Spinner';
 
 
  //응답받은 데이터를 리턴해줌
@@ -37,15 +38,14 @@ function Coffee() {
         }
     }
 
-    // useEffect(()=>{
-    //     alert(clickedMenu);
-    // },[clickedMenu]);
-
+   
     const state = useAsync(getCoffeeList);
     const { loading, data:coffeeData, error } = state;
 
     //로딩중이라면?
-    if(loading) return <div>로딩중...</div>
+    // if(loading) return <div>로딩중...</div>
+    if(loading) return <Spinner />
+
     // 에러가 발생했다면?
     if(error) return <div>페이지를 나타낼 수 없습니다.</div>
     // 데이터가 없다면?
@@ -67,8 +67,6 @@ function Coffee() {
             specialProducts.push(coffee);
         }
     });
-
-   
 
     return (
         <section className='coffee-con'>
