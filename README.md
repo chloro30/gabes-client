@@ -1,6 +1,9 @@
 # Gabes Coffee- 가베스 커피
 가베스 커피 프랜차이즈 회사 소개 사이트
 
+# 개선할 사항
+스켈레톤 추가하기
+
 #### 설치
 npm install react-router-dom  (라우터)
 
