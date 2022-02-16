@@ -79,12 +79,12 @@ function Board() {
 
     }, [currentPage]);
 
-    
+
     //로딩 시간 확보하기
     const [loadingFlag, setLoadingFlag] = useState(true);
     setTimeout(() => {
         setLoadingFlag(false);
-    }, 1500);
+    }, 1000);
 
 
     return (
