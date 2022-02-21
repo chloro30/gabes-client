@@ -83,7 +83,7 @@ function Board() {
     const [loadingFlag, setLoadingFlag] = useState(true);
     setTimeout(() => {
         setLoadingFlag(false);
-    }, 1500);
+    }, 1200);
 
 
     return (

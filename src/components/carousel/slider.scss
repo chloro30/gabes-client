@@ -80,15 +80,15 @@
             height: 1.5rem;
             width: 1.5rem;
             margin: 0px 3px;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.2);
             border-radius: 50%;
             display: inline-block;
         }
         .active-dot {
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(43, 43, 43, 0.5);
         }
         .dot:hover {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(128, 106, 106, 0.8);
         }
     }
 }
@@ -97,56 +97,9 @@
 /* 디바이스 width의 크기가 900px 미만 일때 */
 @media screen and (max-width: 899px) {
     .slider-container {
-        
-        section {
-            .slide-div {
-                
-                
-                > div {
-                   
-                    &.active {
-                        
-                    }
-                    &.inactive {
-                       
-                    }
-                    &.slides {
-                       
-                    }
-                    .slide-image {
-                        
-                    }
-                }
-            }
-        }
-        .arrows {
-            .prev {
-                
-                &:hover {
-                    
-                }
-            }
-            .next {
-               
-                &:hover {
-                   
-                }
-            }
-        }
         .all-dots {
             // background-color: antiquewhite;
             transform: translate(-50%, -80px);
-            .dot {
-              
-            }
-            .active-dot {
-                
-            }
-            .dot:hover {
-               
-            }
         }
     }
-
-
 }

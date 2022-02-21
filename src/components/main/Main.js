@@ -5,12 +5,14 @@ import Slider from '../carousel/Slider';
 import Section1 from './Section1';
 import Section2 from './Section2';
 import Section3 from './Section3';
+import SectionPara from './SectionPara';
 
 function Main() {
     return (
         <section className='main-con'>
             <Slider />
             <Section1 />
+            <SectionPara />
             <Section2 />
             <Section3 />
         </section>
