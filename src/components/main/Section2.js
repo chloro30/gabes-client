@@ -27,20 +27,16 @@ function Section2() {
             // console.log(parallaxImg.current.style);
         }
 
-
         
     }, [scrollValue]);
     return (
         <div className='section2'>
             <div className='inner-con'>
-                <div>
-                    <img ref={parallaxImg}
-                        src='img/main/section2/2022_hawaii_title.png' 
-                        alt='하와이 텍스트'
-                        style={{
-                            transform: `translateX(${transformValue}%)`
-                        }}
-                     />
+                <div style={{
+                        transform: `translateX(${transformValue}%)`
+                    }}
+                >
+                    <img ref={parallaxImg} src='img/main/section2/2022_hawaii_title.png' alt='하와이 텍스트'/>
                     <button>자세히 보기</button>
                 </div>    
             </div>
