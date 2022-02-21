@@ -15,7 +15,7 @@ function Section2() {
         // console.log(e.target.scrollingElement.scrollTop);  //리액트에서 scroll 위치 값 얻기
 
         setScrollValue(e.target.scrollingElement.scrollTop);
-        console.log(`scrollValue: ${scrollValue}`);
+        // console.log(`scrollValue: ${scrollValue}`);
 
     }
     
@@ -24,7 +24,7 @@ function Section2() {
 
         if(scrollValue >= 850){
             setTransformValue(0);
-            console.log(parallaxImg.current.style);
+            // console.log(parallaxImg.current.style);
         }
 
 
