@@ -278,12 +278,17 @@ section.coffee-con {
                     margin: 0 20px;
                     padding: 20px 0 0 0;
                     li {
+                        margin-top: 10px;
+                        padding: 20px 0;
                         width: 220px;
                         a{
                             .all-img-div {
                                 .all-img {
                                     height: 165px;
                                 }
+                            }
+                            p {
+                                bottom: 0;
                             }
                         }
                     }
