@@ -23,7 +23,7 @@ function LoginModal( { closeModal } ) {
         }else if(inputPwd.current.value === ""){
             alert('비밀번호를 입력하세요');
         }else{
-            alert('로그인 세션 연결은 미완성입니다. 😂');
+            alert('로그인 세션 연결은 보완중입니다. 😂');
             closeModal();
         }
     }

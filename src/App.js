@@ -22,9 +22,9 @@ function App() {
       <Header />
         <Routes>
           <Route path="/" element={<Main />} />
-          {/* login */}
+          {/* 회원등록 */}
           <Route path="/register" element={<RegisterForm />} />
-          {/* gnb */}
+          {/* gnb 메뉴 */}
           <Route path="/about/intro" element={<CompanyIntro />} />
           <Route path="/about/history" element={<History />} />
           <Route path="/menu/coffee" element={<Coffee />} />
