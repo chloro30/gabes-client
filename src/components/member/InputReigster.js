@@ -156,13 +156,13 @@ function InputReigster() {
                             <TableRow>
                                 <TableCell>비밀번호</TableCell>
                                 <TableCell>
-                                    <input ref={passwordInput} type="text" required />
+                                    <input ref={passwordInput} type="password" required />
                                 </TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>비밀번호 확인</TableCell>
                                 <TableCell>
-                                    <input ref={passwordCheckInput} type="text" required />
+                                    <input ref={passwordCheckInput} type="password" required />
                                 </TableCell>
                             </TableRow>
                             <TableRow>
