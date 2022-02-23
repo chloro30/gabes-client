@@ -12,7 +12,6 @@ npm install @material-ui/core   (회원가입)
 
 npm install react-daum-postcode (회원가입)
 
-<!-- npm install styled-components   (우편번호 검색) -->
 
 npm install axios  (AJAX)
 

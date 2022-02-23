@@ -85,7 +85,7 @@ function Header( {isLogin} ) {
                 <div className="login">
                     {(isLogin) ?
                             <ul>
-                                <li onClick={()=>alert('마이페이지는 보완중 입니다.. 😂')}>마이페이지</li>
+                                <li onClick={()=>navigate("/mypage")}>마이페이지</li>
                                 <li onClick={onLogout}>로그아웃</li>
                             </ul>
                         : 
@@ -128,7 +128,7 @@ function Header( {isLogin} ) {
                     </div>
                     { (isLogin) ?
                             <ul className='sub-login'>
-                                <li onClick={()=>alert('마이페이지는 보완중 입니다.. 😂')}>마이페이지</li>
+                                <li onClick={()=>navigate("/mypage")}>마이페이지</li>
                                 <li onClick={onLogout}>로그아웃</li>
                             </ul>
                         :

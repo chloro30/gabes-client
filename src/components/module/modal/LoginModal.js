@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginModal.scss';
 import axios from 'axios';
@@ -70,12 +70,12 @@ function LoginModal( { closeModal } ) {
                     // console.log(`result.data[0].id: ${result.data[0].id}`);
                     
                     //세션에 추가하기
-                    //Session Storage에 key: user_id, Value: result.data[0].id 로 저장됨.
+                    //sessionStorage에 key: user_id, Value: result.data[0].id 로 저장됨.
                     sessionStorage.setItem('user_id', result.data[0].id);
 
                     //세션에서 불러올 때 사용법
-                    // sessionStorage.getItem('user_id');  //결과: result.data[0].id
-                    // console.log(sessionStorage.getItem('user_id'));
+                    // sessionStorage.getItem('user_id');  
+                    // console.log(sessionStorage.getItem('user_id'));  //결과: result.data[0].id
 
                     // 작업 완료 되면 페이지 이동(새로고침)
                     document.location.href = '/';

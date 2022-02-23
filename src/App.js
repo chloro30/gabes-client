@@ -6,6 +6,7 @@ import CompanyIntro from './components/gabes/intro/CompanyIntro';
 import Footer from './components/include/Footer';
 import Header from './components/include/Header';
 import Main from './components/main/Main';
+import MemberInfo from './components/member/mypage/MemberInfo';
 import RegisterForm from './components/member/RegisterForm';
 import Coffee from './components/menu/coffee/Coffee';
 import Desert from './components/menu/desert/Desert';
@@ -22,17 +23,17 @@ function App() {
     const [isLogin, setIsLogin] = useState(false);
 
     useEffect(()=>{
-        if(sessionStorage.getItem('user_id') === null){
-          //sessionStorage에 Key가 user_id라는 데이터가 없다면...
-          // console.log(`로그인 상태인가? => ${isLogin}`);
-        }else{
-          //sessionStorage에 Key가 user_id라는 데이터가 있다면...
-          setIsLogin(true);
-          // console.log(`로그인 상태인가? => ${isLogin}`);
-        }
-      }, [isLogin]);
-      
-      // console.log(`로그인 된 아이디: ${sessionStorage.getItem('user_id')}`);
+      if(sessionStorage.getItem('user_id') === null){
+        //sessionStorage에 Key가 user_id라는 데이터가 없다면...
+        // console.log(`로그인 상태인가? => ${isLogin}`);
+      }else{
+        //sessionStorage에 Key가 user_id라는 데이터가 있다면...
+        setIsLogin(true);
+        // console.log(`로그인 상태인가? => ${isLogin}`);
+      }
+    }, [isLogin]);
+    
+    // console.log(`로그인 된 아이디: ${sessionStorage.getItem('user_id')}`);
 
 
   return (
@@ -53,6 +54,8 @@ function App() {
           <Route path="/board/notice/update/:no" element={<NoticeUpdate />} />
           <Route path="/board/faq" element={<FaqPage />} />
           <Route path="/store" element={<StoreArea />} />
+          {/* login 메뉴 */}
+          <Route path="/mypage" element={<MemberInfo />} />
         </Routes>
       <Footer />
     </div>
