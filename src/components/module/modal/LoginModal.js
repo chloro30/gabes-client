@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LoginModal.scss';
 import axios from 'axios';
@@ -32,6 +32,11 @@ function LoginModal( { closeModal } ) {
         // console.log(formData);
     }
 
+
+    
+
+
+
     //회원가입 버튼 클릭
     const clickRegister = () => {
         closeModal();
@@ -50,19 +55,32 @@ function LoginModal( { closeModal } ) {
             // console.log(formData);
 
             //비동기 전송으로 POST요청을 해주는 함수
-            // const url = `http://localhost:8080/board/notice`;
             const url = `${API_URL}/login/${formData.userId}/${formData.userPwd}`;
             axios.post(url, formData)
             .then( (result) => {
                 // console.log(result);
-                // console.log(result.data[0]['count(*)']);
-                if(result.data[0]['count(*)']===0){
+                // console.log(result.data);
+                // console.log(result.data.length);
+                
+                if(result.data.length===0){
                     alert('입력하신 정보와 일치하는 회원이 없습니다.')
                 }else {
                     alert('로그인에 성공하였습니다!');
-                    alert('로그인 세션 연결은 보완중입니다. 😂');
-                    //로그인 모달 닫기
-                    closeModal();
+                    // console.log(`result.data[0].id: ${result.data[0].id}`);
+                    
+                    //세션에 추가하기
+                    //Session Storage에 key: user_id, Value: result.data[0].id 로 저장됨.
+                    sessionStorage.setItem('user_id', result.data[0].id);
+
+                    //세션에서 불러올 때 사용법
+                    // sessionStorage.getItem('user_id');  //결과: result.data[0].id
+                    // console.log(sessionStorage.getItem('user_id'));
+
+                    // 작업 완료 되면 페이지 이동(새로고침)
+                    document.location.href = '/';
+
+                    //로그인 모달 닫기 - 위에서 새로고침 작업을 추가하니 닫지 않아도 사라진다.
+                    // closeModal();
                 }
             })
             .catch( (err) => console.error(err));

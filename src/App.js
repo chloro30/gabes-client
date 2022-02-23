@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import History from './components/gabes/history/History';
@@ -17,9 +18,28 @@ import NoticeUpdate from './components/whatsnew/notice/NoticeUpdate';
 import NoticeUpForm from './components/whatsnew/notice/NoticeUpForm';
 
 function App() {
+
+    //로그인 상태 관리
+    const [isLogin, setIsLogin] = useState(false);
+
+    useEffect(()=>{
+        if(sessionStorage.getItem('user_id') === null){
+          //sessionStorage에 user_id라는 Key값으로 저장된 값이 없다면...
+          console.log(`로그인 상태인가? => ${isLogin}`);
+        }else{
+          //sessionStorage에 user_id라는 Key값으로 저장된 값이 있다면...
+          setIsLogin(true);
+          console.log(`로그인 상태인가? => ${isLogin}`);
+        }
+        
+      }, [isLogin]);
+      
+      console.log(`로그인 된 아이디: ${sessionStorage.getItem('user_id')}`);
+
+
   return (
     <div className="App">
-      <Header />
+      <Header isLogin={isLogin} />
         <Routes>
           <Route path="/" element={<Main />} />
           {/* 회원등록 */}

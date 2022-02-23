@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SiCoffeescript } from 'react-icons/si';
 import { Link, useNavigate } from 'react-router-dom';
 import LoginModal from '../module/modal/LoginModal';
 import '../scss/Header.scss';
 
-function Header() {
+function Header( {isLogin} ) {
+
+    
+    //로그인 여부 확인
+    useEffect(()=>{
+        console.log(isLogin);
+    },[isLogin]);
+
+    //로그아웃 - session에서 user_id를 삭제한다.
+    const onLogout = () => {
+        sessionStorage.removeItem('user_id');
+        document.location.href = '/';
+    }
+
 
     const navigate = useNavigate();
 
@@ -16,6 +29,7 @@ function Header() {
     const toggleLnb = () => setLnbOn(!lnbOn);
     const onLnb = () => setLnbOn(true);
 
+    //햄버거 토글 버튼
     const [toggle, setToggle] = useState(false);
     const OnToggle = () => setToggle(!toggle);
 
@@ -34,6 +48,7 @@ function Header() {
     }else{
         document.body.classList.remove('active-modal');
     }
+    
 
     return (
         <header className={` ${lnbOn ? 'lnb-on': '' } `} onMouseEnter={toggleLnb}  onMouseLeave={toggleLnb} >
@@ -69,10 +84,18 @@ function Header() {
                     </div>
                 </div>
                 <div className="login">
-                    <ul>
-                        <li onClick={()=>toggleLoginModal()}>로그인</li>
-                        <li onClick={()=>navigate("/register")}>회원가입</li>
-                    </ul>
+                    {(isLogin) ?
+                            <ul>
+                                <li onClick={()=>alert('마이페이지는 보완중 입니다.. 😂')}>마이페이지</li>
+                                <li onClick={onLogout}>로그아웃</li>
+                            </ul>
+                        : 
+                            <ul>
+                                <li onClick={()=>toggleLoginModal()}>로그인</li>
+                                <li onClick={()=>navigate("/register")}>회원가입</li>
+                            </ul>
+                    }
+
                 </div>
                 <div className={`toggle ${ toggle ? 'on' : '' } `} onClick={()=>OnToggle()}>
                     <span></span>
