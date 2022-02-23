@@ -9,27 +9,27 @@ function LoginModal( { closeModal } ) {
     const navigate = useNavigate();
 
     //form 데이터를 저장할 state
-    const [formdata, setFormdata] = useState({
-        userId: null,
-        userPwd: null
+    const [formData, setFormData] = useState({
+        userId: "",
+        userPwd: ""
     });
 
     const changeId = (e) => {
         // console.log(e.target.value);
-        setFormdata({
-            ...formdata,
+        setFormData({
+            ...formData,
             userId: e.target.value
         });
-        // console.log(formdata);
+        // console.log(formData);
     }
 
     const changePwd = (e) => {
         // console.log(e.target.value);
-        setFormdata({
-            ...formdata,
+        setFormData({
+            ...formData,
             userPwd: e.target.value
         });
-        // console.log(formdata);
+        // console.log(formData);
     }
 
     //회원가입 버튼 클릭
@@ -41,18 +41,18 @@ function LoginModal( { closeModal } ) {
     //로그인 버튼 클릭
     const onSubmit = (e) => {
         e.preventDefault();
-        if(formdata.userId === null || formdata.userId === ""){
+        if(formData.userId === ""){
             alert('아이디를 입력하세요');
-        }else if(formdata.userPwd === null || formdata.userPwd === ""){
+        }else if(formData.userPwd === ""){
             alert('비밀번호를 입력하세요');
         }else{
             //로그인 로직 처리
-            // console.log(formdata);
+            // console.log(formData);
 
             //비동기 전송으로 POST요청을 해주는 함수
             // const url = `http://localhost:8080/board/notice`;
-            const url = `${API_URL}/login/${formdata.userId}/${formdata.userPwd}`;
-            axios.post(url, formdata)
+            const url = `${API_URL}/login/${formData.userId}/${formData.userPwd}`;
+            axios.post(url, formData)
             .then( (result) => {
                 // console.log(result);
                 // console.log(result.data[0]['count(*)']);
