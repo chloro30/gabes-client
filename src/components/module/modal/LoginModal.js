@@ -66,7 +66,7 @@ function LoginModal( { closeModal } ) {
                 if(result.data.length===0){
                     alert('입력하신 정보와 일치하는 회원이 없습니다.');
                 }else {
-                    alert('로그인에 성공하였습니다!');
+                    // alert('로그인에 성공하였습니다!');
                     // console.log(`result.data[0].id: ${result.data[0].id}`);
                     
                     //세션에 추가하기
