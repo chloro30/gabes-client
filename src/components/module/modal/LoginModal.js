@@ -3,8 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import './LoginModal.scss';
 import axios from 'axios';
 import { API_URL } from '../../config/constants';
+import Spinner from '../spinner/Spinner';
 
 function LoginModal( { closeModal } ) {
+
+    //로딩 flag
+    const [loadingFlag, setLoadingFlag] = useState(false);
 
     const navigate = useNavigate();
 
@@ -32,11 +36,6 @@ function LoginModal( { closeModal } ) {
         // console.log(formData);
     }
 
-
-    
-
-
-
     //회원가입 버튼 클릭
     const clickRegister = () => {
         closeModal();
@@ -53,17 +52,19 @@ function LoginModal( { closeModal } ) {
         }else{
             //로그인 로직 처리
             // console.log(formData);
+            setLoadingFlag(true);  //로딩 중인 상태
 
             //비동기 전송으로 POST요청을 해주는 함수
             const url = `${API_URL}/login/${formData.userId}/${formData.userPwd}`;
             axios.post(url, formData)
             .then( (result) => {
+                setLoadingFlag(false);  //로딩이 끝난 상태
                 // console.log(result);
                 // console.log(result.data);
                 // console.log(result.data.length);
                 
                 if(result.data.length===0){
-                    alert('입력하신 정보와 일치하는 회원이 없습니다.')
+                    alert('입력하신 정보와 일치하는 회원이 없습니다.');
                 }else {
                     alert('로그인에 성공하였습니다!');
                     // console.log(`result.data[0].id: ${result.data[0].id}`);
@@ -90,6 +91,7 @@ function LoginModal( { closeModal } ) {
     return (
         <div className='overlay'>
             <div className='login-wrap'>
+            { loadingFlag && <Spinner />}
                 <form className='login-form' onSubmit={onSubmit}>
                     <button type="button" className='close' onClick={closeModal}>❌</button>
                     <table>
