@@ -78,7 +78,6 @@ function Header( {isLogin} ) {
                             <ul className={`board  ${ open ? 'on' : '' } `}>
                                 <li><Link to="/board/notice">공지사항</Link></li>
                                 <li><Link to="/board/faq">FAQ</Link></li>
-                                {/* <li><Link to="/board/event">이벤트</Link></li> */}
                             </ul>
                         </div>
                     </div>
@@ -127,19 +126,17 @@ function Header( {isLogin} ) {
                             </ul>
                         </div>
                     </div>
-                    {/* <ul className='sub-login'> */}
-                        { (isLogin) ?
-                                <ul className='sub-login'>
-                                    <li onClick={()=>alert('마이페이지는 보완중 입니다.. 😂')}>마이페이지</li>
-                                    <li onClick={onLogout}>로그아웃</li>
-                                </ul>
-                            :
-                                <ul className='sub-login'>
-                                    <li onClick={()=>toggleLoginModal()}>로그인</li>
-                                    <li onClick={()=>navigate("/register")}>회원가입</li>
-                                </ul>
-                        }
-                    {/* </ul> */}
+                    { (isLogin) ?
+                            <ul className='sub-login'>
+                                <li onClick={()=>alert('마이페이지는 보완중 입니다.. 😂')}>마이페이지</li>
+                                <li onClick={onLogout}>로그아웃</li>
+                            </ul>
+                        :
+                            <ul className='sub-login'>
+                                <li onClick={()=>toggleLoginModal()}>로그인</li>
+                                <li onClick={()=>navigate("/register")}>회원가입</li>
+                            </ul>
+                    }
                 </div>
             </div>
             {/* 로그인 모달 */}
