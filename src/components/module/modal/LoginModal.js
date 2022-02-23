@@ -20,7 +20,7 @@ function LoginModal( { closeModal } ) {
             ...formdata,
             userId: e.target.value
         });
-        console.log(formdata);
+        // console.log(formdata);
     }
 
     const changePwd = (e) => {
@@ -29,7 +29,7 @@ function LoginModal( { closeModal } ) {
             ...formdata,
             userPwd: e.target.value
         });
-        console.log(formdata);
+        // console.log(formdata);
     }
 
     //회원가입 버튼 클릭
@@ -47,22 +47,25 @@ function LoginModal( { closeModal } ) {
             alert('비밀번호를 입력하세요');
         }else{
             //로그인 로직 처리
-            alert('로그인 세션 연결은 보완중입니다. 😂');
-
-            console.log(formdata);
+            // console.log(formdata);
 
             //비동기 전송으로 POST요청을 해주는 함수
             // const url = `http://localhost:8080/board/notice`;
-            // const url = `${API_URL}/login`;
-            // axios.post(url, formdata)
-            // .then( (result) => {
-            //     console.log(result)
-            // })
-            // .catch( (err) => console.error(err));
-
-
-            //로그인 모달 닫기
-            // closeModal();
+            const url = `${API_URL}/login/${formdata.userId}/${formdata.userPwd}`;
+            axios.post(url, formdata)
+            .then( (result) => {
+                // console.log(result);
+                // console.log(result.data[0]['count(*)']);
+                if(result.data[0]['count(*)']===0){
+                    alert('입력하신 정보와 일치하는 회원이 없습니다.')
+                }else {
+                    alert('로그인에 성공하였습니다!');
+                    alert('로그인 세션 연결은 보완중입니다. 😂');
+                    //로그인 모달 닫기
+                    closeModal();
+                }
+            })
+            .catch( (err) => console.error(err));
         }
     }
 
