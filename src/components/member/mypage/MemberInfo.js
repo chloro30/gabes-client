@@ -52,8 +52,8 @@ function MemberInfo() {
                 // console.log(`${no}번 회원 삭제 완료`);
                 alert("그동안 이용해주셔서 감사합니다. 😉");
                 sessionStorage.removeItem('user_id');
-                window.location.href="/mypage";
-                navigate("/", {replace:true});  //리다이렉트로 이동
+                window.location.href="/";  //새로고침으로 홈 이동
+                // navigate("/", {replace:true});  //리다이렉트로 이동
             })
             .catch( (err) => console.error(err));
         }
@@ -135,11 +135,11 @@ function MemberInfo() {
                         <TableRow>
                             <TableCell colSpan={2}>
                                 <div>
-                                    <button onClick={()=>alert('정보수정은 현재 보완중입니다. 😂😂')}>정보수정</button>
+                                    <button onClick={()=>alert('정보수정은 현재 보완중입니다. 😂')}>정보수정</button>
                                     <button onClick={() => onDelete(memberData.data[0].no)}>회원탈퇴</button>
                                 </div>
                                 {/* <div>
-                                    <button onClick={()=>alert('정보수정은 현재 보완중입니다. 😂😂')}>정보수정</button>
+                                    <button onClick={()=>alert('정보수정은 현재 보완중입니다. 😂')}>정보수정</button>
                                     <button onClick={()=>alert('회원탈퇴는 현재 보완중입니다. 😂')}>회원탈퇴</button>
                                 </div> */}
                             </TableCell>
