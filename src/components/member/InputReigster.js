@@ -77,6 +77,7 @@ function InputReigster() {
                 input.current.value="";
             });
         }
+        alert("회원가입을 환영합니다! 😊");
         navigate("/", {replace:true});  //리다이렉트로 이동
     }
 
