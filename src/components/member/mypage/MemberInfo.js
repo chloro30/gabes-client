@@ -52,6 +52,7 @@ function MemberInfo() {
                 // console.log(`${no}번 회원 삭제 완료`);
                 alert("그동안 이용해주셔서 감사합니다. 😉");
                 sessionStorage.removeItem('user_id');
+                window.location.href="/mypage";
                 navigate("/", {replace:true});  //리다이렉트로 이동
             })
             .catch( (err) => console.error(err));
