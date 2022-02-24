@@ -112,9 +112,10 @@ function MemberInfo() {
                             <TableCell colSpan={2}>
                                 {/* <button onClick={()=>alert('삭제클릭')}>삭제</button>
                                 <button><Link to={`/`}>수정</Link></button> */}
-
-                                <button onClick={()=>alert('삭제는 현재 보완중입니다. 😂')}>삭제</button>
-                                <button onClick={()=>alert('수정은 현재 보완중입니다. 😂😂')}>수정</button>
+                                <div>
+                                    <button onClick={()=>alert('정보수정은 현재 보완중입니다. 😂😂')}>정보수정</button>
+                                    <button onClick={()=>alert('회원탈퇴는 현재 보완중입니다. 😂')}>회원탈퇴</button>
+                                </div>
                             </TableCell>
                         </TableRow>
                     </TableBody>
