@@ -42,7 +42,7 @@ function MemberInfo( {HandlerIsLogin} ) {
     // console.log(memberData.data);
 
     
-    // 삭제하기
+    // 회원탈퇴 - 삭제하기
     const onDelete = (no) => {
         const ask = window.confirm("정말 회원탈퇴 하시겠습니까? 😮");
 
@@ -58,10 +58,7 @@ function MemberInfo( {HandlerIsLogin} ) {
             })
             .catch( (err) => console.error(err));
         }
-
     }
-
-
 
 
     // 전화번호 정규식

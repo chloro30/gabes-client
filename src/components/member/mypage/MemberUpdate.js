@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { API_URL } from '../../config/constants';
 import axios from 'axios';
 import useAsync from '../../hook/useAsync';
@@ -25,6 +25,7 @@ async function getMember(){
     return response;
 }
 
+
 function MemberUpdate() {
 
     const navigate = useNavigate();
@@ -32,6 +33,19 @@ function MemberUpdate() {
     const zipcodeInput = useRef();        //우편번호
     const roadAddressInput = useRef();    //도로명 주소
     const detailAddressInput = useRef();  //상세 주소
+
+    /* 입력 데이터 state로 관리 */
+    const [ formData, setFormData ] = useState({
+        userPwd: "",
+        userPhone: "",
+        userAddress: ""
+    });
+
+    useEffect(()=>{
+        console.log(formData);
+    },[formData]);
+
+
 
     /* 주소 */
     // 팝업창 상태 관리
@@ -53,10 +67,12 @@ function MemberUpdate() {
         zipcodeInput.current.value = zipcode;
         roadAddressInput.current.value = roadAddr;
 
+        setFormData({
+            ...formData,
+            userAddress: "(" + zipcodeInput.current.value + ")" + " "
+                        + roadAddressInput.current.value
+        });
     }
-
-
-
 
 
     const state = useAsync(getMember);
@@ -72,21 +88,49 @@ function MemberUpdate() {
 
     // console.log(memberData.data);
 
+
+    // 연락처 입력 데이터
+    const onChangePhone = (e) => {
+        setFormData({
+            ...formData,
+            userPhone: e.target.value
+        });
+    }
+
+
     
-    // 삭제하기
+    // 회원정보 수정하기
     const onUpdate = (no) => {
-        alert("정보 수정은 보완중입니다. 😂");
+        // alert("정보 수정은 보완중입니다. 😂");
+
+        // 연락처 변경
+        if(formData['userPhone']==""){
+            console.log(memberData.data[0].phone);
+            
+            // console.log(formData);
+        }else{
+            console.log(formData['userPhone']);
+        }
+        
+        
+        // 주소 변경
+        let newAddress = formData['userAddress'] + " " + detailAddressInput.current.value;
+
+        if(newAddress==" "){
+            console.log(memberData.data[0].address);
+        }else{
+            console.log(newAddress);
+        }
+
         // const ask = window.confirm("회원정보를 수정하시겠습니까? 😮");
         
         // if(ask){
-        //     const url = `${API_URL}/member/${no}`;
-        //     axios.delete(url)
+        //     const url = `${API_URL}/member/update`;
+        //     axios.put(url, formData)
         //     .then( (result) => {
-        //         // console.log(`${no}번 회원 삭제 완료`);
-        //         alert("그동안 이용해주셔서 감사합니다. 😉");
-        //         sessionStorage.removeItem('user_id');
-        //         HandlerIsLogin();  //sessionStore에 데이터 삭제 후 로그인 해제 상태로 변경 - App.js에서 실행
-        //         navigate("/", {replace:true});  //리다이렉트로 홈 이동
+        //         // console.log(`${no}번 회원 수정 완료`);
+        //         alert("회원정보가 수정되었습니다. 😉");
+        //         navigate("/mypage", {replace:true});  //리다이렉트로 마이페이지 이동
         //     })
         //     .catch( (err) => console.error(err));
         // }
@@ -152,7 +196,7 @@ function MemberUpdate() {
                         </TableRow>
                         <TableRow>
                             <TableCell>연락처</TableCell>
-                            <TableCell><input type="text" name="phone" defaultValue={phoneFomatter(memberData.data[0].phone)} required /></TableCell>
+                            <TableCell><input type="text" name="phone" defaultValue={phoneFomatter(memberData.data[0].phone)} onChange={onChangePhone} required /></TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>생년월일</TableCell>
