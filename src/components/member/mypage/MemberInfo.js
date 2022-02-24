@@ -36,8 +36,7 @@ function MemberInfo() {
     // 데이터가 없다면?
     if(!memberData) return null;
 
-    console.log(memberData.data);
-
+    // console.log(memberData.data);
 
 
     // 전화번호 정규식
