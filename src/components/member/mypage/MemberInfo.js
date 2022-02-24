@@ -4,7 +4,7 @@ import axios from 'axios';
 import useAsync from '../../hook/useAsync';
 import Spinner from '../../module/spinner/Spinner';
 import {Table, TableBody, TableCell, TableRow} from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../scss/MemberInfo.scss';
 
 
@@ -25,6 +25,8 @@ async function getMember(){
 
 function MemberInfo() {
 
+    const navigate = useNavigate();
+
     const state = useAsync(getMember);
     const { loading, data:memberData, error } = state;
 
@@ -37,6 +39,27 @@ function MemberInfo() {
     if(!memberData) return null;
 
     // console.log(memberData.data);
+
+    
+    // 삭제하기
+    const onDelete = (no) => {
+        const ask = window.confirm("정말 회원탈퇴 하시겠습니까? 😮");
+
+        if(ask){
+            const url = `${API_URL}/member/${no}`;
+            axios.delete(url)
+            .then( (result) => {
+                // console.log(`${no}번 회원 삭제 완료`);
+                alert("그동안 이용해주셔서 감사합니다. 😉");
+                sessionStorage.removeItem('user_id');
+                navigate("/", {replace:true});  //리다이렉트로 이동
+            })
+            .catch( (err) => console.error(err));
+        }
+
+    }
+
+
 
 
     // 전화번호 정규식
@@ -110,12 +133,14 @@ function MemberInfo() {
                         </TableRow>
                         <TableRow>
                             <TableCell colSpan={2}>
-                                {/* <button onClick={()=>alert('삭제클릭')}>삭제</button>
-                                <button><Link to={`/`}>수정</Link></button> */}
                                 <div>
                                     <button onClick={()=>alert('정보수정은 현재 보완중입니다. 😂😂')}>정보수정</button>
-                                    <button onClick={()=>alert('회원탈퇴는 현재 보완중입니다. 😂')}>회원탈퇴</button>
+                                    <button onClick={() => onDelete(memberData.data[0].no)}>회원탈퇴</button>
                                 </div>
+                                {/* <div>
+                                    <button onClick={()=>alert('정보수정은 현재 보완중입니다. 😂😂')}>정보수정</button>
+                                    <button onClick={()=>alert('회원탈퇴는 현재 보완중입니다. 😂')}>회원탈퇴</button>
+                                </div> */}
                             </TableCell>
                         </TableRow>
                     </TableBody>

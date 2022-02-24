@@ -111,12 +111,14 @@ function InputReigster() {
             m_gender: genderValue,
             m_address: address,
         }
-        console.log(memberData);
+        // console.log(memberData);
 
         // const url = "http://localhost:8080/member/register";
         const url = `${API_URL}/member/register`;
         axios.post(url, memberData)
-        .then( (result) => console.log(result))
+        .then( (result) => {
+            // console.log(result)
+        })
         .catch( (err) => console.error(err));
     }
 
