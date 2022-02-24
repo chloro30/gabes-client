@@ -7,6 +7,7 @@ import Footer from './components/include/Footer';
 import Header from './components/include/Header';
 import Main from './components/main/Main';
 import MemberInfo from './components/member/mypage/MemberInfo';
+import MemberUpdate from './components/member/mypage/MemberUpdate';
 import RegisterForm from './components/member/RegisterForm';
 import Coffee from './components/menu/coffee/Coffee';
 import Desert from './components/menu/desert/Desert';
@@ -60,6 +61,7 @@ function App() {
           <Route path="/store" element={<StoreArea />} />
           {/* login 메뉴 */}
           <Route path="/mypage" element={<MemberInfo HandlerIsLogin={HandlerIsLogin} />} />
+          <Route path="/mypage/update" element={<MemberUpdate />} />
         </Routes>
       <Footer />
     </div>
