@@ -1,5 +1,9 @@
 # Gabes Coffee- 가베스 커피
-가베스 커피 프랜차이즈 회사 소개 사이트
+Gabes Coffee 프랜차이즈 회사 소개 사이트
+
+## Gabes란?
+Gabe(가베)는 커피의 우리나라 첫 이름입니다.
+s를 덧붙여 대한민국 모든 커피의 핵심이 되자는 의미를 가지고 있습니다.
 
 #### 설치
 npm install react-router-dom  (라우터)
@@ -11,7 +15,6 @@ npm install react-icons --save  (아이콘)
 npm install @material-ui/core   (회원가입)
 
 npm install react-daum-postcode (회원가입)
-
 
 npm install axios  (AJAX)
 

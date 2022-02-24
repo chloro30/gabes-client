@@ -23,7 +23,7 @@ async function getMember(){
     return response;
 }
 
-function MemberInfo() {
+function MemberInfo( {HandlerIsLogin} ) {
 
     const navigate = useNavigate();
 
@@ -52,8 +52,8 @@ function MemberInfo() {
                 // console.log(`${no}번 회원 삭제 완료`);
                 alert("그동안 이용해주셔서 감사합니다. 😉");
                 sessionStorage.removeItem('user_id');
-                window.location.href="/";  //새로고침으로 홈 이동
-                // navigate("/", {replace:true});  //리다이렉트로 이동
+                HandlerIsLogin();  //sessionStore에 데이터 삭제 후 로그인 해제 상태로 변경 - App.js에서 실행
+                navigate("/", {replace:true});  //리다이렉트로 홈 이동
             })
             .catch( (err) => console.error(err));
         }

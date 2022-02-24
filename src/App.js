@@ -35,6 +35,10 @@ function App() {
     
     // console.log(`로그인 된 아이디: ${sessionStorage.getItem('user_id')}`);
 
+    //회원 탈퇴시 sessionStore에 데이터 삭제 후 로그인 해제 상태로 변경
+    const HandlerIsLogin = () => {
+      setIsLogin(false);
+    }
 
   return (
     <div className="App">
@@ -55,7 +59,7 @@ function App() {
           <Route path="/board/faq" element={<FaqPage />} />
           <Route path="/store" element={<StoreArea />} />
           {/* login 메뉴 */}
-          <Route path="/mypage" element={<MemberInfo />} />
+          <Route path="/mypage" element={<MemberInfo HandlerIsLogin={HandlerIsLogin} />} />
         </Routes>
       <Footer />
     </div>
