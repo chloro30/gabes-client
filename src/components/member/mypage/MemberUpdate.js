@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { API_URL } from '../../config/constants';
 import axios from 'axios';
 import useAsync from '../../hook/useAsync';
 import Spinner from '../../module/spinner/Spinner';
 import {Table, TableBody, TableCell, TableRow} from '@material-ui/core';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PopupDom from '../../popup/PopupDom';
 import PopupZipcode from '../../popup/PopupZipcode';
 import '../../scss/MemberUpdate.scss';
@@ -116,13 +116,13 @@ function MemberUpdate() {
 
     //유효성 검사 - validation
     const validation = () => {
-        if(formData['userPwd']==""){
+        if(formData['userPwd']===""){
             alert("비밀번호를 입력하세요.");
             return false;
-        }else if(formData['userPwdCk']==""){
+        }else if(formData['userPwdCk']===""){
             alert("비밀번호 확인을 입력하세요.");
             return false;
-        }else if(formData['userPwd'] != formData['userPwdCk']){
+        }else if(formData['userPwd'] !== formData['userPwdCk']){
             alert("비밀번호가 일치하지 않습니다.")
         }else{
             return true;
@@ -148,7 +148,7 @@ function MemberUpdate() {
     
     
             // 비밀번호 변경
-            if(formData['userPwd']==""){
+            if(formData['userPwd']===""){
                 // console.log(memberData.data[0].pwd);
                 sendFormData = {
                     ...sendFormData,
@@ -163,7 +163,7 @@ function MemberUpdate() {
             }
     
             // 연락처 변경
-            if(formData['userPhone']==""){
+            if(formData['userPhone']===""){
                 // console.log(memberData.data[0].phone);
                 sendFormData = {
                     ...sendFormData,
@@ -181,7 +181,7 @@ function MemberUpdate() {
             // 주소 변경
             let newAddress = formData['userAddress'] + " " + detailAddressInput.current.value;
     
-            if(newAddress==" "){
+            if(newAddress===" "){
                 // console.log(memberData.data[0].address);
                 sendFormData = {
                     ...sendFormData,

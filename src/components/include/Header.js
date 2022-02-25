@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { SiCoffeescript } from 'react-icons/si';
 import { Link, useNavigate } from 'react-router-dom';
 import LoginModal from '../module/modal/LoginModal';
@@ -7,10 +7,10 @@ import '../scss/Header.scss';
 function Header( {isLogin} ) {
 
     
-    //로그인 여부 확인
-    useEffect(()=>{
-        console.log(isLogin);
-    },[isLogin]);
+    // //로그인 여부 확인
+    // useEffect(()=>{
+    //     console.log(`로그인 여부: ${isLogin}`);
+    // },[isLogin]);
 
     //로그아웃 - session에서 user_id를 삭제한다.
     const onLogout = () => {

@@ -4,7 +4,7 @@ import axios from 'axios';
 import useAsync from '../../hook/useAsync';
 import Spinner from '../../module/spinner/Spinner';
 import {Table, TableBody, TableCell, TableRow} from '@material-ui/core';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../../scss/MemberInfo.scss';
 
 
