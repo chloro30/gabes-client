@@ -37,42 +37,18 @@ function MemberUpdate() {
     /* 입력 데이터 state로 관리 */
     const [ formData, setFormData ] = useState({
         userPwd: "",
+        userPwdCk: "",
         userPhone: "",
         userAddress: ""
     });
 
-    useEffect(()=>{
-        console.log(formData);
-    },[formData]);
-
-
-
     /* 주소 */
     // 팝업창 상태 관리
     const [isPopupOpen, setIsPopupOpen] = useState(false);
-    
-    //다음 우편번호 API 팝업 오픈
-    const openDaumApi = () => {
-        setIsPopupOpen(true);
-    }
 
-    //다음 우편번호 API 팝업 닫기
-    const closeDaumApi = () => {
-        setIsPopupOpen(false);
-    }
-
-    const returnData = (zipcode, roadAddr) => {
-        // console.log(`우편번호: ${zipcode}`);
-        // console.log(roadAddr);
-        zipcodeInput.current.value = zipcode;
-        roadAddressInput.current.value = roadAddr;
-
-        setFormData({
-            ...formData,
-            userAddress: "(" + zipcodeInput.current.value + ")" + " "
-                        + roadAddressInput.current.value
-        });
-    }
+    // useEffect(()=>{
+    //     console.log(formData);
+    // },[formData]);
 
 
     const state = useAsync(getMember);
@@ -89,6 +65,23 @@ function MemberUpdate() {
     // console.log(memberData.data);
 
 
+
+    // 비밀번호 입력 데이터
+    const onChangePwd = (e) => {
+        setFormData({
+            ...formData,
+            userPwd: e.target.value
+        });
+    }
+
+    // 비밀번호 확인 입력 데이터
+    const onChangePwdCk = (e) => {
+        setFormData({
+            ...formData,
+            userPwdCk: e.target.value
+        });
+    }
+
     // 연락처 입력 데이터
     const onChangePhone = (e) => {
         setFormData({
@@ -97,43 +90,128 @@ function MemberUpdate() {
         });
     }
 
+    //다음 우편번호 API 팝업 오픈
+    const openDaumApi = () => {
+        setIsPopupOpen(true);
+    }
+
+    //다음 우편번호 API 팝업 닫기
+    const closeDaumApi = () => {
+        setIsPopupOpen(false);
+    }
+
+    const returnData = (zipcode, roadAddr) => {
+        // console.log(`우편번호: ${zipcode}`);
+        // console.log(roadAddr);
+        zipcodeInput.current.value = zipcode;
+        roadAddressInput.current.value = roadAddr;
+
+        //새로운 주소 정보 저장하기
+        setFormData({
+            ...formData,
+            userAddress: "(" + zipcodeInput.current.value + ")" + " "
+                        + roadAddressInput.current.value
+        });
+    }
+
+    //유효성 검사 - validation
+    const validation = () => {
+        if(formData['userPwd']==""){
+            alert("비밀번호를 입력하세요.");
+            return false;
+        }else if(formData['userPwdCk']==""){
+            alert("비밀번호 확인을 입력하세요.");
+            return false;
+        }else if(formData['userPwd'] != formData['userPwdCk']){
+            alert("비밀번호가 일치하지 않습니다.")
+        }else{
+            return true;
+        }
+    }
+
 
     
     // 회원정보 수정하기
     const onUpdate = (no) => {
-        // alert("정보 수정은 보완중입니다. 😂");
+        
+        if(!validation()){
+            // alert("유효성 검사 - false");
 
-        // 연락처 변경
-        if(formData['userPhone']==""){
-            console.log(memberData.data[0].phone);
+        }else{
+            //서버에 전송할 데이터 양식
+            let sendFormData = {
+                "no": no,
+                "pwd": "",
+                "phone": "",
+                "address": ""
+            }
+    
+    
+            // 비밀번호 변경
+            if(formData['userPwd']==""){
+                // console.log(memberData.data[0].pwd);
+                sendFormData = {
+                    ...sendFormData,
+                    "pwd": memberData.data[0].pwd
+                }
+            }else{
+                // console.log(formData['userPwd']);
+                sendFormData = {
+                    ...sendFormData,
+                    "pwd": formData['userPwd']
+                }
+            }
+    
+            // 연락처 변경
+            if(formData['userPhone']==""){
+                // console.log(memberData.data[0].phone);
+                sendFormData = {
+                    ...sendFormData,
+                    "phone": memberData.data[0].phone
+                }
+                // console.log(formData);
+            }else{
+                // console.log(formData['userPhone']);
+                sendFormData = {
+                    ...sendFormData,
+                    "phone": formData['userPhone']
+                }
+            }
             
-            // console.log(formData);
-        }else{
-            console.log(formData['userPhone']);
+            // 주소 변경
+            let newAddress = formData['userAddress'] + " " + detailAddressInput.current.value;
+    
+            if(newAddress==" "){
+                // console.log(memberData.data[0].address);
+                sendFormData = {
+                    ...sendFormData,
+                    "address": memberData.data[0].address
+                }
+            }else{
+                // console.log(newAddress);
+                sendFormData = {
+                    ...sendFormData,
+                    "address": newAddress
+                }
+            }
+            
+    
+            const ask = window.confirm("회원정보를 수정하시겠습니까? 😮");
+            // console.log(sendFormData);
+    
+            if(ask){
+                //서버에 PUT 요청
+                const url = `${API_URL}/member/update`;
+                axios.put(url, sendFormData)
+                .then( (result) => {
+                    // console.log(`${no}번 회원 수정 완료`);
+                    alert("회원정보가 수정되었습니다. 😉");
+                    navigate("/mypage", {replace:true});  //리다이렉트로 마이페이지 이동
+                })
+                .catch( (err) => console.error(err));
+            }
         }
-        
-        
-        // 주소 변경
-        let newAddress = formData['userAddress'] + " " + detailAddressInput.current.value;
 
-        if(newAddress==" "){
-            console.log(memberData.data[0].address);
-        }else{
-            console.log(newAddress);
-        }
-
-        // const ask = window.confirm("회원정보를 수정하시겠습니까? 😮");
-        
-        // if(ask){
-        //     const url = `${API_URL}/member/update`;
-        //     axios.put(url, formData)
-        //     .then( (result) => {
-        //         // console.log(`${no}번 회원 수정 완료`);
-        //         alert("회원정보가 수정되었습니다. 😉");
-        //         navigate("/mypage", {replace:true});  //리다이렉트로 마이페이지 이동
-        //     })
-        //     .catch( (err) => console.error(err));
-        // }
     }
 
 
@@ -184,11 +262,11 @@ function MemberUpdate() {
                         </TableRow>
                         <TableRow>
                             <TableCell>비밀번호</TableCell>
-                            <TableCell><input type="password" name="pwd" required /></TableCell>
+                            <TableCell><input type="password" name="pwd" onChange={onChangePwd} required /></TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>비밀번호 확인</TableCell>
-                            <TableCell><input type="password" name="pwdCk" required /></TableCell>
+                            <TableCell><input type="password" name="pwdCk" onChange={onChangePwdCk} required /></TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>이름</TableCell>
