@@ -70,13 +70,13 @@ function Board() {
     const [noticeLimit, setNoticeLimit] = useState([]);
     useEffect(() => {
         // console.log(currentPage);
-        setLoadingFlag(true);
+        // setLoadingFlag(true);
         // const url = `http://localhost:8080/board/notice/limit/${currentPage}`;
         const url = `${API_URL}/board/notice/limit/${currentPage}`;
 
         axios.get(url)
         .then((response) => {
-            setLoadingFlag(false);
+            // setLoadingFlag(false);
             // console.log(response.data);
             setNoticeLimit(response.data);
         })

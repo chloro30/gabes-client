@@ -3,9 +3,11 @@ import React, { useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { API_URL } from '../../config/constants';
 import useAsync from '../../hook/useAsync';
+import Spinner from '../../module/spinner/Spinner';
 import '../../scss/NoticeUpdate.scss';
 
 function NoticeUpdate() {
+
     //라우터 파라미터 받기
     const { no } = useParams();
     // console.log(no);
@@ -40,7 +42,7 @@ function NoticeUpdate() {
     const state = useAsync(getNotice);
     const { loading, error, data:notice } = state;
 
-    if(loading) return <div>로딩중...</div>;
+    if(loading) return <Spinner />;
     if(error) return <div>페이지를 나타낼 수 없습니다.</div>;
     if(!notice) return null;
     /* 비동기 종료 */
