@@ -6,10 +6,12 @@ import Section1 from './Section1';
 import Section2 from './Section2';
 import Section3 from './Section3';
 import SectionPara from './SectionPara';
+import ScrollToTop from '../module/scroll/ScrollToTop';
 
 function Main() {
     return (
         <section className='main-con'>
+            <ScrollToTop />
             <Slider />
             <Section1 />
             <SectionPara />

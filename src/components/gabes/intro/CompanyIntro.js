@@ -1,10 +1,12 @@
 import React from 'react';
+import ScrollToTop from '../../module/scroll/ScrollToTop';
 import '../../scss/CompanyIntro.scss';
 import BottomBoxes from '../BottomBoxes';
 
 function CompanyIntro() {
     return (
         <section className='intro-con'>
+            <ScrollToTop />
             <div className='intro-container'>
                 <div className='inner-con'>
                     <h2>Gabes Coffee</h2>

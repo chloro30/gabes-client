@@ -9,6 +9,7 @@ import useAsync from '../../hook/useAsync';
 import axios from 'axios';
 import { API_URL } from '../../config/constants';
 import Spinner from '../../module/spinner/Spinner';
+import ScrollToTop from '../../module/scroll/ScrollToTop';
 
 
  //응답받은 데이터를 리턴해줌
@@ -68,6 +69,7 @@ function Desert() {
 
     return (
         <section className='desert-con'>
+            <ScrollToTop />
             <AllDesert products={coffeeList} allMenuClick={allMenuClick} />
             <BasicMenu basicProducts={basicProducts} clickedMenu={clickedMenuBasic} />
             <SpecialMenu specialProducts={specialProducts} clickedMenu={clickedMenuSpecial} />

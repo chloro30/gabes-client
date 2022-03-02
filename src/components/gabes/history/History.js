@@ -1,10 +1,12 @@
 import React from 'react';
+import ScrollToTop from '../../module/scroll/ScrollToTop';
 import '../../scss/History.scss';
 import BottomBoxes from '../BottomBoxes';
 
 function History() {
     return (
         <section className='history-con'>
+            <ScrollToTop />
             <div className='history-container'>
                 <h2 className='inner-con'>History Of Gabes</h2>
                 <div className='history-01-bg'>
