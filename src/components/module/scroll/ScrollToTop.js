@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { CgArrowUpO } from 'react-icons/cg';
 import './ScrollToTop.scss';
 
 function ScrollToTop() {
@@ -40,7 +41,7 @@ function ScrollToTop() {
 
     return (
         <div className='scroll-to-top' onClick={moveTop}>
-            <span>⬆</span>
+            <span><CgArrowUpO /></span>
         </div>
     );
 }
