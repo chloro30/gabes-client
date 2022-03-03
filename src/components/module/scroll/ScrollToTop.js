@@ -32,6 +32,11 @@ function ScrollToTop() {
         }else{
             setVisible(false);
         }
+
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+        }
+
     }, [scrollValue]);
 
 

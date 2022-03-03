@@ -26,7 +26,10 @@ function Section2() {
             setTransformValue(0);
             // console.log(parallaxImg.current.style);
         }
-
+        
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+        }
         
     }, [scrollValue]);
     return (

@@ -24,6 +24,10 @@ function SectionPara() {
         // console.log(`브라우저의 화면 높이: ${window.innerHeight}`);
         // console.log(parasDiv);
         
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+        }
+        
     }, [scrollValue]);
 
     return (
