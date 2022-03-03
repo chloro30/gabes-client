@@ -20,7 +20,3 @@ a {text-decoration: none;color: inherit;}
 /* :not(#root > div > header) {
   margin-top: 140px;
 } */
-
-html {
-  scroll-behavior: smooth;
-}

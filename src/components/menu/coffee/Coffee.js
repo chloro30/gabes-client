@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../../scss/Coffee.scss';
 import AllCoffee from './AllCoffee';
 import BasicMenu from './BasicMenu';
@@ -25,6 +25,10 @@ import ScrollToTop from '../../module/scroll/ScrollToTop';
 
 function Coffee() {
 
+    const basicRef = useRef(null);
+    const specialRef = useRef(null);
+
+
     // 모든 메뉴에서 basic 상품 클릭시 상세 보기에도 적용시키기
     const [clickedMenuBasic, setClickedMenuBasic] = useState(null);
 
@@ -34,8 +38,16 @@ function Coffee() {
     const allMenuClick = (product) => {
         if(product.category === 'basic'){
             setClickedMenuBasic(product);
+            window.scrollTo({
+                top: basicRef.current.offsetTop,
+                behavior: "smooth"
+            });
         }else if(product.category === 'special'){
             setClickedMenuSpecial(product);
+            window.scrollTo({
+                top: specialRef.current.offsetTop,
+                behavior: "smooth"
+            });
         }
     }
    
@@ -72,8 +84,8 @@ function Coffee() {
         <section className='coffee-con'>
             <ScrollToTop />
             <AllCoffee products={coffeeList} allMenuClick={allMenuClick} />
-            <BasicMenu basicProducts={basicProducts} clickedMenu={clickedMenuBasic} />
-            <SpecialMenu specialProducts={specialProducts} clickedMenu={clickedMenuSpecial} />
+            <BasicMenu ref={basicRef} basicProducts={basicProducts} clickedMenu={clickedMenuBasic} />
+            <SpecialMenu ref={specialRef} specialProducts={specialProducts} clickedMenu={clickedMenuSpecial} />
         </section>
     );
 }

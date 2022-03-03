@@ -36,36 +36,37 @@ section.desert-con {
                     padding: 8px 0;
                     overflow: hidden;
                     position: relative;
-                    a {
-                        .all-img-div {
-                            width: 75%;
-                            height: 80%;
-                            position: absolute;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            &:hover img {
-                                transform: translate(-50%, -50%) scale(1.2);
-                            }
-                            .all-img {
-                                width: 100%;
-                                height: 90%;
-                                border-radius: 10px;
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%,-50%);
-                                transition: 0.3s;
-                            }
+                    cursor: pointer;
+                    
+                    .all-img-div {
+                        width: 75%;
+                        height: 80%;
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        &:hover img {
+                            transform: translate(-50%, -50%) scale(1.2);
                         }
-                        > p {
-                            width: 65%;
-                            text-align: center;
+                        .all-img {
+                            width: 100%;
+                            height: 90%;
+                            border-radius: 10px;
                             position: absolute;
-                            bottom: 10px;
+                            top: 50%;
                             left: 50%;
-                            transform: translateX(-50%);
+                            transform: translate(-50%,-50%);
+                            transition: 0.3s;
                         }
                     }
+                    > p {
+                        width: 65%;
+                        text-align: center;
+                        position: absolute;
+                        bottom: 10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                
                 }
             }
         }
@@ -280,15 +281,14 @@ section.desert-con {
                         margin-top: 10px;
                         padding: 20px 0;
                         width: 220px;
-                        a{
-                            .all-img-div {
-                                .all-img {
-                                    height: 165px;
-                                }
+                        
+                        .all-img-div {
+                            .all-img {
+                                height: 165px;
                             }
-                            p {
-                                bottom: 0;
-                            }
+                        }
+                        p {
+                            bottom: 0;
                         }
                     }
                 }

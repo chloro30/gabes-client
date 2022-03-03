@@ -1,10 +1,12 @@
 /* eslint-disable */
 
-import React, { useEffect, useState } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import MapIteratorEvent from '../../module/MapIteratorEvent';
 import ProductIntro from '../../module/ProductIntro';
 
-function BasicMenu( {basicProducts, clickedMenu} ) {
+
+//부모 컴포넌트 <Desert />에서 useRef() 사용하기 위해서 forwardRef로 생성
+const BasicMenu = forwardRef(( {basicProducts, clickedMenu}, ref ) => {
     
     //초기화
     const [item, setItem] = useState(basicProducts[0]);
@@ -23,7 +25,7 @@ function BasicMenu( {basicProducts, clickedMenu} ) {
     /* MapIterator_arr 끝 */
 
     return (
-        <div id='basic' className='basicmenu-container'>
+        <div ref={ref} id='basic' className='basicmenu-container'>
             <div className='inner-con'>
                 <p>기본 메뉴</p>
                 <MapIteratorEvent products={basicProducts} changeItem={changeItem} />
@@ -31,6 +33,6 @@ function BasicMenu( {basicProducts, clickedMenu} ) {
             </div>
         </div>
     );
-}
+});
 
 export default BasicMenu;
